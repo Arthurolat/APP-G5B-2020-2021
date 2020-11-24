@@ -1,23 +1,32 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
+body{
     padding: 0;
+    margin: 0;
     background-color: #041733;
 }
 
 li, a, button {
     font-family: Oswald, sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     color: #FFF;
     text-decoration: none;
 }
+
+/* HEADER */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    margin: 0;
+    padding: 0px 5%;
+    /*background: linear-gradient(0.25turn, #e36509, #041733)*/
+    background-image: linear-gradient(to left, #041733, #432356, #8c215e, #c82f46, #e36509);
+}
+
+
+#logo_infinite img{
+    width: 70%;
 }
 
 #menu_principal {
@@ -26,15 +35,16 @@ header {
 
 #menu_principal li {
     display: inline-block;
-    padding: 0px 20px
+    padding: 0px 40px
 }
 
 #menu_principal li a {
     transition: all 0.3 ease 0s;
+    text-shadow: #041733 1px 0 10px;
 }
 
 #menu_principal li a:hover {
-    color: #e36509
+    color: #041733
 }
 
 button {
@@ -50,9 +60,218 @@ button:hover {
     background-color: #cc5a08;
 }
 
+
+/* ACCUEIL */
+
 #accueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding:0;
     background-image: url("images/image_militaire.png");
     background-size: cover;
     background-position: center center;
-    height: 100%;
+    background-repeat: no-repeat;
+    height: 750px;
+    width : 100%;
 }
+    
+
+
+#titre_accueil h1{
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFF;
+    font-size: 100px;
+    text-shadow: #e649a2 0 0 20px;
+}
+
+#titre_accueil h1:after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #e649a2;
+    filter: blur(15px);
+}
+
+#titre_accueil h1:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e649a2;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
+
+/* A PROPOS */
+
+#a_propos{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding: 0;
+    height: 850px;
+    width: 100%;
+}
+
+#image_idea{
+    background-image: url("images/idea.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 850px;
+    width: 50%;
+    align-items: flex-start;
+}
+
+#a_propos h1, h2, p{
+    font-family: Oswald, sans-serif;
+    color: #FFF;
+}
+
+#description_idea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 850px;
+    /*background: linear-gradient(0.25turn, #041733, #e36509)*/
+    background-image: linear-gradient(to right bottom, #041733, #432356, #8c215e, #c82f46, #e36509);
+}
+
+#titre_idea{
+    padding-bottom: 10%;
+}
+
+#titre_idea h1{
+    font-weight: 500;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-shadow: #041733 1px 0 10px;
+}
+
+#petite_description_idea{
+    width: 50%;
+    padding-bottom: 10%;
+}
+
+#petite_description_idea p{
+    text-align: justify;
+    text-shadow: #041733 1px 0 10px;
+}
+
+#bouton_a_propos{
+    padding-top: 10%;
+    text-shadow: #041733 1px 0 10px;
+}
+
+/* TEAM */
+
+#team h1, h3{
+    font-family: Oswald, sans-serif;
+    color: #FFF;
+}
+
+#team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 850px;
+    width: 100%;
+    flex-direction: column;
+    background-image: url("images/workspace.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background: linear-gradient(0.25turn, #e36509, #041733)*/
+    /*background-image: linear-gradient(to left, #ffffff, #eeedfa, #dadcf5, #c5cbf1, #acbced, #94a7da, #7c93c8, #6480b6, #4b6393, #334871, #1c2e51, #041733);*/
+}
+
+#titre_team h1{
+    font-weight: 500;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-shadow: #e649a2 0 0 15px;
+}
+
+#titre_team h1:after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #e649a2;
+    filter: blur(15px);
+}
+
+#titre_team h1:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e649a2;
+    z-index: -2;
+    opacity: .5;
+    filter: blur(40px);
+}
+
+#membres_haut, #membres_bas{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#membres_haut{
+    padding-top: 40px;
+}
+
+#clara, #constantin, #sanae, #guillaume, #arthur, #thomas h3{
+    text-align: center;
+    text-shadow: #041733 1px 0 10px;
+}
+
+#clara img{
+    box-shadow: 3px 3px 5px #AFAFAF;
+    border-radius: 50%;
+} 
+
+#constantin img{
+    box-shadow: 3px 3px 5px #AFAFAF;
+    border-radius: 50%;
+} 
+
+#sanae img{
+    box-shadow: 3px 3px 5px #AFAFAF;
+    border-radius: 50%;
+} 
+
+#guillaume img{
+    box-shadow: 3px 3px 5px #AFAFAF;
+    border-radius: 50%;
+} 
+
+#arthur img{
+    box-shadow: 3px 3px 5px #AFAFAF;
+    border-radius: 50%;
+} 
+
+#thomas img{
+    box-shadow: 3px 3px 5px #AFAFAF;
+    border-radius: 50%;
+} 
