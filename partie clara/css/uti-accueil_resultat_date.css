@@ -8,7 +8,7 @@ body {
 /*------------------------------ header ------------------------------*/
 
 header {
-    margin-bottom: 0;
+    margin-bottom: 15px;
     padding: 0px;
     background: linear-gradient(0.25turn, #A9CAED, #041733);
 }
@@ -160,21 +160,12 @@ footer a {
 
 /*------------------------------corps de page ------------------------------*/
 
-#image_fond{
-    margin: 0;
-    padding: 0;
-    background-image: url("../images/image_fond.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
 section {
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; 
 }
 
 
