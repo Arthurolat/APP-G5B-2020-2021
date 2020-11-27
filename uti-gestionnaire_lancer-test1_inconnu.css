@@ -1,7 +1,7 @@
 body {
     width: 100%;
     margin: 0;
-    background: url("../images/image_fond.png");
+    background: url("images/image_militaire.png");
 }
 
 
@@ -14,6 +14,7 @@ header {
 }
 
 header a {
+    /*color: #FFFF;*/
     text-decoration: none;
 }
 
@@ -326,48 +327,48 @@ ul li.ok:after {
 }
 
 
-/*---- formulaire ----*/
+/*---- attribuer session à un utilisateur----*/
+
+#contenu .onglet {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 15px auto 0 auto;
+}
+
+.onglet .element1,
+.onglet .element2 {
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    border: 2px solid #041733;
+}
+
+.onglet .element2 {
+    color: #ed7d31;
+    font-weight: bold;
+}
+
+.element1 a,
+.element1 a:visited {
+    text-decoration: none;
+    color: black;
+}
 
 #contenu .formulaire {
     text-align: center;
     border: 2px solid #041733;
     width: auto;
-    margin-top: 10px;
+    margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.774);
 }
 
-
-/*---- bouton retour//suivant ----*/
-
-.formulaire .controle {
-    text-align: center;
-    width: 100%;
-    margin: 15px auto;
-}
-
-.controle .element1,
-.controle .element2 {
-    color: #ed7d31;
-    font-weight: bold;
-}
-
-.element1 {
-    float: left;
-    margin-left: 40px;
-}
-
-.element2 {
-    float: right;
-    margin-right: 40px;
-}
-
-.formulaire .controle a {
-    display: inline-block;
+.formulaire a {
     border: 2px solid #ed7d31;
     border-radius: 50px;
     padding: 10px 35px;
     text-decoration: none;
     background: #ed7d31;
     color: white;
-    font-weight: normal;
 }

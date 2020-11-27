@@ -1,14 +1,14 @@
 body {
     width: 100%;
     margin: 0;
-    background: url("../images/image_fond.png");
+    /*background: url("images/image_militaire.png");*/
 }
 
 
 /*------------------------------ header ------------------------------*/
 
 header {
-    margin-bottom: 15px;
+    margin-bottom: 0;
     padding: 0px;
     background: linear-gradient(0.25turn, #A9CAED, #041733);
 }
@@ -70,7 +70,6 @@ footer {
     background: #041733;
     padding: 20px 0px;
     padding-bottom: 0;
-    margin-top: 15px;
 }
 
 footer a {
@@ -161,10 +160,21 @@ footer a {
 
 /*------------------------------corps de page ------------------------------*/
 
+#image_fond{
+    margin: 0;
+    padding: 0;
+    background-image: url("images/image_militaire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 section {
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -190,7 +200,7 @@ section {
     margin-bottom: 0px;
     list-style-type: none;
     padding-left: 0px;
-    font-size: large;
+    font-size: 18px;
     text-decoration: none;
     width: auto;
     vertical-align: center;
@@ -247,43 +257,19 @@ section h2 {
     border-bottom: 1px solid #002060;
 }
 
+#contenu .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    padding: 50px;
+    font-size: 20px;
+}
 
-/* step progress bar */
-
-.step_progress {
-    width: 100%;
+#contenu table,
+td,
+th {
+    border-collapse: collapse;
     border: 1px solid black;
-}
-
-.step_progress ul {
-    text-align: center;
-    text-decoration: none;
-}
-
-.step_progress ul li {
-    display: inline-block;
-}
-
-
-/* attribuer session à un utilisateur*/
-
-#contenu .onglet {
-    text-align: center;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 80%;
-    border: 1px solid black;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.onglet .element1,
-.onglet .element2 {
-    margin: 0 auto;
-}
-
-#contenu .formulaire {
-    text-align: center;
-    border: 1px solid black;
-    margin: 10px 0;
+    width: max-content;
 }

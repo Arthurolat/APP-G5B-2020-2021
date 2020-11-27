@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/uti-gestionnaire_lancer-test2.css" />
+    <link rel="stylesheet" href="uti-accueil_mes_tests.css" />
     <title>Page d'accueil</title>
 
 </head>
@@ -14,87 +14,83 @@
         <nav>
             <ul>
                 <div id="logoinfi_container">
-                    <img class="logo_infinite" src="../images/logo_infinite.gif" alt="" />
+                    <img class="logo_infinite" src="images/logo_infinite.gif" alt="" />
                 </div>
 
                 <div id="logosolution_container">
-                    <img class="logo_solution" src="../images/logo_solution.png" alt="" />
+                    <img class="logo_solution" src="images/logo_solution.png" alt="" />
                 </div>
 
                 <li>
-                    <a href="#"><img class="logohome" src="../images/logo_home.png" /></a>
+                    <a href="#"><img class="logohome" src="images/logo_home.png" /></a>
                 </li>
             </ul>
         </nav>
     </header>
+
 
     <section>
 
         <div id=menuGauche>
             <ul id=barre_nav>
                 <li id="ongletdebut">
-                    <a href=#><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
+                    <a href=#><img class="img-responsive" src="images/icones/icone_profil.png" alt="icone profil"> Mon profil</a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                    <a href=#><img class="img-responsive" src="images/icones/icone_messagerie.png" alt="icone messagerie"> Messagerie</a>
                 </li>
                 <li>
-                    <a class="active" href=#><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
+                    <a href="../html/uti-accueil_resultat_date.html"><img class="img-responsive" src="images/icones/icon-survey.png" alt="icone resultats"> Consulter mes résultats</a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="../images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
+                    <a class="active" href=#><img class="img-responsive" src="images/icones/icone_folder.png" alt="icone report"> Analyse de mes tests</a>
+                    <ul>
+                        <li><a href="#test-1">1. Temps de réaction à un son</a></li>
+                        <li><a href="#test-2">2. Temps de réaction à une lumière</a></li>
+                        <li><a href="#test-3">3. Fréquence cardiaque</a></li>
+                        <li><a href="#test-4">4. Température de la peau</a></li>
+                        <li id="ongletfin"><a href="#test-5">5. Reconnaissance de tonalité</a></li>
+                    </ul>
                 </li>
-                <li id="ongletfin">
-                    <a href=#><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
-                </li>
-
             </ul>
-
         </div>
 
         <div id=contenu>
-            <h2> Lancement d'une session de tests </h2>
+            <h2> Sythèse des tests </h2>
 
-            <p>Vous êtes dans la phase de tests. Lancer les tests psychotechniques que vous souhaitez et passez à l'étape suivante pour clôturer la session de tests.</p>
+            <h3 id="test-1">1. Temps de réaction à un son</h3>
+            <div class="div-test-son"></div>
 
-            <div class="step_progress">
-                <ul>
-                    <li class="ok">Démarrage session</li>
-                    <li class="ok">Phase tests</li>
-                    <li>Validation</li>
-                </ul>
-            </div>
+            <h3 id="test-2">2. Temps de réaction à une lumière</h3>
+            <div class="div-test-lumière"></div>
 
+            <h3 id="test-3">3. Fréquence cardiaque</h3>
+            <div class="div-test-freq"></div>
 
-            <div class=formulaire>
-                <p>ici le formulaire</p>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
-                </br>
-                <div class=controle>
-                    <div class="element1">
-                        <p><a href="uti-gestionnaire_lancer-test1_connu.html">Retour</a></p>
-                    </div>
-                    <div class="element2">
-                        <p><a href="uti-gestionnaire_lancer-test3.html">Suivant</a></p>
-                    </div>
-                </div>
+            <h3 id="test-4">4. Température de la peau</h3>
+            <div class="div-test-temperature"></div>
 
-
-            </div>
-            </br>
+            <h3 id="test-5">5. Reconnaissance de tonalité</h3>
+            <div class="div-test-tonalite"></div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
 
         </div>
+
     </section>
 
     <footer>
         <div id="logostart_container">
-            <img src="../images/logo_apmd.png" alt="" />
+            <img src="images/logo_apmd.png" alt="" />
         </div>
 
         <div class="footer_social_icons">
