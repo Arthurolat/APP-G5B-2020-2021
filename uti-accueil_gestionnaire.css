@@ -1,7 +1,7 @@
 body {
     width: 100%;
     margin: 0;
-    background: url("images/image_militaire.png");
+    /*background: url("images/image_militaire.png");*/
 }
 
 
@@ -161,10 +161,21 @@ footer a {
 
 /*------------------------------corps de page ------------------------------*/
 
+#image_fond{
+    margin: 0;
+    padding: 0;
+    background-image: url("images/image_militaire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 section {
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 

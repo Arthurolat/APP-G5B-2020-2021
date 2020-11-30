@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="a_propos.css">
+        <link rel="stylesheet" href="footer.css">
     </head>
     <body>
         <header> <!-- Bande du haut de page -->

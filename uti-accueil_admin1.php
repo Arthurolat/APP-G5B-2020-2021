@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="uti-accueil_admin1.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
     <title>Page d'accueil</title>
 
 </head>

@@ -1,157 +1,29 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    background: url("imagemilitaire.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
-
-}
-
-/*------------------------------ header ------------------------------*/
-
-header {
-    margin-bottom: 15px;
-    padding: 0;
-    background: linear-gradient(0.25turn, #A9CAED, #041733);
-}
-
-header li {
-    font-size: 2rem;
-}
-
-header a {
-    color: #FFFF;
-    text-decoration: none;
-}
-
-nav {
-    min-height: 100px;
-    display: flex;
-    width: 100%;
-    box-shadow: 2px 2px 5px #041733;
-    margin-bottom: 1px;
-}
-
-nav ul {
-    display: flex;
-    flex: 3 1 40rem;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    margin-right: 2rem;
-}
-
-#logoinfi_container {
-    margin-left: 15PX;
-    flex: 3 1 40rem;
-    justify-content: space-around;
-}
-
-#logosolution_container {
-    flex: 3 1 40rem;
-    justify-content: space-around;
-    margin: auto;
-}
-
-
-
-/*------------------------------ footer ------------------------------*/
-
-footer {
-    display: inline-block;
     width: 100%;
     margin: 0;
-    background: #041733;
-    padding: 20px 0px;
-    padding-bottom: 0;
+    /*background: url("images/image_militaire.png");*/
 }
 
-footer a {
-    text-decoration: none;
-    outline: none;
+/*------------------------------corps de page ------------------------------*/
+
+#image_fond{
+    margin: 0;
+    padding: 0;
+    background-image: url("images/image_militaire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
-#logostart_container {
-    float: left;
-    width: 200px;
-    margin-left: 10px;
+section {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-.footer_social_icons {
-    width: 50%;
-    margin: auto;
-}
 
-.footer_social_icons ul {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-}
-
-.footer_social_icons ul li {
-    display: inline-block;
-    width: 50px;
-    height: 40px;
-    margin: 0px 10px;
-    /*border-radius: 100%;
-    background:#FFFF;*/
-}
-
-.footer_social_icons ul li a {
-    display: block;
-    font-size: 25px;
-}
-
-.footer_social_icons ul li a img {
-    line-height: 50px;
-}
-
-.footer_menu_one {
-    width: 50%;
-    margin: auto;
-}
-
-.footer_menu_one ul {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-}
-
-.footer_menu_one ul li {
-    display: inline-block;
-    margin: 10px 20px;
-}
-
-.footer_menu_one ul li a {
-    font-family: arial;
-    font-size: 18px;
-    color: #FFFF;
-    text-transform: uppercase;
-}
-
-.footer_menu_one ul li a:hover {
-    color: #ed7d31;
-}
-
-.footer_bottom {
-    margin: 5px 0 0 0;
-    padding: 1px;
-    background: #A9CAED;
-}
-
-.footer_bottom p {
-    font-family: arial;
-    font-size: 14px;
-    text-align: center;
-    color: black;
-    letter-spacing: 1px;
-}
-
-.footer_bottom p a:hover {
-    color: #ed7d31;
-}
 
 #menuGauche {
     width: 15%;
@@ -164,6 +36,7 @@ footer a {
     position: -webkit-sticky;
     position: sticky;
     top: 1%;
+    box-shadow: 2px 2px 5px #A9CAED;
 }
 
 #menuGauche ul,
@@ -172,7 +45,7 @@ footer a {
     margin-bottom: 0px;
     list-style-type: none;
     padding-left: 0px;
-    font-size: large;
+    font-size: 18px;
     text-decoration: none;
     width: auto;
     vertical-align: center;
