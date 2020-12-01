@@ -9,13 +9,13 @@
         <title>APMD_accueil</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="accueil.css">
-        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="../css/accueil.css">
+        <link rel="stylesheet" href="../css/footer.css">
     </head>
     <body>
         <header> <!-- Bande du haut de page -->
 			<div id="logo_infinite"> <!-- Logo Infinite Measures dans logo -->
-				<img src="images/logo_infinite.gif" alt="Logo Infinite Measures" />
+				<img src="../images/logo_infinite.gif" alt="Logo Infinite Measures" />
             </div> 
                 
             <nav id="menu_principal"> <!-- Menu principal de navigation dans bande du haut -->
@@ -72,17 +72,17 @@
             <div id="membres_haut">
             
                 <div id="clara">
-                    <img src="images/photos_membres/clara.png" alt="Photo Clara" />
+                    <img src="../images/photos_membres/clara.png" alt="Photo Clara" />
                     <h3>Clara Augié</h3>
                 </div>
 
                 <div id="constantin">
-                    <img src="images/photos_membres/constantin.png" alt="Photo Constantin" />
+                    <img src="../images/photos_membres/constantin.png" alt="Photo Constantin" />
                     <h3>Constantin Chevalier</h3>
                 </div>
 
                 <div id="sanae">
-                    <img src="images/photos_membres/sanae.png" alt="Photo Sanae" />
+                    <img src="../images/photos_membres/sanae.png" alt="Photo Sanae" />
                     <h3>Sanae El Messadi</h3>
                 </div>
 
@@ -91,17 +91,17 @@
             <div id="membres_bas">
 
                 <div id="guillaume">
-                    <img src="images/photos_membres/guillaume.png" alt="Photo Guillaume" />
+                    <img src="../images/photos_membres/guillaume.png" alt="Photo Guillaume" />
                     <h3>Guillaume Jolly</h3>
                 </div>
 
                 <div id="arthur">
-                    <img src="images/photos_membres/arthur.png" alt="Photo Arthur" />
+                    <img src="../images/photos_membres/arthur.png" alt="Photo Arthur" />
                     <h3>Arthur Latourrette</h3>
                 </div>
 
                 <div id="thomas">
-                    <img src="images/photos_membres/thomas.png" alt="Photo Thomas" />
+                    <img src="../images/photos_membres/thomas.png" alt="Photo Thomas" />
                     <h3>Thomas Le Deventec</h3>
                 </div>
 

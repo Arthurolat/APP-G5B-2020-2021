@@ -78,7 +78,7 @@ button:hover {
     padding: 0;
     width: 100%;
     height: 750px;
-    background-image: url("images/histoire.jpg");
+    background-image: url("../images/histoire.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@ button:hover {
     padding: 0;
     width: 100%;
     height: 850px;
-    background-image: url("images/solution.jpg");
+    background-image: url("../images/solution.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

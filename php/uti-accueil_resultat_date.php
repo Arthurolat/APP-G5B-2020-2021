@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="uti-accueil_resultat_date.css" />
+    <link rel="stylesheet" href="../css/uti-accueil_resultat_date.css" />
     <title>Page d'accueil</title>
 
 </head>

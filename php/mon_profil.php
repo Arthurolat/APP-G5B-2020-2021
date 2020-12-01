@@ -6,9 +6,9 @@
         <title>Page Mon Profil</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="mon_profil.css">
-        <link rel="stylesheet" href="footer.css">
-        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="../css/mon_profil.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/header.css">
     </head>
 
     <body>

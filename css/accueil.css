@@ -69,7 +69,7 @@ button:hover {
     align-items: center;
     margin: 0;
     padding:0;
-    background-image: url("images/image_militaire.png");
+    background-image: url("../images/image_militaire.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -125,7 +125,7 @@ button:hover {
 }
 
 #image_idea{
-    background-image: url("images/idea.jpg");
+    background-image: url("../images/idea.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -191,7 +191,7 @@ button:hover {
     height: 850px;
     width: 100%;
     flex-direction: column;
-    background-image: url("images/workspace.jpg");
+    background-image: url("../images/workspace.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

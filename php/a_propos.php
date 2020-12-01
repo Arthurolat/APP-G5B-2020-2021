@@ -6,13 +6,13 @@
         <title>APMD_a_propos</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="a_propos.css">
-        <link rel="stylesheet" href="footer.css">
+        <link rel="stylesheet" href="../css/a_propos.css">
+        <link rel="stylesheet" href="../css/footer.css">
     </head>
     <body>
         <header> <!-- Bande du haut de page -->
 			<div id="logo_infinite"> <!-- Logo Infinite Measures dans logo -->
-				<img src="images/logo_infinite.gif" alt="Logo Infinite Measures" />
+				<img src="../images/logo_infinite.gif" alt="Logo Infinite Measures" />
             </div> 
                 
             <nav id="menu_principal"> <!-- Menu principal de navigation dans bande du haut -->
@@ -30,7 +30,7 @@
         <div id="histoire">
             
             <div id="logo_apmd">
-                <img src="images/logo_apmd.png" alt="Logo APMD" />
+                <img src="../images/logo_apmd.png" alt="Logo APMD" />
             </div>
 
             <div id="texte_histoire">
@@ -55,7 +55,7 @@
         <div id="solution">    
             
             <div id="logo_solution">
-                <img src="images/logo_solution.png" alt="Logo Solution" />
+                <img src="../images/logo_solution.png" alt="Logo Solution" />
             </div>
             
             <div id="texte_solution">

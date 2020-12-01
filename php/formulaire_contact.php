@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Formulaire de contact</title>
-        <link rel="stylesheet" href="formulaire_contact.css">
+        <link rel="stylesheet" href="../css/formulaire_contact.css">
     </head>
 
     <body>

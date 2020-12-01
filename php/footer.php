@@ -1,6 +1,6 @@
 <footer>
     <div id="logostart_container">
-        <img src="images/logo_apmd.png" alt="" />
+        <img src="../images/logo_apmd.png" alt="" />
     </div>
     
     <div class="footer_social_icons">
