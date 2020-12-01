@@ -1,7 +1,7 @@
 body {
     width: 100%;
     margin: 0;
-    background: url("images/image_militaire.png");
+    background: url("../images/image_fond.png");
 }
 
 
@@ -237,6 +237,7 @@ section {
     box-shadow: 2px 2px 5px #041733;
     border-radius: 15px;
     margin-left: 1%;
+    margin-bottom: 50px;
     padding: 0% 1% 0% 1%;
     background-color: rgba(255, 255, 255, 0.555);
 }
@@ -260,11 +261,12 @@ section h2 {
 
 .step_progress ul li {
     display: inline-block;
-    width: 30%;
+    width: 24%;
     position: relative;
     text-align: center;
     list-style-type: none;
     font-weight: bold;
+    vertical-align: top;
 }
 
 .step_progress ul {
@@ -342,11 +344,21 @@ ul li.ok:after {
     width: 100%;
     margin: 0 auto;
     height: 40px;
-    border: 2px solid #041733;
 }
 
 .onglet .element1 {
     color: #ed7d31;
+    font-weight: bold;
+    text-decoration: underline;
+    border: 2px solid #041733;
+    border-bottom: none;
+    border-radius: 30px 30px 0 0;
+    background-color: rgba(255, 255, 255, 0.774);
+}
+
+.onglet .element2 {
+    border-bottom: 2px solid #041733;
+    text-shadow: 0.3px 0.8px 10px white;
     font-weight: bold;
 }
 
@@ -359,6 +371,7 @@ ul li.ok:after {
 #contenu .formulaire {
     text-align: center;
     border: 2px solid #041733;
+    border-top: 2px solid #04173300;
     width: auto;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.774);
@@ -366,9 +379,16 @@ ul li.ok:after {
 
 .formulaire a {
     border: 2px solid #ed7d31;
+    box-shadow: 2px 2px 3px #ed7d31;
     border-radius: 50px;
     padding: 10px 35px;
     text-decoration: none;
     background: #ed7d31;
     color: white;
+    font-weight: bold;
+}
+
+#contenu .formulaire form {
+    text-align: left;
+    padding: 40px 20px;
 }
