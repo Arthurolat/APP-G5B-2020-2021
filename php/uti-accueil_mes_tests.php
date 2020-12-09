@@ -18,16 +18,16 @@
         <div id=menuGauche>
             <ul id=barre_nav>
                 <li id="ongletdebut">
-                    <a href=#><img class="img-responsive" src="images/icones/icone_profil.png" alt="icone profil"> Mon profil</a>
+                    <a href=#><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil"> Mon profil</a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="images/icones/icone_messagerie.png" alt="icone messagerie"> Messagerie</a>
+                    <a href=#><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie"> Messagerie</a>
                 </li>
                 <li>
-                    <a href="../html/uti-accueil_resultat_date.html"><img class="img-responsive" src="images/icones/icon-survey.png" alt="icone resultats"> Consulter mes résultats</a>
+                    <a href="../html/uti-accueil_resultat_date.html"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats"> Consulter mes résultats</a>
                 </li>
                 <li>
-                    <a class="active" href=#><img class="img-responsive" src="images/icones/icone_folder.png" alt="icone report"> Analyse de mes tests</a>
+                    <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report"> Analyse de mes tests</a>
                     <ul>
                         <li><a href="#test-1">1. Temps de réaction à un son</a></li>
                         <li><a href="#test-2">2. Temps de réaction à une lumière</a></li>
