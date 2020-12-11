@@ -179,7 +179,7 @@ section {
     background-color: #a9caed86;
     border: 2px solid #A9CAED;
     position: -webkit-sticky;
-    position: sticky;
+    -position: sticky;
     top: 1%;
     box-shadow: 2px 2px 5px #A9CAED;
 }
