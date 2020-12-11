@@ -9,7 +9,7 @@
         <title>APMD_accueil</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/accueil2.css">
+        <link rel="stylesheet" href="../css/accueil2.css"> 
         <link rel="stylesheet" href="../css/footer.css">
     </head>
     <body>
