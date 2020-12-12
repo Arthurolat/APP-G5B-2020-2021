@@ -12,7 +12,7 @@
 
     <header>
         <p>
-            <header class="main_head">
+            <header  class="main_head">
             <nav>
                 <ul>
                     <div id ="logoinfi_container">

@@ -1,0 +1,54 @@
+
+body{
+	background-image:url(https://i.pinimg.com/originals/2f/96/b0/2f96b0f56c83198ae81288ac30f656e0.jpg);	
+}
+
+section{
+	margin:50px 10px;
+
+}
+
+#contenu{
+	margin:0;
+	padding:0;
+	color:#002060;
+	background-color: white;
+	opacity:0.6;
+}
+
+h3{
+	text-align : center;
+	margin-top:20px;
+	font-size:22px;
+
+}
+#contenu input{
+	margin:10px 10px 10px 10px;
+}
+#contenu input{
+	text-shadow:none;
+}
+.section1 button{
+	display:block;
+}
+form{
+	display:flex;
+	flex-direction:column;
+}
+.section1{
+	justify-content: center;
+}
+form input{
+	padding:10px;
+}
+form label{
+	padding:10px;
+	font-size:17px;
+}
+button{
+	margin-top:50px;
+	padding:20px;
+	background-color:#ED7D31;
+	color:#FFFFFF;
+	border-size:1px;
+}

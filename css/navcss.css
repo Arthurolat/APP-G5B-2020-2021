@@ -1,0 +1,32 @@
+nav > ul > li {
+	list-style-type : none; /* désactivation des puces */
+	display : inline-block; /* il met les éléments a sur la mm ligne */
+	
+}
+
+nav a {
+	text-decoration: none ; /* désactivation du soulignement */
+}
+
+nav img {
+	 width: 15%;	
+}
+
+nav ul {
+    display: inline-block; 
+}
+
+#logosolution {
+    float: right; /* il va à la droite de la division dans lequel il est contenu donc a droite */
+}
+#logo_apmd{
+    float: left; /* la meme mais a gauche */
+}
+
+nav {
+    margin-bottom: 10%; /* espacement entre la nav et le body */
+}
+header nav a {
+    padding: 1em ;
+    display: block;
+}
