@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="uti-accueil_admin1.css" />
+    <link rel="stylesheet" href="../css/uti-accueil_admin1.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <title>Page d'accueil</title>

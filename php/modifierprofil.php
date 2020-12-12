@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/modifierprofil.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <title>Gestion Utilisateur</title>
+    
+
+</head>
+
+<body>
+    
+    <?php include("header.php"); ?>
+        <div id="image_fond">
+            <section>
+
+                <div id=menuGauche>
+                    <ul id=barre_nav>
+                        <li id="ongletdebut">
+                            <a href=#><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
+                        </li>
+                        <li>
+                            <a href=#><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                        </li>
+                        <li>
+                            <a href=#><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
+                        </li>
+                        <li>
+                            <a href=#><img class="img-responsive" src="../images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
+                        </li>
+                        <li>
+                            <a href=#><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                        </li>
+
+                        <p> Réglages :</p>
+                        <li>
+                            <a class="active" href=#><img class="img-responsive" src="../images/icone_utilisateurs.png" alt="icone utilisateurs" width=10px> Utilisateurs</a>
+                        </li>
+                        <li>
+                            <a href=#><img class="img-responsive" src="../images/icone_capteur2.png" alt="icone capteur" width=10px> Capteurs</a>
+                        </li>
+                        <li id="ongletfin">
+                            <a href=#><img class="img-responsive" src="../images/icone_faq.png" alt="icone faq" width=10px> F.A.Q</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                
+                <div id=contenu>
+                    <h2> Modification du profil </h2>
+
+
+                    <div class=formulaire >
+                        <form method="post" action="uti-gestionnaire_lancer-test2.html">
+                            <p>
+                                <fieldset>
+                                    <p><label>Nom : <input type="text" name="nom" size="50" placeholder="nom"></label></p>
+                                    <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="prénom"></label></p>
+                                    <p><label>Email : <input type="email" name="email" size="50" placeholder="email"></label></p>
+                                    <p><label>Date de naissance : <input type="date" name="date"></label></p>
+                                    <p><label>Numero de téléphone : <input type="tel" name="tel" maxlength="10" placeholder="tel"></label></p>
+                                    <p><label>Adresse : <input type="text" name="adresse" size="50" placeholder="rue"></label></p>
+                                    <p><label>Ville : <input type="text" name="ville" size="50" placeholder="ville"></label></p>
+                                    <p><label>Code postal : <input type="text" name="adresse" size="50" maxlength="5" placeholder="code postal"></label></p>
+                                    <p><label>Mot de passe : <input type="text" name="Mdp" size="50" placeholder="mot de passe"></label></p>
+                                    <p><label>Statut : </label>
+                                        <select id="statut" name="idstatut"> 
+                                        <option value="Utilisateur">Utilisateur</option>
+                                        <option value="Gestionnaire">Gestionnaire</option>
+                                        <option value="Administrateur">Administrateur</option>
+                                        </select>
+                                    </p>
+                                    <p class="bouton"><input type="submit" value="Valider" align="right"></p>
+                                
+                                </fieldset>
+                            </p>
+                    
+                        </form>
+                
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    <?php include("footer.php"); ?>
+
+</body>
+</html>
