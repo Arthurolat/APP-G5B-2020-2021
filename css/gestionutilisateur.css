@@ -1,158 +1,19 @@
 body {
-
-background-image:url(../Images/imagemilitaire.png);
-background-position: center;
-background-size: 200%;
-background-repeat: no-repeat;
-}
-
-header {
     width: 100%;
-    margin-bottom: 40px;
-    padding: 0px;
-    background: linear-gradient(0.25turn, #A9CAED, #041733);
-}
-
-header a {
-    /*color: #FFFF;*/
-    text-decoration: none;
-}
-
-nav {
-    min-height: 50px;
-    display: flex;
-    /*width: 100%;*/
-    box-shadow: 2px 2px 5px #041733;
-    /*margin-bottom: 1px;*/
-}
-
-nav ul {
-    display: flex;
-    flex: 3 1 40rem;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    margin-right: 2rem;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-#logoinfi_container {
-    flex: 3 1 40rem;
-    justify-content: space-around;
     margin: 0;
+    height: auto;
 }
 
-#logosolution_container {
-    flex: 3 1 45rem;
-    justify-content: space-around;
+
+#image_fond{
     margin: 0;
+    padding: 0;
+    background-image: url("../images/image_militaire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
-
-/* réglage taille image*/
-
-header .logo_infini {
-    width: 100px;
-}
-
-header .logo_solution {
-    width: 150px;
-}
-
-footer a {
-    text-decoration: none;
-    outline: none;
-}
-
-#logostart_container {
-    float: left;
-    width: 200px;
-    margin-left: 10px;
-}
-
-footer {
-    background: #041733;
-    width: 100%;
-    margin: auto;
-    margin-top: 10px;
-    height: 150px;
-
-}
-
-.footer_social_icons {
-    width: 50%;
-    margin: auto;
-}
-
-.footer_social_icons ul {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-}
-
-.footer_social_icons ul li {
-    display: inline-block;
-    width: 45px;
-    height: 35px;
-    margin: 0px 10px;
-    /*border-radius: 100%;
-    background:#FFFF;*/
-}
-
-.footer_social_icons ul li a {
-    display: block;
-    font-size: 25px;
-}
-
-.footer_social_icons ul li a img {
-    line-height: 50px;
-}
-
-.footer_menu_one {
-    width: 50%;
-    margin: auto;
-}
-
-.footer_menu_one ul {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-}
-
-.footer_menu_one ul li {
-    display: inline-block;
-    margin: 10px 20px;
-}
-
-.footer_menu_one ul li a {
-    font-family: arial;
-    font-size: 17px;
-    color: #FFFF;
-    text-transform: uppercase;
-}
-
-.footer_menu_one ul li a:hover {
-    color: #ed7d31;
-}
-
-.footer_bottom {
-    margin: 5px 0 0 0;
-    padding: 1px;
-    background: #A9CAED;
-}
-
-.footer_bottom p {
-    font-family: arial;
-    font-size: 14px;
-    text-align: center;
-    color: black;
-    letter-spacing: 1px;
-}
-
-.footer_bottom p a:hover {
-    color: #ed7d31;
-}
 section {
     display: flex;
     margin-left: 5%;
@@ -457,5 +318,4 @@ tr td:nth-child(2) p {
 
 .pages a.desactive {
     color: rgba(0, 0, 0, 0.329);
-}
 }
