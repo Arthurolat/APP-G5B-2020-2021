@@ -1,0 +1,16 @@
+.plus img {
+  padding: 5px;
+  width: 30%;
+  vertical-align: middle ;
+
+}
+.plus a {
+	display: block;
+	text-decoration: none ;
+	margin-bottom : 5%;
+}
+
+.plus {
+	margin-left: 30%;
+	margin-right: 15%;	
+}
