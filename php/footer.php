@@ -25,7 +25,7 @@
     </div>
     <div class="footer_menu_one">
         <ul>
-            <li><a href="#">A propos</a></li>
+            <li><a href="a_propos.php">A propos</a></li>
             <li><a href="#">Contactez-nous</a></li>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="#">FAQ</a></li>

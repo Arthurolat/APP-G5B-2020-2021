@@ -17,9 +17,9 @@
                 
             <nav id="menu_principal"> <!-- Menu principal de navigation dans bande du haut -->
 				<ul>
-					<li><a href="accueil.html">Accueil</a></li>
-					<li><a href="accueil.html#a_propos">A propos</a></li>
-					<li><a href="accueil.html#team">La team</a></li>
+					<li><a href="accueil.php">Accueil</a></li>
+					<li><a href="accueil.php#a_propos">A propos</a></li>
+					<li><a href="accueil.php#team">La team</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>

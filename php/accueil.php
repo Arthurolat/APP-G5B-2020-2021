@@ -57,7 +57,7 @@
                     </p>
                 </div>
 
-                <a id="bouton_a_propos" href="a_propos.html"><button>En savoir plus !</button></a>
+                <a id="bouton_a_propos" href="a_propos.php"><button>En savoir plus !</button></a>
             </div>
             
         </div>
@@ -107,7 +107,7 @@
 
             </div>
         </div>
-
+        
         <?php include("formulaire_contact.php"); ?>
 
         <?php include("footer.php"); ?>
