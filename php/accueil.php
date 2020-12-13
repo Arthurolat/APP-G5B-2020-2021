@@ -27,7 +27,7 @@
                 </ul>
             </nav>
 
-            <a id="connexion" href="#"><button>Connexion</button></a>  
+            <a id="connexion" href="page_connexion.html"><button>Connexion</button></a>  
         </header> 
 
         
