@@ -12,5 +12,4 @@ while ($donnees = $reponse->fetch())
 { 
     echo $donnees['idsession'].  '</br>';
 }
-
 -->
