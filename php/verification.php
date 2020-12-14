@@ -2,13 +2,6 @@
 session_start();
 if(isset($_POST['mail']) && isset($_POST['mdp']))
 {
-    // connexion à la base de données
-    $db_mail = 'mail_bdd';
-    $db_mdp = 'mdp_bdd';
-    $db_name     = 'bddv1.sql';
-    $db_host   = 'localhost';
-    $db = mysqli_connect($db_host, $db_mail, $db_mdp,$db_name)
-           or die('could not connect to database');
     
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
@@ -18,7 +11,7 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
     if($mail !== "" && $mdp !== "")
     {
         $requete = "SELECT count(*) FROM personne where 
-              nom_utilisateur = '".$mail."' and mot_de_passe = '".$mdp."' ";
+              mail = '".$mail."' and mdp = '".$mdp."' ";
         $exec_requete = mysqli_query($db,$requete);
         $reponse      = mysqli_fetch_array($exec_requete);
         $count = $reponse['count(*)'];
