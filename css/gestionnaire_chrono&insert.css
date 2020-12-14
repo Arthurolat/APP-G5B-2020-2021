@@ -1,0 +1,35 @@
+body {
+    background-color: red;
+    text-align: center;
+}
+
+span {
+    font-size: 200px;
+}
+
+div {
+    background-color: rgba(255, 255, 255, 0.596);
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.596);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.596);
+    padding: 2%;
+    width: 40%;
+    margin: auto;
+}
+
+.bouton input {
+    width: 90px;
+    height: auto;
+    border: 1px outset red;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    padding: 2% 0;
+}
+
+.bouton:hover input {
+    background-color: rgb(13, 226, 13);
+    color: white;
+    border: 1px outset rgb(13, 226, 13);
+    transition: all .3s ease;
+}
