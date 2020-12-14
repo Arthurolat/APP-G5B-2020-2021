@@ -5,8 +5,9 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
     // connexion à la base de données
     $db_mail = 'mail_bdd';
     $db_mdp = 'mdp_bdd';
-    $db_host     = 'localhost';
-    $db = mysqli_connect($db_host, $db_mail, $db_mdp)
+    $db_name     = 'bdd v1.sql';
+    $db_host   = 'localhost';
+    $db = mysqli_connect($db_host, $db_mail, $db_mdp,$db_name)
            or die('could not connect to database');
     
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
@@ -25,15 +26,15 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
         {
 
            $_SESSION['mail'] = $mail;
-           if($nom='nadmin')
+           if($mail='administrateur@mail.com')
            {
             header('Location: admin-lancer-test1_connu.php');
            }
-           if($nom='ngestionnaire')
+           if($mail='gestionnaire@mail.com')
            {
             header('Location: gestionnaire_lancer-test1_connu.html');
            }
-           if($nom='nutilisateur')
+           if($mail='utilisateur@mail.com')
            {
             header('Location: uti-accueil_resultat_date.php');
            }

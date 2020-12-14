@@ -21,9 +21,9 @@ adresse varchar(255) NOT NULL,
 statut varchar(25) NOT NULL
 );
 
-INSERT INTO personne VALUES (0, 'mdp','padmin', 'nadmin', 'exemple@mail.com','2020-12-01','0600000000','paris','admin');
-INSERT INTO personne VALUES (0, 'mdp','pgestionnaire', 'ngestionnaire', 'exemple@mail.com','2020-12-01','0600000000','paris','gestionnaire');
-INSERT INTO personne VALUES (0, 'mdp','putilisateur', 'nutilisateur', 'exemple@mail.com','2020-12-01','0600000000','paris','utilisateur');
+INSERT INTO personne VALUES (0, 'aaa','padmin', 'nadmin', 'administrateur@mail.com','2020-12-01','0600000000','paris','admin');
+INSERT INTO personne VALUES (0, 'aaa','pgestionnaire', 'ngestionnaire', 'gestionnaire@mail.com','2020-12-01','0600000000','paris','gestionnaire');
+INSERT INTO personne VALUES (0, 'aaa','putilisateur', 'nutilisateur', 'utilisateur@mail.com','2020-12-01','0600000000','paris','utilisateur');
 
 select * from personne;
 delete from personne;
