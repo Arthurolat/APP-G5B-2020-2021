@@ -108,7 +108,9 @@
             </div>
         </div>
         
+        <div id="contact">
         <?php include("formulaire_contact.php"); ?>
+        </div>
 
         <?php include("footer.php"); ?>
     </body>

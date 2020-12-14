@@ -10,7 +10,7 @@
             </div>
 
             <li>
-                <a href="#"><img class="logohome" src="../images/icones/logo_home.png" /></a>
+                <a href="accueil.php"><img class="logohome" src="../images/icones/logo_home.png" /></a>
             </li>
         </ul>
     </nav>

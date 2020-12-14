@@ -20,11 +20,11 @@
 					<li><a href="accueil.php">Accueil</a></li>
 					<li><a href="accueil.php#a_propos">A propos</a></li>
 					<li><a href="accueil.php#team">La team</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="accueil.php#contact">Contact</a></li>
                 </ul>
             </nav>
 
-            <a id="connexion" href="#"><button>Connexion</button></a>  
+            <a id="connexion" href="page_connexion.html"><button>Connexion</button></a>  
         </header> 
 
         <div id="histoire">
