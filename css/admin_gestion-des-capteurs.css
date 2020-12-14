@@ -1,70 +1,24 @@
-body{
-	width: 100%;
-    margin: 0;
-    height: 100%;	
-}
-
-#image_fond{
+body {
+    width: 100%;
     margin: 0;
     padding: 0;
-    background-image: url("../images/image_militaire.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-	background-position: center center;
+    /*background: url("../images/image_militaire.png");*/
+    height: auto;
+    background: url("../images/image_avion");
+    background-attachment: fixed;
 }
 
-section{
-	display: flex;
-	margin-left: 5%;
+
+/*------------------------------corps de page ------------------------------*/
+
+section {
+    display: flex;
+    margin-left: 5%;
     margin-right: 5%;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
-#contenu{
-	margin:0;
-	padding:0;
-	color:#002060;
-	background-color: white;
-	opacity:0.6;
-}
-
-h3{
-	text-align : center;
-	margin-top:20px;
-	font-size:22px;
-
-}
-#contenu input{
-	margin:10px 10px 10px 10px;
-}
-#contenu input{
-	text-shadow:none;
-}
-.section1 button{
-	display:block;
-}
-form{
-	display:flex;
-	flex-direction:column;
-}
-.section1{
-	justify-content: center;
-}
-form input{
-	padding:10px;
-}
-form label{
-	padding:10px;
-	font-size:17px;
-}
-button{
-	margin-top:50px;
-	padding:20px;
-	background-color:#ED7D31;
-	color:#FFFFFF;
-	border-size:1px;
-}
 
 /*------------ barre de navigation verticale ------------*/
 
@@ -109,6 +63,7 @@ button{
     width: 15%;
 }
 
+
 /*passage de la souris*/
 
 #menuGauche li a:hover,
@@ -123,4 +78,35 @@ button{
 
 #menuGauche #ongletfin a:hover {
     border-radius: 0 0 15px 15px;
+}
+
+
+/*-------------------contenu-------------------*/
+
+#contenu {
+    width: 85%;
+    border: 2px solid #041733;
+    box-shadow: 2px 2px 5px #041733;
+    border-radius: 15px;
+    margin-left: 1%;
+    padding: 0% 1% 0% 1%;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+
+section h2 {
+    margin-left: 1%;
+    margin-right: 1%;
+    border-bottom: 1px solid #002060;
+}
+
+.div1 img {
+    width: 20%;
+    vertical-align: middle;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.div1 a {
+    color: black;
+    font-size: 20px;
 }

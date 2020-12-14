@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <link rel="stylesheet" type ="text/css" href="../css/cssaccueil_admin.css" /> -->
-    <link rel="stylesheet" type="text/css" href="../css/Gestion_des_capteurs.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin_gestion-des-capteurs.css">
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <title>Page d'accueil</title>
@@ -17,7 +17,7 @@
     <section>
 
         <div id=menuGauche>
-            <ul>
+            <ul id="barre_nav">
                 <li id="ongletdebut">
                     <a href=#><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
