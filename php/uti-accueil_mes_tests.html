@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/uti-accueil_mes_tests.css" />
+    <title>Page d'accueil</title>
+
+</head>
+
+<body>
+    <header class="main_head">
+        <nav>
+            <ul>
+                <div id="logoinfi_container">
+                    <img src="../images/Infinite_measures.gif" alt="" width="100px" />
+                </div>
+
+                <div id="logosolution_container">
+                    <img src="../images/logosolution.png" alt="" width="150px" />
+                </div>
+
+                <li>
+                    <a href="#"><img class="logohome" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABZUlEQVRIS+3W21HDMBAF0L0d0AGUQAckFUAHkA6gAqAC6IDQAVRA6IASoIN0cJmb8XocW7IediY/0V9iSUerx0qwIxUcybVqmOSdmW0BfNQMvgpu0LcGXAFYl+LFcA91rxgvgkkuzOwrEt0SwCY38myY5GWDnkU635qZ8J8cPAvOQN3KxpMwSUWo6VXEOUURK3INIlpG4QrUoSSegrVZrnLCDNTZAFjG2kZhkjqbt5WoN1sDWIX6CMIzoaP4AI4kiImB2yDB7MEHQoPZrYUTWWlqxN6+zW5d+N7MXuYSIv08AHjVt/5UC/eUqGvvfOJA/szMby5doTt0AHcRklPOsHf1DUAXy6CMneMT7NP13lk3/0/7IZTlZp3qZwBPvf2g34+BpTzB7aTU7OqDT7Xey9eBdWuzj38jGct6nwBuSs/xhZlpt3aLnjO6Y/eeNc1LRXX7D0HV/S2CJ6bKZPPkYy/ZQ2WFf40MqR+/fRLLAAAAAElFTkSuQmCC"
+                        /></a>
+                </li>
+                <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-touch-icon-57x57.png">
+
+            </ul>
+
+        </nav>
+
+        <div class="header_bottom">
+            <p> Session réalisée le 2020-10-27 à 15h32 - M. Jean DUPONT </p>
+            <p>
+                <a href="#"><img id="save" src="../images/save.png" alt=""></a>
+                <a href="#"><img id="print" src="../images/imprimante.png" alt=""></a>
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <section>
+
+        <div id=menuGauche>
+            <ul id=barre_nav>
+                <li id="ongletdebut">
+                    <a href=#><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone messagerie" width=10px> Mon profil</a>
+                </li>
+                <li>
+                    <a href=#><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                </li>
+                <li>
+                    <a href="uti-accueil_resultat_date.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Consulter mes résultats</a>
+                </li>
+                <li>
+                    <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report" width=10px> Analyse de mes tests</a>
+                    <ul>
+                        <li><a href="uti-accueil_mes_tests.html#test-1">1. Temps de réaction à un son</a></li>
+                        <li><a href="uti-accueil_mes_tests.html#test-2">2. Temps de réaction à une lumière</a></li>
+                        <li><a href="uti-accueil_mes_tests.html#test-3">3. Fréquence cardiaque</a></li>
+                        <li><a href="uti-accueil_mes_tests.html#test-4">4. Température de la peau</a></li>
+                        <li id="ongletfin"><a href="uti-accueil_mes_tests.html#test-5">5. Reconnaissance de tonalité</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div id=contenu>
+            <h2> COMPTE RENDU DES TESTS</h2>
+            <p>
+                <h3 id="test-1">Temps de réaction à un son</h3>
+                <div class="div-test-son">
+                    <h4 id="son attendu"> Temps de réaction à un son attendu</h4>
+                    <div class="div-son-attendu">
+                        <p> Début du son: 15:45:32.12</p>
+                        <p> Départ du militaire:15:45.59</p>
+                    </div>
+                    <h4 id="son inattendu"> Temps de réaction à un son inattendu</h4>
+                    <div class="div-son-inattendu">
+                        <p> Début du son: 15:45:32.20</p>
+                        <p> Départ du militaire:15:45.99</p>
+                    </div>
+
+                </div>
+
+                <h3 id="test-2">Temps de réaction à une lumière</h3>
+                <div class="div-test-lumière">
+                    <h4 id=" lumière attendue"> Temps de réaction à une lumière attendue</h4>
+                    <div class="div-lumière-attendue">
+                        <h5 id="lumière jour">JOUR</h5>
+                        <div class="div-lumière-jour"></div>
+                        <h5 id="lumière nuit">NUIT</h5>
+                        <div class="div-lumière-nuit"></div>
+                        <h5 id="champs vision ">Largeur du champs de vision</h5>
+                        <div class="div-champs-vision"></div>
+                    </div>
+                    <h4 id="lumière inattendue"> Temps de réaction à une lumière inattendue</h4>
+                    <div class="div-lumière-inattendue">
+                        <h5 id="lumière jour">JOUR</h5>
+                        <div class="div-lumière-jour"></div>
+                        <h5 id="lumière nuit">NUIT</h5>
+                        <div class="div-lumière-nuit"></div>
+                    </div>
+
+                </div>
+
+                <h3 id="test-3">Fréquence cardiaque</h3>
+                <div class="div-test-freq">
+                    <p>
+                        <table>
+                            <tr>
+                                <td>Fréquence Cardiaque </td>
+
+                                <td>73/min</td>
+                            </tr>
+                            <tr>
+                                <td>Durée de P </td>
+
+                                <td>98 ms</td>
+
+                            </tr>
+                            <tr>
+                                <td>Axe de P </td>
+
+                                <td>0°</td>
+
+                            </tr>
+                            <tr>
+                                <td>Amplitude de P</td>
+
+                                <td>1,8 mm</td>
+
+                            </tr>
+                            <tr>
+                                <td>PR </td>
+
+                                <td>165 ms</td>
+
+                            </tr>
+                            <tr>
+                                <td>Durée de QRS </td>
+
+                                <td>80 ms, en pratique 110 ms </td>
+
+                            </tr>
+                            <tr>
+                                <td>Axe de QRS</td>
+
+                                <td>62°</td>
+
+                            </tr>
+                            <tr>
+                                <td>Onde Q physiologique </td>
+
+                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td>QT(variable avec FC)</td>
+
+                                <td>360 à 60bpm</td>
+
+                            </tr>
+
+
+
+                        </table>
+                    </p>
+                    <div id="bilan">
+                        *BILAN: Rythme sinusal, ECG NORMAL
+                        <a href="https://ecglibrary.com/ecgs/norm_2x.png"> Afficher ECG </a>
+                    </div>
+                </div>
+
+                <h3 id="test-4">Température de la peau</h3>
+                <div class="div-test-temperature">
+                    <h4 id="son attendu"> Sans effort</h4>
+                    <div class="div-son-attendu"></div>
+                    <h4 id="son inattendu"> Avec effort </h4>
+                    <div class="div-son-inattendu"></div>
+
+                </div>
+
+                <h3 id="test-5">Reconnaissance de tonalité</h3>
+                <div class="div-test-tonalite">
+                    <p>
+                        <table>
+                            <tr>
+                                <th>Fréquence (Hz)</th>
+                                <th>Son reproduit</th>
+                                <th>Score</th>
+
+                            </tr>
+                            <tr>
+                                <td>250</td>
+                                <td>oui</td>
+                                <td>......</td>
+                            </tr>
+                            <tr>
+                                <td>500</td>
+                                <td>oui</td>
+                                <td>......</td>
+                            </tr>
+                            <tr>
+                                <td>1000</td>
+                                <td>oui</td>
+                                <td>......</td>
+                            </tr>
+                            <tr>
+                                <td>2000</td>
+                                <td>oui</td>
+                                <td>......</td>
+                            </tr>
+                            <tr>
+                                <td>3000</td>
+                                <td>oui</td>
+                                <td>......</td>
+                            </tr>
+                            <tr>
+                                <td>4000</td>
+                                <td>oui</td>
+                                <td>......</td>
+                            </tr>
+                            <tr>
+                                <td>8000</td>
+                                <td>non</td>
+                                <td>......</td>
+                            </tr>
+
+
+
+
+                        </table>
+                    </p>
+                    <div id="bilan">
+                        *BILAN:
+                        <a href="https://ecglibrary.com/ecgs/norm_2x.png"> Afficher profil auditif </a>
+                    </div>
+                </div>
+
+                </br>
+
+            </p>
+
+        </div>
+    </section>
+
+    <footer>
+        <footer class="footer_main">
+            <div id="logostart_container">
+                <img src="assets/images/logoapmd.png" alt="" width="200px" />
+            </div>
+
+            <div class="footer_social_icons">
+                <ul>
+                    <li>
+                        <a href="#" target="blanck"><img class="facebook" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACYElEQVRIS8WWP3LTQBTGv7caSOlwAswM9qTDKcDucE6AHUEd34DhBCgnYHICTE2MxQkgFbYpcJmJPIO4gV06nuxjVlhBkldarRpvaevt733v7xL2dGhPXFiDn3Y+d8FODcytyGmiOQSWix+nVzYiSoEbz8ctCPkWQA/AYQ5gCcCHFBfBz/7c5EQhuN4aHz44kB8ADEwXZf4fbtbiXTjvK2e0Jxe8VTkGULeExp+HkKKfp14L3kK/FYS1rC9LSHGig++At+H9VUYpAX8Y5BPxfUhZogvCy4Rn4WYtjrNh3wE3Ol+GYD4zS6KLzZq87IXNzshjxvuUPdGnYHKaqpMUeBtipbb4MK6CmdvVfaQFA3BIPLme9MPYJg0uqZaY+zez134SHPU3OUySlbLdLsioToPbI5WrmkkwpDhOFkyzfekz6JXBbhlM3Uc7ipXHxEJVsvEEUzfrMBuNADDJk8Xkzfdo4MUGzReXPSZSfWs8VcHJFP0H66oxx4XKYML5zcT10oqLwAVVnPWtKN+kAzc6owEYH7UiLcCN9kgtiGe6e7ShLiwuO3B+oSW6oWw7hcwYxioWM/c8qUgNDSkRAYkQ5VBzVsHUvV+plQZIpeIqGiBHnXH9juVvUz9VAReOTAUsM4WswaYlocBqLT48kHMGHucptwGr1Xm7Fi3jWlSw7ZZSo007ty3AK0jRLfUQiFUqOAnp65SXAUePBCl6Vk+fGP4v7HfD7OYxgQn89XbtDCo99pL5jaod7IFZPW9rOeAViHwH5CUXfl6dlHpXJ41VCrLh0/1maklrsOnCsv/vDfwX2/FCLmrpZ4MAAAAASUVORK5CYII="
+                            /></a>
+                    </li>
+                    <li>
+                        <a href="#" target="blanck"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACK0lEQVRIS+1WQXbSUBS9N6AdylypJC6guALpDnAFpSsoDqzMjLNQB9Yd0BWAK1B30C5Ag02dyxCP/Od5IbGBhORXzrEDmyH//Xvfu/++9yBu6eMt8eKO+J8pv7XUrX7Y+HUfR6T0ALQATEU4qv/E++mp+0MraQ1C/R3TwJ2mla0QK8hiR8a1OZ+nl8okePgybDuOjBPC9dA4AYfSFYDR0GtnA1aIm8dhF5QxgXNnzv0q8uarr+cA9sqSE+IbQFUDV4H7qbDi3cEXX4Sv9VDJF4aH39+6Cp770iQtTKFy0xh2sliFFWfBROjXHZxl30fPs0lWkM/WSZPCrq8lb6wGeJAHkwngjGrEhSZhS0zKm8vgib+Ol3P17nHYF8o7Cwk1wditZZ8VcXMQ9iBmD6A6sFMFanVOHkaBOyqt+NEg7FDkoxWgZZAxfFpk0JzUNi1iyalhs2joNYric8TJUNB+KzDYDSiXoR+iode1ItYgHXELiA/BwY2pMheE3M8OjSxW4axOhsPRVgYjPkeBt9GghcTl/WynwSZTpbc3bid9a9ZkQsFjO6rrKApfXJ64p6X9XQUa9zakY/3exFkUePFS+Gtildzs4EDUaEBhW6yAW5LqnT9Sxwv93nLFOURLaDoAtRWqCYEZyH7RhNpU9cobx5Nr2UbPqqRKzmcCGdXnjl+1u0tHZnqofWxgeiJsg2hkErkAoft1CsNJdOJOLBPMhW39n+uO2FaB/0/q318B4B/XZZO3AAAAAElFTkSuQmCC"
+                            /></a>
+                    </li>
+                    <li>
+                        <a href="#" target="blanck"><img class="youtube" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABUklEQVRIS+2W3VXCQBCFv/Ek5/imViAdSAdKB9KBHWgHYgWWoB2IFQgd0IHYAe+ujmeWIHGNOoZAeGDeNufeuZm/nRVaMmlJl53wxjK/XalWsjPgtBS+nZ2mU5DpHCwz0IkQxin5S8RK3oX3B5COU8UJs5/Z6wuvkwUhEc5GSaROxy7YSAi9b8LKfgfCs8tFbVA4EpjFIix8FHV9qu3TR+wJwbJaFs4vQO8c/EfAeuDEgU0g2hfehmnEA+Da4exGCAMlvwI1zoGDs4BE7krCRlY4hMwcXTrFmxFe9kdszHvHRKxF2Prjr4umGeEi1ZbmWDeHrS6sxCm4JdbZbVXC7nGycbBx6rrllsCqOY6LoY0LpKUrcz6Xa10SYyF8dn3FWmQIelyjfr9Q5AU4/3EtJgujPJPWSP/p3rgICrN1WD7Hz9v19Gk2zdXedhFvIsvtNtcHrDZ2HxZzvJMAAAAASUVORK5CYII="
+                            /></a>
+                    </li>
+                    <li>
+                        <a href="#" target="blanck"><img class="linkedin" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABbUlEQVRIS+2X4VGDQBCF3xMLiBXkrECsQK3AEoTkr4l0YOyASfybXKzEdKAdeHRAAcI6lxEGcEZDcpI4Iz+PY7/bt7tvDmJPD/fExeGAVaQVMuk7VcJjYuLQVGPWMrZQyeTNKfQzGD2eVuF18K2+FMrzr4CFV+YxXBWxNwEnAHaWnm3AhIRmNlyqSPckE3vas23VaANOktlAFSA1mgcC6i7AoMcTE4ephanxIhbBXSdgACsScZ7TJyUC0OsKvC3ny3dtagy7uYiQQwISNyJ4OgKX63XmvoABPQYmDl/XJYm0yjOJCVzXDKNNVyezQTluajyfiPCelAczHU4KCIC06IMqqD9a2Cm4KOfWJbjs+Ej3mvDmFLSS+qeMG92e0uN5YYuq4YLOwf3RQko5K2Wwa7V3LqVWkfYlk5fuwU05O8v4H/znpXZm1NZd24xTd+B9XfZK439HefNwkvUxzLfXWyeQDYMczp/EhgfeedsHfoWuLghKbj0AAAAASUVORK5CYII="
+                            /></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_menu_one">
+                <ul>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">FAQ</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer_bottom">
+                <p>Design by: <a href="#">APMD</a></p>
+            </div>
+
+
+            </div>
+        </footer>
+
+
+</body>

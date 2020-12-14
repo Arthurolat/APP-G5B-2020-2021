@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/uti-gestionnaire_lancer-test1_connu.css" />
-    <title>lancement session attribution utilisateur connu-test </title>
+    <link rel="stylesheet" href="../css/gestionnaire_lancer-test4.css" />
+    <title>lancement session récapitulatif et clôture</title>
 
 </head>
 
@@ -33,19 +33,19 @@
         <div id=menuGauche>
             <ul id=barre_nav>
                 <li id="ongletdebut">
-                    <a href=#><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
+                    <a href=#><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                    <a href=#><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
-                    <a class="active" href=#><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
+                    <a class="active" href=#><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="../images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
+                    <a href=#><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
                 <li id="ongletfin">
-                    <a href=#><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                    <a href=#><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
                 </li>
 
             </ul>
@@ -55,46 +55,99 @@
         <div id=contenu>
             <h2> Lancement d'une session de tests </h2>
 
-            <p>Pour lancer une session de tests, vous devez commencer par attribuer la session à un utilisateur.</p>
+            <p>Voici un récapitulatif des tests réalisés. Cliquez sur "Clôturer" pour clôturer la session de tests psychotechniques. </p>
 
             <div class="step_progress">
                 <ul>
                     <li class="ok">Démarrage session</li>
-                    <li>Choisir le boitier</li>
-                    <li>Phase tests</li>
-                    <li>Validation</li>
+                    <li class="ok">Choisir le boitier</li>
+                    <li class="ok">Phase tests</li>
+                    <li class="ok">Validation</li>
                 </ul>
             </div>
 
-            <div class=onglet>
-                <div class=element1>
-                    <p>Utilisateur déjà existant</p>
-                </div>
-                <div class=element2>
-                    <p><a href="uti-gestionnaire_lancer-test1_inconnu.html">Créer un nouveau compte utilisateur</a></p>
-                </div>
-            </div>
             <div class=formulaire>
 
-                <form method="post" action="uti-gestionnaire_lancer-test2.html">
-                    <p>
-                        <fieldset>
-                            <p><label>Nom : <input type="text" name="nom" size="50" placeholder="Le nom de l'utilisateur..."></label></p>
-                            <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="Le prénom de l'utilisateur..."></label></p>
-                            <p><label>Date et heure : <input type="datetime-local" name="date"></label></p>
-                            <p class="bouton"><input type="submit" value="Suivant" /></p>
-                        </fieldset>
-                    </p>
-                </form>
+                <table>
+                    <tr class="theader">
+                        <th>Heure</th>
+                        <th>Test</th>
+                        <th>Valeur</th>
+                        <th>Unité de mesure</th>
+                    </tr>
+                    <tr>
+                        <td>2020-11-11 16h45</td>
+                        <td>Température superficielle de la peau avant effort</td>
+                        <td>36.8</td>
+                        <td>degrés</td>
+                    </tr>
+                    <tr>
+                        <td>2020-11-11 16h50</td>
+                        <td>Température superficielle de la peau après effort</td>
+                        <td>37.9</td>
+                        <td>degrés</td>
+                    </tr>
+                    <tr>
+                        <td>2020-11-11 17h10</td>
+                        <td>Fréquence cardiaque avant effort</td>
+                        <td>80 </td>
+                        <td>battement/s</td>
+                    </tr>
+                    <tr>
+                        <td>2020-11-11 17h10</td>
+                        <td>Fréquence cardiaque après effort</td>
+                        <td>110 </td>
+                        <td>battement/s</td>
+                    </tr>
+                    <tr>
+                        <td>2020-11-11 17h10</td>
+                        <td>Fréquence cardiaque après effort</td>
+                        <td>110 </td>
+                        <td>battement/s</td>
+                    </tr>
+                    <tr>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ff</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
 
-                <!-- <p>
-                    <a href="uti-gestionnaire_lancer-test2.html">Suivant</a>
-                </p>
-                -->
 
             </div>
             </br>
-
+            <div class=controle>
+                <div class="element1">
+                    <p><a href="gestionnaire_lancer-test3.html">Retour</a></p>
+                </div>
+                <div class="element2">
+                    <p><a href="gestionnaire_lancer-test1_connu.html">Clôturer</a></p>
+                </div>
+            </div>
         </div>
     </section>
 

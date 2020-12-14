@@ -1,7 +1,8 @@
 body {
     width: 100%;
     margin: 0;
-    background: url("../images/image_fond.png");
+    background: url("../images/image_militaire.png");
+    height: auto;
 }
 
 
@@ -237,7 +238,6 @@ section {
     box-shadow: 2px 2px 5px #041733;
     border-radius: 15px;
     margin-left: 1%;
-    margin-bottom: 50px;
     padding: 0% 1% 0% 1%;
     background-color: rgba(255, 255, 255, 0.555);
 }
@@ -346,7 +346,7 @@ ul li.ok:after {
     height: 40px;
 }
 
-.onglet .element1 {
+.onglet .element2 {
     color: #ed7d31;
     font-weight: bold;
     text-decoration: underline;
@@ -356,14 +356,14 @@ ul li.ok:after {
     background-color: rgba(255, 255, 255, 0.774);
 }
 
-.onglet .element2 {
+.onglet .element1 {
     border-bottom: 2px solid #041733;
     text-shadow: 0.3px 0.8px 10px white;
     font-weight: bold;
 }
 
-.element2 a,
-.element2 a:visited {
+.element1 a,
+.element1 a:visited {
     text-decoration: none;
     color: black;
 }

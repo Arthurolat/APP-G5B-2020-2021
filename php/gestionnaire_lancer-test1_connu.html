@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/uti-gestionnaire_lancer-test1_inconnu.css" />
-    <title>lancement session attribution test-création compte</title>
+    <link rel="stylesheet" href="../css/gestionnaire_lancer-test1_connu.css" />
+    <title>lancement session attribution utilisateur connu-test </title>
 
 </head>
 
@@ -68,30 +68,26 @@
 
             <div class=onglet>
                 <div class=element1>
-                    <p><a href="uti-gestionnaire_lancer-test1_connu.html">Utilisateur déjà existant</a></p>
+                    <p>Utilisateur déjà existant</p>
                 </div>
                 <div class=element2>
-                    <p>Créer un nouveau compte utilisateur</p>
+                    <p><a href="gestionnaire_lancer-test1_inconnu.html">Créer un nouveau compte utilisateur</a></p>
                 </div>
             </div>
             <div class=formulaire>
-                <form method="post" action="uti-gestionnaire_lancer-test2.html">
+
+                <form method="post" action="gestionnaire_lancer-test2.html">
                     <p>
                         <fieldset>
-                            <p><label>Nom : <input type="text" name="nom" size="50" placeholder="nom"></label></p>
-                            <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="prénom"></label></p>
-                            <p><label>Email : <input type="email" name="email" size="50" placeholder="email"></label></p>
-                            <p><label>Date de naissance : <input type="date" name="date"></label></p>
-                            <p><label>Numero de téléphone : <input type="tel" name="tel" maxlength="10" placeholder="tel"></label></p>
-                            <p><label>Adresse : <input type="text" name="adresse" size="50" placeholder="rue"></label></p>
-                            <p><label>Ville : <input type="text" name="ville" size="50" placeholder="ville"></label></p>
-                            <p><label>Code postal : <input type="text" name="adresse" size="50" maxlength="5" placeholder="code postal"></label></p>
+                            <p><label>Nom : <input type="text" name="nom" size="50" placeholder="Le nom de l'utilisateur..."></label></p>
+                            <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="Le prénom de l'utilisateur..."></label></p>
+                            <p><label>Date et heure : <input type="datetime-local" name="date"></label></p>
                             <p class="bouton"><input type="submit" value="Suivant" /></p>
                         </fieldset>
                     </p>
                 </form>
-                <!-- 
-                <p>
+
+                <!-- <p>
                     <a href="uti-gestionnaire_lancer-test2.html">Suivant</a>
                 </p>
                 -->
