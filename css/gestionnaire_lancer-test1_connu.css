@@ -1,7 +1,7 @@
 body {
     width: 100%;
     margin: 0;
-    background: url("../images/image_militaire.png");
+    /*background: url("../images/image_militaire.png");*/
     height: auto;
 }
 
@@ -9,10 +9,21 @@ body {
 
 /*------------------------------corps de page ------------------------------*/
 
+#image_fond{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/image_militaire.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 section {
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -85,7 +96,6 @@ section {
     box-shadow: 2px 2px 5px #041733;
     border-radius: 15px;
     margin-left: 1%;
-    margin-bottom: 50px;
     padding: 0% 1% 0% 1%;
     background-color: rgba(255, 255, 255, 0.555);
 }
