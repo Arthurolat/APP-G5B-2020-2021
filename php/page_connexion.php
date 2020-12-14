@@ -31,7 +31,7 @@
                 <img src="../images/Infinite_measures.gif" alt="" width="300px" />
 
             </div>
-            <form class="connexionsection">
+            <form class="connexionsection " action="verification.php" method="POST">
                 <h1>Connexion</h1>
                 <div class="inputRow">
                     <div class="inputIcon">
@@ -59,6 +59,13 @@
                 <div class="btnRow">
                     <input type="submit" value="Connexion" class="btn" id="loginBtn">
                 </div>
+                <?php
+                if(isset($_GET['erreur'])){
+                    $err = $_GET['erreur'];
+                    if($err==1 || $err==2)
+                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                }
+                ?>
             </form>
         </div>
     </div>
