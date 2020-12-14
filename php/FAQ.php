@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/FAQ.css" />
+    <link rel="stylesheet" href="../css/FAQ.css" />
     <title>Page d'accueil</title>
 
 </head>
@@ -15,15 +15,15 @@
             <nav>
                 <ul>
                     <div id ="logoinfi_container">
-                        <img src="assets/images/Infinite_measures.gif" alt="" width="100px"/>
+                        <img src="../images/Infinite_measures.gif" alt="" width="100px"/>
                     </div>
 
                     <div id="logosolution_container">
-                        <img src="assets/images/logosolution.png" alt="" width="150px"/>
+                        <img src="../images/logosolution.png" alt="" width="150px"/>
                     </div>
 
                     <li><a href="#"><img  class="logohome" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABZUlEQVRIS+3W21HDMBAF0L0d0AGUQAckFUAHkA6gAqAC6IDQAVRA6IASoIN0cJmb8XocW7IediY/0V9iSUerx0qwIxUcybVqmOSdmW0BfNQMvgpu0LcGXAFYl+LFcA91rxgvgkkuzOwrEt0SwCY38myY5GWDnkU635qZ8J8cPAvOQN3KxpMwSUWo6VXEOUURK3INIlpG4QrUoSSegrVZrnLCDNTZAFjG2kZhkjqbt5WoN1sDWIX6CMIzoaP4AI4kiImB2yDB7MEHQoPZrYUTWWlqxN6+zW5d+N7MXuYSIv08AHjVt/5UC/eUqGvvfOJA/szMby5doTt0AHcRklPOsHf1DUAXy6CMneMT7NP13lk3/0/7IZTlZp3qZwBPvf2g34+BpTzB7aTU7OqDT7Xey9eBdWuzj38jGct6nwBuSs/xhZlpt3aLnjO6Y/eeNc1LRXX7D0HV/S2CJ6bKZPPkYy/ZQ2WFf40MqR+/fRLLAAAAAElFTkSuQmCC"/></a></li>
-                    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-touch-icon-57x57.png">
+                    <link rel="apple-touch-icon" sizes="57x57" href="/../icons/apple-touch-icon-57x57.png">
                     
                 </ul>
                 
