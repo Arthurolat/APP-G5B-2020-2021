@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type ="text/css" href="assets/css/cssaccueil_admin.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/Ajouter_new_type_capteur.css">
+    <link rel="stylesheet" type ="text/css" href="../css/cssaccueil_admin.css" />
+    <link rel="stylesheet" type="text/css" href="../css/Gestion_des_capteurs.css">
     <title>Page d'accueil</title>
 </head>
 
@@ -16,15 +16,15 @@
             <nav>
                 <ul>
                     <div id ="logoinfi_container">
-                        <img src="assets/images/Infinite_measures.gif" alt="" width="100px"/>
+                        <img src="../images/Infinite_measures.gif" alt="" width="100px"/>
                     </div>
 
                     <div id="logosolution_container">
-                        <img src="assets/images/logosolution.png" alt="" width="150px"/>
+                        <img src="../images/logosolution.png" alt="" width="150px"/>
                     </div>
 
                     <li><a href="#"><img  class="logohome" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAABZUlEQVRIS+3W21HDMBAF0L0d0AGUQAckFUAHkA6gAqAC6IDQAVRA6IASoIN0cJmb8XocW7IediY/0V9iSUerx0qwIxUcybVqmOSdmW0BfNQMvgpu0LcGXAFYl+LFcA91rxgvgkkuzOwrEt0SwCY38myY5GWDnkU635qZ8J8cPAvOQN3KxpMwSUWo6VXEOUURK3INIlpG4QrUoSSegrVZrnLCDNTZAFjG2kZhkjqbt5WoN1sDWIX6CMIzoaP4AI4kiImB2yDB7MEHQoPZrYUTWWlqxN6+zW5d+N7MXuYSIv08AHjVt/5UC/eUqGvvfOJA/szMby5doTt0AHcRklPOsHf1DUAXy6CMneMT7NP13lk3/0/7IZTlZp3qZwBPvf2g34+BpTzB7aTU7OqDT7Xey9eBdWuzj38jGct6nwBuSs/xhZlpt3aLnjO6Y/eeNc1LRXX7D0HV/S2CJ6bKZPPkYy/ZQ2WFf40MqR+/fRLLAAAAAElFTkSuQmCC"/></a></li>
-                    <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-touch-icon-57x57.png">
+                    <link rel="apple-touch-icon" sizes="57x57" href="/../icons/apple-touch-icon-57x57.png">
                     
                 </ul>
                 
@@ -38,50 +38,49 @@
         <div id=menuGauche>
             <ul>
                 <li id="ongletdebut">
-                    <a href=#><img class="img-responsive" src="assets/images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
+                    <a href=#><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="assets/images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                    <a href=#><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="assets/images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
+                    <a href=#><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
-                    <a class="img-responsive" href=#><img class="img-responsive" src="assets/images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
+                    <a class="img-responsive" href=#><img class="img-responsive" src="../images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="assets/images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                    <a href=#><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
                 </li>
 
                 <p> Réglages :</p>
                 <li>
-                    <a href=#><img class="img-responsive" src="assets/images/icone_utilisateurs.png" alt="icone utilisateurs" width=10px> Utilisateurs</a>
+                    <a href=#><img class="img-responsive" src="../images/icone_utilisateurs.png" alt="icone utilisateurs" width=10px> Utilisateurs</a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="assets/images/icone_capteur2.png" alt="icone capteur" width=10px> Capteurs</a>
+                    <a href=#><img class="img-responsive" src="../images/icone_capteur2.png" alt="icone capteur" width=10px> Capteurs</a>
                 </li>
                 <li id="ongletfin">
-                    <a href=#><img class="img-responsive" src="assets/images/icone_faq.png" alt="icone faq" width=10px> F.A.Q</a>
+                    <a href=#><img class="img-responsive" src="../images/icone_faq.png" alt="icone faq" width=10px> F.A.Q</a>
                 </li>
 
             </ul>
 
         </div>
         <div id="contenu">
+
             <h2> Gestion des capteurs </h2>
-                <h3>Ajouter un nouveau capteur</h3>
-                    <section class="section1">
-                        <form action="#">
-                                 <label for="Nomcapteurinput">Nom du capteur :</label>
-                                 <input type="text" name="Nom" id="nomcapteurinput" placeholder="Nom">
-                                 <label for="Seuilinput">Veuillez saisir le seuil :</label>
-                                 <input type="text" name="Seuil" id="Seuilinput" placeholder="Seuil">
-                                 <label for="Imageinput">Image du capteur :</label>
-                                 <input type="file" name="ImageCapteur" id="Imageinput" placeholder="Image">
-                                 <button>Enregistrer</button> 
-                        </form>
-                    </section>
-               
+
+            <div class="div1">
+                <p>
+                    <a href="#"><img src="../images/plus.png" alt="imageplus">Ajouter des capteurs</a>
+                </p>
+                <P>
+                    <a href="#"><img src="../images/plus.png" alt="imageplus">Ajouter un nouveau type de capteur</a>
+                </P>
+            </div>
+          
+            </p>
 
         </div>
     </section>
@@ -89,7 +88,7 @@
     <footer>
         <footer class="footer_main">
     <div id ="logostart_container">
-                        <img src="assets/images/logoapmd.png" alt="" width="200px"/>
+                        <img src="../images/logoapmd.png" alt="" width="200px"/>
                     </div>
 
     <div class="footer_social_icons">
