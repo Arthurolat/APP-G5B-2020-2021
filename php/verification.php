@@ -5,7 +5,7 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
     // connexion à la base de données
     $db_mail = 'mail_bdd';
     $db_mdp = 'mdp_bdd';
-    $db_name     = 'bdd v1.sql';
+    $db_name     = 'bddv1.sql';
     $db_host   = 'localhost';
     $db = mysqli_connect($db_host, $db_mail, $db_mdp,$db_name)
            or die('could not connect to database');
