@@ -13,6 +13,8 @@
 
 
 
+
+
 <body>
     
     <?php include("header.php"); ?>
@@ -20,6 +22,7 @@
     <div class="connexioncontainer">
         <div class="slidersection">
             <img src="../images/Infinite_measures.gif" alt="" width="300px" />
+
 
         </div>
         <form class="connexionsection " action="verification.php" method="POST">
