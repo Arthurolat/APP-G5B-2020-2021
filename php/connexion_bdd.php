@@ -5,7 +5,9 @@ $bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset
 ?>
 
 
-<!-- 
+
+<!-- $reponse = $bdd->query('SELECT mail, mdp, statut FROM personne');
+
 $reponse = $bdd->query('SELECT * FROM sessiontest');
 
 while ($donnees = $reponse->fetch())
