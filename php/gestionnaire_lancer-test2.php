@@ -77,7 +77,7 @@
                     <p><a href="gestionnaire_lancer-test1_connu.php">Retour</a></p>
                 </div>
                 <div class="element2">
-                    <p><a href="gestionnaire_lancer-test3.html">Suivant</a></p>
+                    <p><a href="gestionnaire_lancer-test3.php">Suivant</a></p>
                 </div>
             </div>
         </div>

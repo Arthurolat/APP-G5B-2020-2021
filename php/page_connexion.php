@@ -53,11 +53,13 @@
             <div class="btnRow">
                 <input type="submit" value="Connexion" class="btn" id="loginBtn">
             </div>
-            <? php
-            if(isset($_GET['erreur'])){
+            <?php
+            if(isset($_GET['erreur']))
+            {
                 $err = $_GET['erreur'];
                 if($err==1 || $err==2)
-                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>"; 
+                       
             }
             ?>
         </form>

@@ -28,7 +28,7 @@
                     <a class="active" href=#><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Consulter mes résultats</a>
                 </li>
                 <li>
-                    <a href="uti-accueil_mes_tests.html"><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report" width=10px> Analyse de mes tests</a>
+                    <a href="uti-accueil_mes_tests.php"><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report" width=10px> Analyse de mes tests</a>
                     <ul>
                         <li><a href="uti-accueil_mes_tests.html#test-1">1. Temps de réaction à un son</a></li>
                         <li><a href="uti-accueil_mes_tests.html#test-2">2. Temps de réaction à une lumière</a></li>

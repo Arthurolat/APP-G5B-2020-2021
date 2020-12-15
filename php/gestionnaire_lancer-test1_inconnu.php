@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class=formulaire>
-                <form method="post" action="gestionnaire_lancer-test2.html">
+                <form method="post" action="gestionnaire_lancer-test2.php">
                     <p>
                         <fieldset>
                             <p><label>Nom : <input type="text" name="nom" size="50" placeholder="nom"></label></p>

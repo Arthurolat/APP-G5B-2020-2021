@@ -129,10 +129,10 @@
 
             <div class=controle>
                 <div class="element1">
-                    <p><a href="gestionnaire_lancer-test2.html">Retour</a></p>
+                    <p><a href="gestionnaire_lancer-test2.php">Retour</a></p>
                 </div>
                 <div class="element2">
-                    <p><a href="gestionnaire_lancer-test4.html">Suivant</a></p>
+                    <p><a href="gestionnaire_lancer-test4.php">Suivant</a></p>
                 </div>
             </div>
         </div>
