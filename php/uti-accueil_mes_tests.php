@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/uti-accueil_mes_tests.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
-    <title>Page d'accueil</title>
+    <title>Page résutat des tests utilisateur</title>
 
 </head>
 

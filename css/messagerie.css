@@ -1,225 +1,206 @@
 /*------------ Messagerie ------------*/
 
-.container
-{
+.container {
     max-width: 500 !important;
     margin: auto;
     margin-top: 4%;
     font-family: arial;
-    letter-spacing: 0.5px ;
-    float:right;
+    letter-spacing: 0.5px;
+    float: right;
     background-color: #A9CAED;
-
 }
 
-img
-{
+img {
     max-width: 100%;
-    border-radius:50%;
+    border-radius: 50%;
 }
 
-
-.msg-header
-{
-    border: 1px solid #ccc ;
+.msg-header {
+    border: 1px solid #ccc;
     width: 100%;
     height: 10%;
     border: none;
-    display: inline-block; 
+    display: inline-block;
     background-color: #A9CAED;
-    
 }
-.msg-header-img
-{
 
+.msg-header-img {
     border-radius: 50%;
     width: 40px;
     margin-left: 5%;
     margin-top: 12px;
     float: left;
 }
-.active
-{
+
+.active {
     width: 120px;
-    float:left;
+    float: left;
     margin-top: 10px;
-
 }
-.active h4
-{
-    font-size:20px;
-    margin-left:10px;
 
+.active h4 {
+    font-size: 20px;
+    margin-left: 10px;
     color: #000;
 }
-.active h6
-{ 
-    font-size:10px;
-    margin-left:10px;
+
+.active h6 {
+    font-size: 10px;
+    margin-left: 10px;
     line-height: 2px;
     color: #000;
 }
 
-.header-icons
-{
+.header-icons {
     width: 120px;
     float: right;
     margin-top: 12px;
     margin-right: 10px;
     color: #FFF;
     cursor: pointer;
-    margin:10px;
-
+    margin: 10px;
 }
-.chat-page
-{
+
+.chat-page {
     padding: 0 0 50px 0;
     background-color: #FFF;
-
 }
-.msg-inbox
-{
+
+.msg-inbox {
     border: 1px solid #ccc;
     overflow: hidden;
     padding-bottom: 30px;
+}
 
+.chats {
+    padding: 30px 15px 0 25px;
 }
-.chats
-{
-    padding:30px 15px 0 25px;
-}
-.msg-page
-{
+
+.msg-page {
     height: 516px;
     overflow-y: auto;
-    
 }
-.received-chats-img
-{
+
+.received-chats-img {
     display: inline-block;
     width: 20px;
     float: left;
 }
-.received-msg
-{
+
+.received-msg {
     display: inline-block;
     padding: 0 0 0 10px;
     vertical-align: top;
     width: 92%;
 }
-.received-msg-inbox
-{
+
+.received-msg-inbox {
     width: 57%;
 }
-.received-msg-inbox p
-{
+
+.received-msg-inbox p {
     background: #efefef none repeat scroll 0 0;
     border-radius: 10px;
     color: #646464;
     font-size: 14px;
     margin: 0;
-    padding: 5px 10px 5px 12px ;
+    padding: 5px 10px 5px 12px;
     width: 100%;
 }
 
-.time
-{
+.time {
     color: #FFF;
     display: block;
     font-size: 12px;
-    margin:8px 0 0;
+    margin: 8px 0 0;
 }
-.outgoing-chats
-{
+
+.outgoing-chats {
     overflow: hidden;
     margin: 26px 20px;
-
-
 }
-.outgoing-chats-msg p
-{
+
+.outgoing-chats-msg p {
     background: #007bff none repeat scroll 0 0;
     border-radius: 10px;
-    font-size:14px;
-    margin:0;
-    color:#fff;
+    font-size: 14px;
+    margin: 0;
+    color: #fff;
     padding: 5px 10px 5px 12px;
     width: 100%;
-    
-
-
 }
-.outgoing-chats-msg
-{
-    float:left;
+
+.outgoing-chats-msg {
+    float: left;
     width: 46%;
     margin-left: 45%;
-
 }
-.outgoing-chats-img
-{
+
+.outgoing-chats-img {
     display: inline-block;
     width: 20px;
     float: right;
-
 }
-.msg-bottom
-{
+
+.msg-bottom {
     margin-top: 3%;
     margin-bottom: 3%;
     border: none;
     position: relative;
     height: 10%;
     background-color: #A9CAED;
-}    
-    
-.input-group
-{
+}
+
+.input-group {
     float: right;
     margin-top: 13px;
     margin-right: 20px;
     outline: none !important;
     border-radius: 20px;
     width: 61% !important;
-    background-color:#A9CAED;
-    border: 1px solid #ccc ;
+    background-color: #A9CAED;
+    border: 1px solid #ccc;
 }
-.form-control
-{
-    border:none !important;
-    border-radius: 20px !important;
 
+.form-control {
+    border: none !important;
+    border-radius: 20px !important;
 }
-.input-group-text
-{
-    background: transparent !important; 
-    border:none !important;
+
+.input-group-text {
+    background: transparent !important;
+    border: none !important;
 }
-.fa 
-{
-    
+
+.fa {
     cursor: pointer;
 }
-body
-{
-    background-image: url("../images/Militaire\ photos.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-   
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*background: url("../images/image_militaire.png");*/
+    height: auto;
+    background: url("../images/image_avion");
+    background-attachment: fixed;
 }
+
+
 /*------------ barre de navigation verticale ------------*/
 
 #menuGauche {
     width: 15%;
 }
 
-#menuGauche ul {
+#menuGauche #barre_nav {
     border-radius: 15px;
-    background-color: #A9CAED;
+    background-color: #a9caed86;
     border: 2px solid #A9CAED;
     position: -webkit-sticky;
     position: sticky;
     top: 1%;
+    box-shadow: 2px 2px 5px #A9CAED;
 }
 
 #menuGauche ul,
@@ -228,7 +209,7 @@ body
     margin-bottom: 0px;
     list-style-type: none;
     padding-left: 0px;
-    font-size: large;
+    font-size: 18px;
     text-decoration: none;
     width: auto;
     vertical-align: center;
@@ -238,15 +219,24 @@ body
     display: block;
     color: #000;
     padding: 4% 1% 4% 2%;
+    color: black;
 }
 
 #menuGauche ul ul li a {
     padding-left: 9%;
 }
 
+#menuGauche img {
+    width: 15%;
+}
+
+
+/*passage de la souris*/
+
 #menuGauche li a:hover,
 #menuGauche li a.active {
     background-color: white;
+    transition: all .2s ease;
 }
 
 #menuGauche #ongletdebut a:hover {
@@ -255,8 +245,4 @@ body
 
 #menuGauche #ongletfin a:hover {
     border-radius: 0 0 15px 15px;
-}
-
-#menuGauche img {
-    width: 15%;
 }

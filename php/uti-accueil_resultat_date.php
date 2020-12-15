@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/uti-accueil_resultat_date.css" />
-    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <title>Page résultat par date de l'utilisateur</title>
 
 </head>
 
