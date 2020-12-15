@@ -6,7 +6,7 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
     $db_mdp = 'mdp_bdd';
     $db_nom     = 'nom_bdd';
     $db_host     = 'localhost';
-   $db = mysqli_connect($db_host, $db_mail, $db_mdp,$db_nom)
+    $db = mysqli_connect($db_host, $db_mail, $db_mdp,$db_nom)
    or die('could not connect to database');
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
