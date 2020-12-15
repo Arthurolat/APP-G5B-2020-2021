@@ -6,6 +6,8 @@ body {
     height: auto;
     background: url("../images/image_avion");
     background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
 }
 
 
@@ -15,6 +17,8 @@ section {
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 
@@ -87,7 +91,6 @@ section {
     box-shadow: 2px 2px 5px #041733;
     border-radius: 15px;
     margin-left: 1%;
-    margin-bottom: 50px;
     padding: 0% 1% 0% 1%;
     background-color: rgba(255, 255, 255, 0.555);
 }

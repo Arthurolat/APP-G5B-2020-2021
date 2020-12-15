@@ -5,6 +5,8 @@ body {
     height: auto;
     background: url("../images/image_avion");
     background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
 }
 
 
@@ -14,6 +16,8 @@ section {
     display: flex;
     margin-left: 5%;
     margin-right: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 
