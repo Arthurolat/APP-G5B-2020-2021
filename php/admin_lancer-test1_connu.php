@@ -14,7 +14,7 @@
 
     <?php include("header.php"); ?>
 
-    <div id="image_fond">
+    
         <section>
 
             <div id=menuGauche>
@@ -95,7 +95,7 @@
 
         </div>
         </section>
-    </div>
+    
 
     <?php include("footer.php"); ?>
 

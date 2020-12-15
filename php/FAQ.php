@@ -17,7 +17,7 @@
     <section>
 
         <div id="contenu">
-            <h2> F.A.Q </h2><br>
+            <h2> F.A.Q. </h2><br>
             <p>
                 <h3 id="test-1">1. Question :</h3>
                 <div class="div-test1"><p>Réponse</p></div><br>
