@@ -2,14 +2,19 @@
 session_start();
 if(isset($_POST['mail']) && isset($_POST['mdp']))
 {
-    
+    $db_mail = 'mail';
+    $db_mdp = 'mdp_bdd';
+    $db_nom     = 'nom_bdd';
+    $db_host     = 'localhost';
+   $db = mysqli_connect($db_host, $db_mail, $db_mdp,$db_nom)
+   or die('could not connect to database');
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
     $mail = mysqli_real_escape_string($db,htmlspecialchars($_POST['mail'])); 
     $mdp = mysqli_real_escape_string($db,htmlspecialchars($_POST['mdp']));
     
-    if($mail !== "" && $mdp !== "")
-    {
+   
+    
         $requete = "SELECT count(*) FROM personne where 
               mail = '".$mail."' and mdp = '".$mdp."' ";
         $exec_requete = mysqli_query($db,$requete);
@@ -19,15 +24,15 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
         {
 
            $_SESSION['mail'] = $mail;
-           if($mail='administrateur@mail.com')
+           if($mail=='administrateur@mail.com')
            {
             header('Location: admin-lancer-test1_connu.php');
            }
-           if($mail='gestionnaire@mail.com')
+           if($mail=='gestionnaire@mail.com')
            {
-            header('Location: gestionnaire_lancer-test1_connu.html');
+            header('Location: gestionnaire_lancer-test1_connu.php');
            }
-           if($mail='utilisateur@mail.com')
+           if($mail=='utilisateur@mail.com')
            {
             header('Location: uti-accueil_resultat_date.php');
            }
@@ -35,17 +40,11 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
         }
         else
         {
-           header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
+            'utilisateur ou mot de passe incorrect';
         }
     }
     else
     {
-       header('Location: login.php?erreur=2'); // utilisateur ou mot de passe vide
+         'utilisateur ou mot de passe vide';
     }
-}
-else
-{
-   header('Location: page_connexion.php');
-}
-mysqli_close($db); // fermer la connexion
-?>
+
