@@ -12,6 +12,9 @@
             <li>
                 <a href="accueil.php"><img class="logohome" src="../images/icones/logo_home.png" /></a>
             </li>
-        </ul>
+            <div id="deconnexion">
+                <a href="accueil.php">Déconnexion</a>    
+            </div>
+        </ul>  
     </nav>
 </header>

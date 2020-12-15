@@ -11,11 +11,6 @@ body {
     background: #041733;
 }
 
-footer {
-    position: absolute;
-    botom: 0;
-}
-
 .container {
     position: absolute;
     top: 0;
