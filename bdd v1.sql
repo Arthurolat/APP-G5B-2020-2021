@@ -72,7 +72,8 @@ DROP TABLE IF EXISTS boitier;
 CREATE TABLE boitier(
 idboitier int(10) PRIMARY KEY NOT NULL auto_increment, 
 idcapteur int(10),
-FOREIGN KEY (idcapteur) REFERENCES capteur(idcapteur) on delete cascade
+FOREIGN KEY (idcapteur) REFERENCES capteur(idcapteur) on delete cascade, 
+PRIMARY KEY (idboitier, idcapteur) 
 );
 
 
