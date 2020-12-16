@@ -184,6 +184,8 @@ body {
     height: auto;
     background: url("../images/image_avion");
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
 }
 
 
