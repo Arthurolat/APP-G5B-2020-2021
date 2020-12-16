@@ -255,9 +255,10 @@ section h2 {
     margin-left: 1%;
     margin-right: 1%;
     border-bottom: 1px solid #041733;
-    background-color: #041733;
+    background-color: white;
     height: 160px;
-    color: white;
+    color: #041733;
+    border-radius: 20px;
     
 }
 
