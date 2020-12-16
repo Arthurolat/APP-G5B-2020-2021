@@ -256,9 +256,9 @@ section h2 {
     margin-left: 1%;
     margin-right: 1%;
     border-bottom: 1px solid #041733;
-    background-color: white;
+    background-color: #041733;
     height: 160px;
-    color: #041733;
+    color: white;
     border-radius: 20px;
     
 }
