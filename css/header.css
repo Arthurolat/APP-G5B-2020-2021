@@ -41,6 +41,7 @@ nav ul {
     border-radius: 50px;*/
     cursor: pointer;
     transition: all 0.3 ease 0s;
+    margin-top: 20px;
 }
 
 #deconnexion a {
@@ -48,7 +49,7 @@ nav ul {
     font-weight: 500;
     font-size: 15px;
     color: #FFF;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 #deconnexion a:hover {
