@@ -24,7 +24,7 @@ section {
 /*------------ barre de navigation verticale ------------*/
 
 #menuGauche {
-    width: 17%;
+    width: 15%;
 }
 
 #menuGauche #barre_nav {
@@ -43,7 +43,7 @@ section {
     margin-bottom: 0px;
     list-style-type: none;
     padding-left: 0px;
-    font-size: large;
+    font-size: 18px;
     text-decoration: none;
     width: auto;
     vertical-align: center;
