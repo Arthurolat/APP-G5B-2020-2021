@@ -17,7 +17,7 @@
 
 <body>
     
-    <?php include("header.php"); ?>
+    <a href="accueil.php" ><img class="logohome" src="../images/icones/logo_home.png" width='30px'/></a>
 
     <div class="connexioncontainer">
         <div class="slidersection">
@@ -65,7 +65,7 @@
         </form>
     </div>
     
-    <?php include("footer.php"); ?>
+    
             
 </body>
 
