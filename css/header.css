@@ -28,11 +28,17 @@ nav ul {
     margin-bottom: 2px;
 }
 
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #deconnexion {
-    padding: 9px 25px;
+    /*padding: 9px 25px;
     background-color: #e36509;
     border: none;
-    border-radius: 50px;
+    border-radius: 50px;*/
     cursor: pointer;
     transition: all 0.3 ease 0s;
 }
@@ -40,13 +46,13 @@ nav ul {
 #deconnexion a {
     font-family: Oswald, sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     color: #FFF;
     text-decoration: none;
 }
 
-#deconnexion:hover {
-    background-color: #cc5a08;
+#deconnexion a:hover {
+    color: #cc5a08;
 }
 
 #logoinfi_container {
