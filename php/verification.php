@@ -32,9 +32,9 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
       {
 
          $_SESSION['mail'] = $mail;
-         if($statut=='administrateur')
+         if($statut=='admin')
          {
-         header('Location: admin-lancer-test1_connu.php');
+         header('Location: admin_lancer-test1_connu.php');
          }
          if($statut=='gestionnaire')
          {

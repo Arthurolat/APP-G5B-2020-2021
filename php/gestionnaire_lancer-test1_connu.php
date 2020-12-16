@@ -32,7 +32,7 @@
                     <a href="gestionnaire_rechercher.php"><img class="img-responsive" src="../images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
                 <li id="ongletfin">
-                    <a href=#><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                    <a href="gestionnaire_analyse-test.php"><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
                 </li>
 
             </ul>

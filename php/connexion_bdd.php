@@ -50,6 +50,6 @@ FROM personne
 
 ------- fonction lancer une session de tests (admin/gestionnaire)-----------
 
-SELECT  as utilisateur 
-FROM personne
+SELECT idboitier  
+FROM boitier
 -->

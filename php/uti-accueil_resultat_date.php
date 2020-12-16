@@ -30,11 +30,11 @@
                 <li>
                     <a href="uti-accueil_mes_tests.php"><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report" width=10px> Analyse de mes tests</a>
                     <ul>
-                        <li><a href="uti-accueil_mes_tests.html#test-1">1. Temps de réaction à un son</a></li>
-                        <li><a href="uti-accueil_mes_tests.html#test-2">2. Temps de réaction à une lumière</a></li>
-                        <li><a href="uti-accueil_mes_tests.html#test-3">3. Fréquence cardiaque</a></li>
-                        <li><a href="uti-accueil_mes_tests.html#test-4">4. Température de la peau</a></li>
-                        <li id="ongletfin"><a href="uti-accueil_mes_tests.html#test-5">5. Reconnaissance de tonalité</a></li>
+                        <li><a href="uti-accueil_mes_tests.php#div-test-son">1. Temps de réaction à un son</a></li>
+                        <li><a href="uti-accueil_mes_tests.php#div-test-lumière">2. Temps de réaction à une lumière</a></li>
+                        <li><a href="uti-accueil_mes_tests.php#div-test-freq">3. Fréquence cardiaque</a></li>
+                        <li><a href="uti-accueil_mes_tests.php#div-test-temperature">4. Température de la peau</a></li>
+                        <li id="ongletfin"><a href="uti-accueil_mes_tests.php#div-test-tonalite">5. Reconnaissance de tonalité</a></li>
                     </ul>
                 </li>
 
@@ -54,105 +54,105 @@
                     <td>Session réalisée le 2020-11-11 à 16h45</td>
                     <td>test son, test fréquence, test température de peau</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
                     <td>Session réalisée le 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
             </table>

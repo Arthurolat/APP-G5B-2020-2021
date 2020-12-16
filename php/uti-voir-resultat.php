@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/uti-accueil_mes_tests.css" />
+    <link rel="stylesheet" href="../css/uti-accueil_mes_tests.css" />   <!-- css idem -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <title>Page résutat des tests utilisateur</title>
@@ -25,10 +25,10 @@
                     <a href=#><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
-                    <a href="uti-accueil_resultat_date.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Consulter mes résultats</a>
+                    <a class="active" href="uti-accueil_resultat_date.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Consulter mes résultats</a>
                 </li>
                 <li>
-                    <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report" width=10px> Analyse de mes tests</a>
+                    <a href="uti-accueil_mes_tests.php"><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report" width=10px> Analyse de mes tests</a>
                     <ul>
                         <li><a href="uti-accueil_mes_tests.php#div-test-son">1. Temps de réaction à un son</a></li>
                         <li><a href="uti-accueil_mes_tests.php#div-test-lumière">2. Temps de réaction à une lumière</a></li>
@@ -44,7 +44,7 @@
 
 
         <div id=contenu>
-                <div class="titre"><h1>ANALYSE DES TESTS</h1></div>
+                <div class="titre"><h1>RESULTATS SESSION DU 2020-12-01</h1></div>
                 <div class="div-legende">
                     <div class="titre-legende"><h2>Légende</h2></div>
                     <div class="div-rond-vert"><h3>Temps de réaction compris entre 0s-2s</h3></div>

@@ -2,7 +2,7 @@
         width: 100%;
         margin: 0;
         padding: 0;
-        background: url("../images/image_militaire.png");
+        background: url("../images/image_avion");
         height: auto;
         background-attachment: fixed;
         background-position: center center;
@@ -72,6 +72,10 @@
     }
     
     #menuGauche #ongletfin a:hover {
+        border-radius: 0 0 15px 15px;
+    }
+    
+    #menuGauche #ongletfin a {
         border-radius: 0 0 15px 15px;
     }
     /*----------------------- contenu -----------------------*/

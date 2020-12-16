@@ -32,7 +32,7 @@
                     <a class="active" href="admin_rechercher.php"><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                    <a href="admin_analyse-test.php"><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
                 </li>
 
                 <p> Réglages :</p>
@@ -64,7 +64,7 @@
                     <td>Session réalisée le </br> 2020-11-11 à 16h45</td>
                     <td>test son, test fréquence, test température de peau</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
@@ -72,7 +72,7 @@
                     <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
@@ -80,7 +80,7 @@
                     <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
@@ -88,7 +88,7 @@
                     <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
@@ -96,7 +96,7 @@
                     <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
                     </td>
                 </tr>
                 <tr>
@@ -104,7 +104,7 @@
                     <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
                     <td>test son, test lumière, test fréquence</td>
                     <td>
-                        <p>Voir</p>
+                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
                     </td>
                 </tr>
 

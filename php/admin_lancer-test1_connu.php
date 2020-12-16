@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/gestionnaire_lancer-test1_connu.css" /> <!--idem que gestionnaire -->
+    <link rel="stylesheet" href="../css/admin_lancer-test1_connu.css" /> <!--idem que gestionnaire -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <title>Page d'accueil</title>
@@ -32,7 +32,7 @@
                         <a href="admin_rechercher.php"><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                     </li>
                     <li>
-                        <a href=#><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                        <a href="admin_analyse-test.php"><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
                     </li>
 
                     <p> Réglages :</p>

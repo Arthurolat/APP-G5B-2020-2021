@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/uti-accueil_mes_tests.css" />
+    <link rel="stylesheet" href="../css/gestionnaire_recherche-tableau-resultat-voir.css" />   <!-- css idem -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <title>Page résutat des tests utilisateur</title>
@@ -19,23 +19,30 @@
         <div id=menuGauche>
             <ul id=barre_nav>
                 <li id="ongletdebut">
-                    <a href=#><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone messagerie" width=10px> Mon profil</a>
+                    <a href="mon_profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                    <a href="admin_messagerie.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
-                    <a href="uti-accueil_resultat_date.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Consulter mes résultats</a>
+                    <a  href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
-                    <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report" width=10px> Analyse de mes tests</a>
-                    <ul>
-                        <li><a href="uti-accueil_mes_tests.php#div-test-son">1. Temps de réaction à un son</a></li>
-                        <li><a href="uti-accueil_mes_tests.php#div-test-lumière">2. Temps de réaction à une lumière</a></li>
-                        <li><a href="uti-accueil_mes_tests.php#div-test-freq">3. Fréquence cardiaque</a></li>
-                        <li><a href="uti-accueil_mes_tests.php#div-test-temperature">4. Température de la peau</a></li>
-                        <li id="ongletfin"><a href="uti-accueil_mes_tests.php#div-test-tonalite">5. Reconnaissance de tonalité</a></li>
-                    </ul>
+                    <a class="active" href="admin_rechercher.php"><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
+                </li>
+                <li>
+                    <a href="admin_analyse-test.php"><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                </li>
+
+                <p> Réglages :</p>
+                <li>
+                    <a href="admin_gestion-utilisateur.php"><img class="img-responsive" src="../images/icones/icone_utilisateurs.png" alt="icone utilisateurs" width=10px> Utilisateurs</a>
+                </li>
+                <li>
+                    <a href="admin_gestion-des-capteurs.php"><img class="img-responsive" src="../images/icones/icone_capteur2.png" alt="icone capteur" width=10px> Capteurs</a>
+                </li>
+                <li id="ongletfin">
+                    <a href="admin_gestion-faq.php"><img class="img-responsive" src="../images/icones/icone_faq.png" alt="icone faq" width=10px> F.A.Q</a>
                 </li>
 
             </ul>
@@ -44,7 +51,7 @@
 
 
         <div id=contenu>
-                <div class="titre"><h1>ANALYSE DES TESTS</h1></div>
+                <div class="titre"><h1>RESULTATS SESSION DU 2020-12-01</h1></div>
                 <div class="div-legende">
                     <div class="titre-legende"><h2>Légende</h2></div>
                     <div class="div-rond-vert"><h3>Temps de réaction compris entre 0s-2s</h3></div>

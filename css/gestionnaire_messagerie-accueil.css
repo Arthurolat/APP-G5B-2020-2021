@@ -128,7 +128,7 @@ tr:not(.theader):hover {
     box-shadow: 1.2px 1.2px 2px #ed7c31e8;
 }
 
-tr td:nth-child(3) a:hover {
+tr td:nth-child(3) p:hover {
     background-color: #ed7d31;
     color: white;
     border: 1px outset #ed7d31;
@@ -187,16 +187,14 @@ tr:nth-child(1) th:nth-child(3) {
 
 /*bouton voir résultat col3 */
 
-tr td:nth-child(3) p a {
+tr td:nth-child(3) p {
     border: 1px outset #A9CAED;
     /*margin: 0 45px 0 45px;*/
     /*padding: 10px 0 10px 0;*/
     margin: 0 30%;
-    padding: 6% 8px;
+    padding: 6% 0;
     border-radius: 5px;
     background-color: #A9CAED;
-    text-decoration: none;
-    color: black;
 }
 
 
