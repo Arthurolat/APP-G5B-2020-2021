@@ -4,13 +4,7 @@ session_start();
 if(isset($_POST['mail']) && isset($_POST['mdp']))
 {
 
-   $db_id = 'appg5b';
-   $db_mdp = '@ppg5b2020';
-   $db_nom     = 'appg5b_bdd';
-   $db_host     = 'mysql-appg5b.alwaysdata.net';
-   $db = mysqli_connect($db_host, $db_id, $db_mdp,$db_nom)
-   or die('could not connect to database');
-
+require"connexionbdd.php";
 
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
@@ -27,10 +21,10 @@ if(isset($_POST['mail']) && isset($_POST['mdp']))
       $exec_requete = mysqli_query($db,$requete);
       $reponse      = mysqli_fetch_array($exec_requete);
       $count = $reponse['count(*)'];
-      $statut= $reponse['statut'];
-      if($count!=0) // nom d'utilisateur et mot de passe correctes
-      {
+      $statut= $reponse['statut']; 
 
+      if($count != 0) // nom d'utilisateur et mot de passe correctes
+      {
          $_SESSION['mail'] = $mail;
          if($statut=='admin')
          {
