@@ -44,8 +44,14 @@
         </div>
 
         <div id=contenu>
+             <?php require"connexionbdd.php";
+                        $requete = "SELECT * FROM personne where mail = '".$_SESSION['mail']."'";
+                        $exec_requete = mysqli_query($db,$requete);
+                        $reponse      = mysqli_fetch_array($exec_requete);
+                    ?>
+
             <h2>
-                <IMG class="profil" src="../images/photos_membres/thomas.png" alt="Thomas LE DEVENTEC" width=120px> Thomas Le Deventec</h2>
+                <IMG class="profil" src="../images/photos_membres/thomas.png" alt="<?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?>" width=120px><?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?></h2>
 
 
 
@@ -65,21 +71,22 @@
                         <td>Prénom</td>
 
                         <td>
-                            <p>Thomas</p>
+                            <p><?= ucfirst($reponse['prenom'])?></p>
+
                         </td>
                     </tr>
                     <tr>
                         <td>Nom</td>
 
                         <td>
-                            <p>LE DEVENTEC</p>
+                            <p><?=mb_strtoupper($reponse['nom']) ?></p>
                         </td>
                     </tr>
                     <tr>
                         <td>Adresse mail</td>
 
                         <td>
-                            <p>thomas.le-deventec@isep.fr</p>
+                            <p><?=$reponse['mail']?></p>
                         </td>
                     </tr>
                     <tr>
@@ -94,14 +101,14 @@
                         <td>Adresse</td>
 
                         <td>
-                            <p>10 rue de Vanves ISSY LES MOULINEAUX</p>
+                            <p><?=ucfirst($reponse['adresse'])?></p>
                         </td>
                     </tr>
                     <tr>
                         <td>Téléphone</td>
 
                         <td>
-                            <p>06.54.32.17.56</p>
+                            <p><?=$reponse['tel']?></p>
                         </td>
                     </tr>
 

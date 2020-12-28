@@ -5,4 +5,5 @@
    $db_host     = 'mysql-appg5b.alwaysdata.net';
    $db = mysqli_connect($db_host, $db_id, $db_mdp,$db_nom)
    or die('could not connect to database');
+   session_start();
 
