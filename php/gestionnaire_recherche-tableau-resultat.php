@@ -85,9 +85,7 @@ session_start();
                     WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur 
                     GROUP BY datesession
                     HAVING utilisateur LIKE '%$Nomutilisateur%'");
-                    while ($donnees = $reponse->fetch()){
-                        echo $donnees['utilisateur'];
-                    } 
+                     
                 break;
 
                 case array(null, $DatedesTestsTo, $DatedesTestsFrom, null): #champs 2 ok si selection des deux
@@ -119,11 +117,7 @@ session_start();
                        HAVING test LIKE '%$selected%'"); 
                    }
                                    
-                   while ($donnees = $reponse->fetch())
-                   {
-                       echo $donnees['utilisateur'].'</br>';
-                       echo $donnees['test'].'</br>';
-                   };    
+                       
                 break;
 
                 case array(empty(trim($Nomutilisateur)), null, null, $Testpsychotechniques): #champs 3 ok
@@ -180,7 +174,7 @@ session_start();
                         HAVING test LIKE '%$selected%'"); 
                     }
                 break;
-                
+
                 case array($Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques): 
                     echo "all";
                     foreach ($Testpsychotechniques as $selected){
@@ -192,7 +186,6 @@ session_start();
                         HAVING (test LIKE '%$selected%') AND (utilisateur LIKE '%$Nomutilisateur%')"); 
                     }
                 break;
-               
             }
                         
             ?>
@@ -204,14 +197,21 @@ session_start();
                     <th>Tests réalisés</th>
                     <th> </th>
                 </tr>
+                <?php 
+                while ($donnees = $reponse->fetch())
+                { 
+                ?>
                 <tr>
-                    <td>Clara Augié</td>
-                    <td>Session réalisée le </br> 2020-11-11 à 16h45</td>
-                    <td>test son, test fréquence, test température de peau</td>
+                    <td><?php echo $donnees['utilisateur']?></td>
+                    <td>Session réalisée le </br> <?php echo $donnees['datesession']?></td>
+                    <td><?php echo $donnees['test']?></td>
                     <td>
                         <p><a href="gestionnaire_recherche-tableau-resultat-voir.php">Voir</a></p>
                     </td>
                 </tr>
+                <?php }
+                    
+                ?>
                 <tr>
                     <td>Arthur Latourrette</td>
                     <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
