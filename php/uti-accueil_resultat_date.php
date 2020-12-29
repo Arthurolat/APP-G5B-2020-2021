@@ -1,3 +1,16 @@
+<?php
+//connection à la bdd
+try {
+    $bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset=utf8', 'appg5b', '@ppg5b2020');
+
+}
+catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
@@ -44,120 +57,42 @@
 
         <div id=contenu>
             <h2> Mes résultats </h2>
+            <?php
+                $reponse = $bdd->query("SELECT datesession, GROUP_CONCAT(distinct t.nom SEPARATOR '</br>- ') as test
+                FROM sessiontest s, resultat r, testgenerique t, personne p
+                WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur AND mail='$_SESSION[mail]'
+                GROUP BY datesession ");
+            
+            ?>                 
+            
             <table>
                 <tr class="theader">
                     <th>Date</th>
                     <th>Tests réalisés</th>
                     <th> </th>
                 </tr>
+
+                <?php 
+                while ($donnees = $reponse->fetch())
+                { 
+                ?>
                 <tr>
-                    <td>Session réalisée le 2020-11-11 à 16h45</td>
-                    <td>test son, test fréquence, test température de peau</td>
+                    <td>Session réalisée le <?php echo $donnees['datesession']?></td>
+                    <td><?php echo '- '.$donnees['test']?></td>
                     <td>
                         <p><a href="uti-voir-resultat.php">Voir</a></p>
                     </td>
                 </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Session réalisée le 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
-                </tr>
-            </table>
+                <?php }
+                    
+                ?>
+            </table>    
+            
+            
             <br>
             <br>
+            
+            <!-- 
             <div class="pagination">
                 <div class="pages">
                     <a class="desactive"> &#60; Précédent</a>
@@ -170,6 +105,7 @@
                     <a href="#">Suivant &#62;</a>
                 </div>
             </div>
+            -->
             <br>
             <br>
         </div>

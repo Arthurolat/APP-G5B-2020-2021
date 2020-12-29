@@ -1,3 +1,15 @@
+<?php
+//connection à la bdd
+try {
+    $bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset=utf8', 'appg5b', '@ppg5b2020');
+
+}
+catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
@@ -41,6 +53,150 @@
 
         <div id=contenu>
             <h2> Résultats </h2>
+            
+            <?php 
+            $Nomutilisateur= $_POST['Nomutilisateur'];
+            $DatedesTestsFrom= $_POST['DatedesTestsFrom'];
+            $DatedesTestsTo= $_POST['DatedesTestsTo'];
+            $Testpsychotechniques= isset($_POST['Testpsychotechniques']) ? $_POST['Testpsychotechniques'] : NULL;
+            $tableau= array($Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques);
+
+            switch($tableau){
+                case array(null, null, null, null): #recherche vide ok
+                    echo "champs vide"; 
+                    $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                    FROM sessiontest s, resultat r, testgenerique t, personne p
+                    WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur 
+                    GROUP BY datesession");
+                break;
+
+                case array(empty(trim($Nomutilisateur)), null, null, null): #recherche vide ok
+                    echo "champs vide"; 
+                    $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                    FROM sessiontest s, resultat r, testgenerique t, personne p
+                    WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur 
+                    GROUP BY datesession");
+                break;
+
+                case array($Nomutilisateur, null, null, null): #champs 1 ok
+                    print_r($Nomutilisateur.'</br>'); 
+                    $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                    FROM sessiontest s, resultat r, testgenerique t, personne p
+                    WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur 
+                    GROUP BY datesession
+                    HAVING utilisateur LIKE '%$Nomutilisateur%'");
+                    while ($donnees = $reponse->fetch()){
+                        echo $donnees['utilisateur'];
+                    } 
+                break;
+
+                case array(null, $DatedesTestsTo, $DatedesTestsFrom, null): #champs 2 ok si selection des deux
+                    print_r($DatedesTestsFrom.'</br>');
+                    print_r($DatedesTestsTo.'</br>');  
+                    $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                    FROM sessiontest s, resultat r, testgenerique t, personne p
+                    WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur 
+                    AND (datesession BETWEEN '$DatedesTestsFrom' AND '$DatedesTestsTo')
+                    GROUP BY datesession"); 
+                break;
+
+                case array(empty(trim($Nomutilisateur)), $DatedesTestsTo, $DatedesTestsFrom, null): #champs 2 ok
+                    print_r($DatedesTestsFrom.'</br>');
+                    print_r($DatedesTestsTo.'</br>');  
+                    $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                    FROM sessiontest s, resultat r, testgenerique t, personne p
+                    WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur 
+                    AND (datesession BETWEEN '$DatedesTestsFrom' AND '$DatedesTestsTo')
+                    GROUP BY datesession");
+                break;
+
+                case array(null, null, null, $Testpsychotechniques): #champs 3 ok 
+                   foreach ($Testpsychotechniques as $selected){
+                       $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                       FROM sessiontest s, resultat r, testgenerique t, personne p
+                       WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur
+                       GROUP BY datesession
+                       HAVING test LIKE '%$selected%'"); 
+                   }
+                                   
+                   while ($donnees = $reponse->fetch())
+                   {
+                       echo $donnees['utilisateur'].'</br>';
+                       echo $donnees['test'].'</br>';
+                   };    
+                break;
+
+                case array(empty(trim($Nomutilisateur)), null, null, $Testpsychotechniques): #champs 3 ok
+                    foreach ($Testpsychotechniques as $selected){
+                        $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                        FROM sessiontest s, resultat r, testgenerique t, personne p
+                        WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur
+                        GROUP BY datesession
+                        HAVING test LIKE '%$selected%'"); 
+                    }
+                break;
+
+                case array($Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, null):
+                    echo "champs 1+2";
+                    $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                    FROM sessiontest s, resultat r, testgenerique t, personne p
+                    WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur
+                    AND (datesession BETWEEN '$DatedesTestsFrom' AND '$DatedesTestsTo') 
+                    GROUP BY datesession
+                    HAVING utilisateur LIKE '%$Nomutilisateur%'");
+                break;
+
+                case array($Nomutilisateur, null, null, $Testpsychotechniques): 
+                    echo "champs 1+3";
+                    foreach ($Testpsychotechniques as $selected){
+                        $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                        FROM sessiontest s, resultat r, testgenerique t, personne p
+                        WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur
+                        GROUP BY datesession
+                        HAVING (test LIKE '%$selected%') AND (utilisateur LIKE '%$Nomutilisateur%')"); 
+                    }
+                break;
+
+                case array(null, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques): 
+                    echo "champs 2+3";
+                    foreach ($Testpsychotechniques as $selected){
+                        $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                        FROM sessiontest s, resultat r, testgenerique t, personne p
+                        WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur
+                        AND (datesession BETWEEN '$DatedesTestsFrom' AND '$DatedesTestsTo') 
+                        GROUP BY datesession
+                        HAVING test LIKE '%$selected%'"); 
+                    }
+                break;
+
+                case array(empty(trim($Nomutilisateur)), $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques): 
+                    echo "champs 2+3";
+                    foreach ($Testpsychotechniques as $selected){
+                        $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                        FROM sessiontest s, resultat r, testgenerique t, personne p
+                        WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur
+                        AND (datesession BETWEEN '$DatedesTestsFrom' AND '$DatedesTestsTo') 
+                        GROUP BY datesession
+                        HAVING test LIKE '%$selected%'"); 
+                    }
+                break;
+                
+                case array($Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques): 
+                    echo "all";
+                    foreach ($Testpsychotechniques as $selected){
+                        $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur , datesession, GROUP_CONCAT(distinct t.nom SEPARATOR ', ') as test
+                        FROM sessiontest s, resultat r, testgenerique t, personne p
+                        WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur
+                        AND (datesession BETWEEN '$DatedesTestsFrom' AND '$DatedesTestsTo') 
+                        GROUP BY datesession
+                        HAVING (test LIKE '%$selected%') AND (utilisateur LIKE '%$Nomutilisateur%')"); 
+                    }
+                break;
+               
+            }
+                        
+            ?>
+
             <table>
                 <tr class="theader">
                     <th>Utilisateur</th>
