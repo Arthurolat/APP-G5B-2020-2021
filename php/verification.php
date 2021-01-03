@@ -3,7 +3,7 @@
 if(isset($_POST['mail']) && isset($_POST['mdp']))
 {
 
-require"connexionbdd.php";
+require("../modele/connexionbdd.php");
 
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS

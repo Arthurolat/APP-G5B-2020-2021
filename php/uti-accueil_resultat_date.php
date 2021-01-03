@@ -1,15 +1,7 @@
 <?php
-//connection à la bdd
-try {
-    $bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset=utf8', 'appg5b', '@ppg5b2020');
-
-}
-catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
-session_start();
+require("../modele/connexionbdd.php");
+require("../modele/fonctions.php");
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -58,11 +50,7 @@ session_start();
         <div id=contenu>
             <h2> Mes résultats </h2>
             <?php
-                $reponse = $bdd->query("SELECT datesession, GROUP_CONCAT(distinct t.nom SEPARATOR '</br>- ') as test
-                FROM sessiontest s, resultat r, testgenerique t, personne p
-                WHERE s.idsession=r.idsession AND r.idtest=t.idtest AND p.idacteur=s.idacteur AND mail='$_SESSION[mail]'
-                GROUP BY datesession ");
-            
+                $reponse=session_users ($bdd, $_SESSION['mail']);
             ?>                 
             
             <table>

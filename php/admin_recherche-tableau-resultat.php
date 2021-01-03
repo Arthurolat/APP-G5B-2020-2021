@@ -52,67 +52,17 @@
 
         <div id=contenu>
             <h2> Résultats </h2>
-            <table>
-                <tr class="theader">
-                    <th>Utilisateur</th>
-                    <th>Date</th>
-                    <th>Tests réalisés</th>
-                    <th> </th>
-                </tr>
-                <tr>
-                    <td>Clara Augié</td>
-                    <td>Session réalisée le </br> 2020-11-11 à 16h45</td>
-                    <td>test son, test fréquence, test température de peau</td>
-                    <td>
-                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Arthur Latourrette</td>
-                    <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Sanae El Messadi</td>
-                    <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Thomas Le Deventec</td>
-                    <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Guillaume Jolly</td>
-                    <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Costantin Chevalier</td>
-                    <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
-                    <td>test son, test lumière, test fréquence</td>
-                    <td>
-                        <p><a href="admin_recherche-tableau-resultat-voir.php">Voir</a></p>
-                    </td>
-                </tr>
 
-            </table>
+            <?php
+            require("../modele/rechercher_un_test.php");
+            
+            ?>
+
             </br>
             </br>
             </br>
 
+            <!--
             <div class="pagination">
                 <div class="pages">
                     <a class="desactive"> &#60; Précédent</a>
@@ -125,6 +75,7 @@
                     <a href="#">Suivant &#62;</a>
                 </div>
             </div>
+            -->
             </br>
             </br>
         </div>
