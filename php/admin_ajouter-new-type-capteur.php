@@ -16,7 +16,6 @@
     
 
     <section>
-
         <div id=menuGauche>
             <ul id="barre_nav">
                 <li id="ongletdebut">
