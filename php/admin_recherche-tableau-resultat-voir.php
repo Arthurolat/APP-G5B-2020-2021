@@ -11,7 +11,6 @@
 </head>
 
 <body>
-    
     <?php include("header.php"); ?>
 
     <section>
@@ -64,7 +63,7 @@
                 </div>
 
                 <div id="div-test-son">
-                    <div class="titre2"><h2>Temps de réaction à un son</h2></div>
+                    <div class="titre2" name="Tempsson"><h2>Temps de réaction à un son</h2></div>
 
                     <div class="div-test-son-attendu"><h3>Son attendu</h3>
                         <p>Temps: 1:02 s</p>
@@ -78,7 +77,7 @@
 
 
                 <div id="div-test-lumière">
-                    <div class="titre3"><h2>Temps de réaction à une lumière</h2></div>
+                    <div class="titre3" name=Tempslumière><h2>Temps de réaction à une lumière</h2></div>
                     <div class="div-test-lumière-attendue">
                         <div class= "titre-lumière-attendue"><h3>Lumière attendue</h3></div>
                         <div class="lumière-attendue-jour">
@@ -108,7 +107,7 @@
                     </div>
                 </div>
 
-                <div id="div-test-freq">
+                <div id="div-test-freq" name="Freqcardiaque">
                     <div class="titre4"><h2>Fréquence cardiaque</h2></div>
                     <div class="div-effort">
                         <h3>Effort</h3>
@@ -121,7 +120,7 @@
                     </div>
                 </div>
 
-                <div id="div-test-temperature">
+                <div id="div-test-temperature" name="Température">
                     <div class="titre5"><h2>Température de la peau</h2></div>
                     <div class="div-effort">
                         <h3>Effort</h3>
@@ -132,7 +131,7 @@
                         <p>39.2°</p>
                     </div>
                 </div>
-                <div id="div-test-tonalite"> 
+                <div id="div-test-tonalite" name="Tonalité"> 
                 <div class="titre6"><h2>Reconnaissance de tonalité</h2></div>
                 <div class="div-test-tonalité-tableau">
                     <p>
@@ -183,6 +182,8 @@
     </section>
 
     <?php include("footer.php"); ?>
+
+ 
 
 
 </body>
