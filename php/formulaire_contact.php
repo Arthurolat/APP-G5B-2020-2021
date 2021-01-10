@@ -6,7 +6,6 @@
         <title>Formulaire de contact</title>
         <link rel="stylesheet" href="../css/formulaire_contact.css">
     </head>
-
     <body>
         
         <div id="corps">

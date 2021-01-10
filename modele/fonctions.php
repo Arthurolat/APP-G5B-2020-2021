@@ -99,10 +99,8 @@ function session_users ($bdd, $mail){
     $reponse->execute();
     return $reponse;
 }
+#----------------------------------affichage des resulats des tests-----------------------------
 
-#-----------------affichage des résultats d'une session de tests------------------------
-
-
-
+?>
 
 
