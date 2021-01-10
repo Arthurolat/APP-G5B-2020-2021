@@ -1,10 +1,3 @@
 <?php
-require("../modele/connexionbdd.php");
-require("../modele/fonctions.php");
-
-$Tempsson= $_POST['Tempsson'];
-$Tempslumière= $_POST['Tempslumière'];
-$Freqcardiaque= $_POST['Freqcardiaque'];
-$Température=$_POST['Température'];
-$Tonalité=$_POST['Tonalité']
-$tableau= array($Tempsson, $Tempslumière, $Freqcardiaque, $Température, $Tonalité );
+ $bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset=utf8', 'appg5b', '@ppg5b2020');
+$reponse=$bdd <-query('SELECT') //requêteSQL

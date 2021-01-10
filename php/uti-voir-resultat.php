@@ -59,10 +59,6 @@
                 <div id="div-test-son">
                     <div class="titre2"><h2>Temps de réaction à un son</h2></div>
 
-                    <div class="div-test-son-attendu"><h3>Son attendu</h3>
-                        <p>Temps: 1:02 s</p>
-                        <p><img src="../images/rond_vert.png"></p>
-                    </div>
                     <div class="div-test-son-inattendu"><h3>Son inattendu</h3>
                     <p>Temps: 2:06 s</p>
                     <p><img src="../images/rond_jaune.png"> </p>
@@ -75,13 +71,10 @@
                     <div class="div-test-lumière-attendue">
                         <div class= "titre-lumière-attendue"><h3>Lumière attendue</h3></div>
                         <div class="lumière-attendue-jour">
-                            <h4>Jour</h4>
+                            <h4>Noir</h4>
                             <p>Temps: 5.03s </p>
                             <p><img src="../images/rond_orange.png"></p></div>
-                        <div class="lumière-attendue-nuit">
-                            <h4>Nuit</h4>
-                            <p>Temps: 3.01 s</p>
-                            <p><img src="../images/rond_jaune.png"></p></div>
+                    
                         <div class="champ-de-vision">
                         <h4>Champ de vision</h4>
                         <p>170°</p></div>
@@ -94,10 +87,6 @@
                             <h4>Jour</h4>
                             <p>Temps: 7.03s </p>
                             <p><img src="../images/rond_rouge.png"></p></div>
-                        <div class="lumière-inattendue-nuit">
-                                <h4>Nuit</h4>
-                                <p>Temps: 5.01 s</p>
-                                <p><img src="../images/rond_orange.png"></p></div>
                     </div>
                 </div>
 
