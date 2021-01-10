@@ -16,7 +16,6 @@
     
 
     <section>
-
         <div id=menuGauche>
             <ul id="barre_nav">
                 <li id="ongletdebut">
@@ -52,20 +51,24 @@
         <div id="contenu">
             <h2> Gestion des capteurs </h2>
                 <h3>Ajouter un nouveau capteur</h3>
+                <?php if(isset($_SESSION['message'])):?>
+                   <h3><?=$_SESSION['message'] ?></h3>
+                <?php endif ?>
                     <section class="section1">
-                        <form method="post" action="#">
+                        <form method="post" enctype="multipart/form-data" action="ajouter-new-type-capteur-importation.php">
                                  <label for="Nomcapteurinput">Nom du capteur :</label>
-                                 <input type="text" name="Nom" id="nomcapteurinput" placeholder="Nom">
+                                 <input type="text" name="nom" id="nomcapteurinput" placeholder="Nom">
                                  <label for="Seuilinput">Veuillez saisir le seuil :</label>
-                                 <input type="text" name="Seuil" id="Seuilinput" placeholder="Seuil">
+                                 <input type="number" name="seuil" id="Seuilinput" placeholder="Seuil">
                                  <label for="Imageinput">Image du capteur :</label>
-                                 <input type="file" name="ImageCapteur" id="Imageinput" placeholder="Image">
+                                 <input type="file" name="imageCapteur" id="Imageinput" placeholder="Image">
                                  <label for="Nomcapteurinput">Unité de mesure :</label>
                                  <input type="text" name="unite" id="unitecapteur" placeholder="Unité">
                                  <button>Enregistrer</button> 
                         </form>
                     </section>
-               
+                    <?php $_SESSION['message']=NULL ;?>
+
 
         </div>
     </section>

@@ -61,18 +61,20 @@ require("../modele/fonctions.php");
                 </tr>
 
                 <?php 
-                while ($donnees = $reponse->fetch())
-                { 
+                while ($donnees = $reponse->fetch())                                      
+                {   
                 ?>
                 <tr>
                     <td>Session réalisée le <?php echo $donnees['datesession']?></td>
                     <td><?php echo '- '.$donnees['test']?></td>
-                    <td>
-                        <p><a href="uti-voir-resultat.php">Voir</a></p>
-                    </td>
+                    <?php
+                        echo 
+                        '<td>
+                            <p><a href="uti-voir-resultat.php?datesession='.$donnees['datesession'].'">Voir</a></p>
+                        </td>'
+                    ?>
                 </tr>
-                <?php }
-                    
+                <?php }   
                 ?>
             </table>    
             

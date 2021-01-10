@@ -16,7 +16,6 @@
     <div id="image_fond">    
     
         <section>
-
             <div id=menuGauche>
                 <ul id=barre_nav>
                     <li id="ongletdebut">
@@ -50,18 +49,30 @@
 
             </div>
             <div id="contenu">
+                <?php require_once"../modele/connexionbdd.php";
+                        $requete = "SELECT nomcapteur FROM typecapteur";
+                        $exec_requete = mysqli_query($db,$requete);
+                    ?>
 
                 <h2> Gestion des capteurs </h2>
                 <h3>Ajouter un nouveau capteur</h3>
+                <?php if($_SESSION['message']!=NULL):?>
+                   <h3><?=$_SESSION['message'] ?></h3>
+                <?php endif ?>
                         <section class="section1">
-                            <form action="#">
+                            <form action="ajouter_capteur_importation.php" method="POST">
                                     <label for="Nomcapteurinput">Nom du capteur :</label>
-                                    <input type="text" name="Nom" id="nomcapteurinput" placeholder="Nom">
+                                    <select name="capteurs" id="nomcapteurinput">
+                                    <?php while ($reponse=mysqli_fetch_array($exec_requete)): ?>
+                                        <option><?=$reponse['nomcapteur'];?></option>
+                                    <?php endwhile ?>
+                                    </select>
                                     <label for="Quantitéinput">Veuillez saisir une quantité :</label>
-                                    <input type="text" name="Quantité" id="Quantitéinput" placeholder="Quantité">
+                                    <input type="number" name="quantité" id="Quantitéinput" placeholder="Quantité">
                                     <button>Enregistrer</button> 
                             </form>
                         </section>
+                        <?php $_SESSION['message']=NULL ;?>
 
             </div>
         </section>
