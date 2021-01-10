@@ -99,6 +99,7 @@ function session_users ($bdd, $mail){
     $reponse->execute();
     return $reponse;
 }
+
 ?>
 
 
