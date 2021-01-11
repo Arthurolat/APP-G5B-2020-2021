@@ -250,7 +250,7 @@
     
     .div-test-lumière-attendue {
         display: grid;
-        grid-template-columns: 1.5fr 1.5fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.1fr 1fr;
         grid-gap: 15px;
         grid-template-areas: "titre_lumière_attendue titre_lumière_attendue titre_lumière_attendue" "nuit champ_de_vision";
@@ -306,10 +306,10 @@
     
     .div-test-lumière-inattendue {
         display: grid;
-        grid-template-columns: 1.5fr 1.5fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 0.1fr 1fr;
         grid-gap: 15px;
-        grid-template-areas: "titre_lumière_inattendue titre_lumière_inattendue" "inatendue_jour inatendue_nuit ";
+        grid-template-areas: "titre_lumière_inattendue titre_lumière_inattendue" "inatendue_jour ";
         border-radius: 10px;
         box-shadow: 5px 3px 10px #A9CAED;
         grid-area: inattendue;

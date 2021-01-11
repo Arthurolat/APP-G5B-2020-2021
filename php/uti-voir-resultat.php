@@ -1,7 +1,8 @@
-<?php
+
+<?php 
 require("../modele/connexionbdd.php");
-require("..modele/fonctions.php");
-?>
+require("../modele/fonctions.php"); ?>
+
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -50,7 +51,14 @@ require("..modele/fonctions.php");
 
 
         <div id=contenu>
-                <div class="titre"><h1>RESULTATS SESSION DU 2020-12-01</h1></div>
+                <div class="titre"><h1>RESULTATS SESSION DU 2020-12-01</h1>
+                <?php 
+                //print_r($_SESSION['sessiontest_uti']); 
+                
+                    echo $_GET['datesession'];
+                
+                ?>
+                </div>
                 <div class="div-legende">
                     <div class="titre-legende"><h2>Légende</h2></div>
                     <div class="div-rond-vert"><h3>Temps de réaction compris entre 0s-2s</h3></div>
@@ -66,7 +74,7 @@ require("..modele/fonctions.php");
                     <div class="titre2"><h2>Temps de réaction à un son</h2></div>
 
                     <div class="div-test-son-inattendu"><h3>Son inattendu</h3>
-                    <p>Temps: 2:06 s</p>
+                    <p>Temps: </p>
                     <p><img src="../images/rond_jaune.png"> </p>
                     </div>   
                  </div>
@@ -78,7 +86,7 @@ require("..modele/fonctions.php");
                         <div class= "titre-lumière-attendue"><h3>Lumière attendue</h3></div>
                         <div class="lumière-attendue-jour">
                             <h4>Noir</h4>
-                            <p>Temps: 5.03s </p>
+                            <p>Temps: </p>
                             <p><img src="../images/rond_orange.png"></p></div>
                     
                         <div class="champ-de-vision">
@@ -91,7 +99,7 @@ require("..modele/fonctions.php");
                         <div class="titre-lumière-inattendue"><h3>Lumière inattendue</h3></div>
                         <div class="lumière-inattendue-jour">
                             <h4>Jour</h4>
-                            <p>Temps: 7.03s </p>
+                            <p>Temps:  </p>
                             <p><img src="../images/rond_rouge.png"></p></div>
                     </div>
                 </div>
@@ -100,12 +108,12 @@ require("..modele/fonctions.php");
                     <div class="titre4"><h2>Fréquence cardiaque</h2></div>
                     <div class="div-effort">
                         <h3>Effort</h3>
-                        <p>80 bits/s</p>
+                        <p></p>
                     </div>
                         
                     <div class="div-sans-effort">
                         <h3>Sans effort</h3>
-                        <p>100 bits/s</p>
+                        <p></p>
                     </div>
                 </div>
 
@@ -113,11 +121,11 @@ require("..modele/fonctions.php");
                     <div class="titre5"><h2>Température de la peau</h2></div>
                     <div class="div-effort">
                         <h3>Effort</h3>
-                        <p>36.5°</p>
+                        <p></p>
                     </div>
                     <div class="div-sans-effort"> 
                         <h3>Sans effort</h3>
-                        <p>39.2°</p>
+                        <p></p>
                     </div>
                 </div>
                 <div id="div-test-tonalite"> 
