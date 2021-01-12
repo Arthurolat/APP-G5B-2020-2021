@@ -10,6 +10,8 @@
 
 </head>
 
+<?php require("../modele/gestionnaire_lancer_test1_connu_bdd.php"); ?>
+
 <body>
 
     <?php include("header.php"); ?> 

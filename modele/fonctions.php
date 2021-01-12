@@ -109,7 +109,7 @@ function affichage_résultats($bdd, $datesession ){
 }
 
 #------------------------------rentrer date, nom et prénom nouveau test dans base de données---------------
-function nouveau_test_bdd(){
+function nouveau_test_bdd($bdd){
     $date = $_POST["date"];
     $prenom = $_POST["prenom"];
     $nom = $_POST["nom"];
@@ -117,11 +117,7 @@ function nouveau_test_bdd(){
     foreach ($bdd->query($sql) as $row){
         $idacteur=$row['idacteur'];
     }
-    $req = $bdd->prepare("INSERT INTO sessiontest(datesession, idacteur) VALUES( :date, :idacteur)"); 
-    $req->execute(array(
-        'date' => $date,
-        'idacteur' => $idacteur
-    ));
+    $req = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('$date', '$idacteur')"); 
 }
 
-?>
+?>  
