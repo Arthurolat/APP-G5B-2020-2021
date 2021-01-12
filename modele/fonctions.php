@@ -120,4 +120,13 @@ function nouveau_test_bdd($bdd){
     $req = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('$date', '$idacteur')"); 
 }
 
+#-----------------------------récupérer numéro de session---------------------------------------------
+function numero_session($bdd){
+    $sql = ("SELECT MAX(idsession) FROM sessiontest");
+    foreach ($bdd->query($sql) as $row){
+        $idsession=$row['idsession'];
+    }
+    echo $idsession;
+}
+
 ?>  
