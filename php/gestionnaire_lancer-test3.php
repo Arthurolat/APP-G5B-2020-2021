@@ -10,6 +10,8 @@
 
 </head>
 
+<p><?php require("../modele/gestionnaire_lancer_test2_bdd.php"); ?></p>
+
 <body>
 
     <?php include("header.php"); ?>
@@ -138,7 +140,7 @@
         </div>
     </section>
 
-    <p><?php require("../modele/gestionnaire_lancer_test2_bdd.php"); ?></p>
+    
 
     <?php include("footer.php"); ?>
 

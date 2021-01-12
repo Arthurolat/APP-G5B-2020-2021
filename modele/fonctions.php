@@ -122,11 +122,12 @@ function nouveau_test_bdd($bdd){
 
 #-----------------------------récupérer numéro de session---------------------------------------------
 function numero_session($bdd){
-    $sql = ("SELECT MAX(idsession) FROM sessiontest");
-    foreach ($bdd->query($sql) as $row){
-        $idsession=$row['idsession'];
-    }
-    echo $idsession;
+    $reponse = $bdd->query("SELECT MAX(idsession) AS idsession FROM sessiontest");
+    $donnees = $reponse->fetch();
+    echo $donnees['idsession'];  
 }
 
 ?>  
+
+
+       
