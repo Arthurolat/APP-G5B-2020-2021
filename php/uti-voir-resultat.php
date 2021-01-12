@@ -51,7 +51,7 @@ require("../modele/fonctions.php"); ?>
 
 
         <div id=contenu>
-                <div class="titre"><h1>RESULTATS SESSION DU 2020-12-01</h1>
+                <div class="titre"><h1>RESULTATS SESSION DU </h1>
                 <?php 
                 //print_r($_SESSION['sessiontest_uti']); 
                 
