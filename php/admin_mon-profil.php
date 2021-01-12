@@ -50,7 +50,7 @@
         </div>
                 
             <div id=contenu>
-             <?php require"connexionbdd.php";
+             <?php require"../modele/connexionbdd.php";
                         $requete = "SELECT * FROM personne where mail = '".$_SESSION['mail']."'";
                         $exec_requete = mysqli_query($db,$requete);
                         $reponse      = mysqli_fetch_array($exec_requete);

@@ -1,6 +1,6 @@
 <?php
 
-$bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset=utf8', 'appg5b', '@ppg5b2020');
+$bdd = new PDO('mysql:host=localhost;dbname=db_app;charset=utf8', 'root', 'mdp_root');
 
 $reponse = $bdd->query("SELECT CONCAT(p.prenom, ' ', p.nom) as utilisateur 
                         FROM personne p");
