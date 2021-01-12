@@ -50,8 +50,9 @@
                         $reponse      = mysqli_fetch_array($exec_requete);
                     ?>
 
+
             <h2>
-                <IMG class="profil" src="../images/photos_membres/thomas.png" alt="<?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?>" width=120px><?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?></h2>
+                <IMG class="profil" src="<?= $reponse['photo']; ?>" alt="<?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?>" width=120px><?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?></h2>
 
 
 
