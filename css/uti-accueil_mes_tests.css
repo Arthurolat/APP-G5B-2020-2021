@@ -75,8 +75,7 @@
         border-radius: 0 0 15px 15px;
     }
     /*----------------------- contenu -----------------------*/
-    
-    #contenu {
+   #contenu {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
@@ -181,10 +180,10 @@
         border-radius: 15px;
         box-shadow: 5px 5px 5px #D2D4D6;
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 0.1fr 1fr;
         grid-gap: 15px;
-        grid-template-areas: "titre2 titre2" "inattendu";
+        grid-template-areas: "titre2 titre2" " attendu inattendu";
         background-color: #EAF2FB;
         grid-area: son;
     }
@@ -200,6 +199,13 @@
         color: #041733;
     }
     
+    .div-test-son-attendu {
+        border-radius: 10px;
+        box-shadow: 5px 3px 10px #A9CAED;
+        grid-area: attendu;
+        background-color: #A9CAED;
+        margin: 15px;
+    }
     
     .div-test-son-inattendu {
         border-radius: 10px;
@@ -250,10 +256,10 @@
     
     .div-test-lumière-attendue {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 0.1fr 1fr;
         grid-gap: 15px;
-        grid-template-areas: "titre_lumière_attendue titre_lumière_attendue titre_lumière_attendue" "nuit champ_de_vision";
+        grid-template-areas: "titre_lumière_attendue titre_lumière_attendue titre_lumière_attendue" "jour nuit champ_de_vision";
         border-radius: 10px;
         box-shadow: 5px 3px 10px #A9CAED;
         grid-area: attendue;
@@ -268,7 +274,14 @@
         text-decoration: underline;
     }
     
- 
+    .lumière-attendue-jour {
+        grid-area: jour;
+        border-radius: 10px;
+        box-shadow: 5px 3px 10px #7FB3D5;
+        background-color: #EDBB99;
+        margin: 15px;
+    }
+    
     .lumière-attendue-nuit {
         grid-area: nuit;
         border-radius: 10px;
@@ -306,10 +319,10 @@
     
     .div-test-lumière-inattendue {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1.5fr 1.5fr;
         grid-template-rows: 0.1fr 1fr;
         grid-gap: 15px;
-        grid-template-areas: "titre_lumière_inattendue titre_lumière_inattendue" "inatendue_jour ";
+        grid-template-areas: "titre_lumière_inattendue titre_lumière_inattendue" "inatendue_jour inatendue_nuit ";
         border-radius: 10px;
         box-shadow: 5px 3px 10px #A9CAED;
         grid-area: inattendue;
