@@ -108,7 +108,7 @@
             </div>
         </div>
         
-        <div id="contact">
+        <div id="formulaire_contact">
         <?php include("formulaire_contact.php"); ?>
         </div>
 

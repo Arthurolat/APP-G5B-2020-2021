@@ -1,6 +1,6 @@
 <footer>
     <div id="logostart_container">
-        <img src="../images/logo_apmd.png" alt="" />
+        <img src="../APP-G5B-2020-2021/images/logo_apmd.png" alt="" />
     </div>
     
     <div class="footer_social_icons">

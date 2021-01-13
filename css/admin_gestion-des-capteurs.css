@@ -8,6 +8,7 @@ body {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    font-family: Oswald, sans-serif;
 }
 
 
@@ -19,6 +20,7 @@ section {
     margin-right: 5%;
     padding-top: 30px;
     padding-bottom: 30px;
+    font-family: Oswald, sans-serif;
 }
 
 
@@ -48,6 +50,7 @@ section {
     text-decoration: none;
     width: auto;
     vertical-align: center;
+    font-family: Oswald, sans-serif;
 }
 
 #menuGauche li a {
@@ -93,6 +96,7 @@ section {
     margin-left: 1%;
     padding: 0% 1% 0% 1%;
     background-color: rgba(255, 255, 255, 0.555);
+    font-family: Oswald, sans-serif;
 }
 
 section h2 {
