@@ -107,6 +107,27 @@ function affichage_résultats($bdd, $datesession ){
     $reponse->execute();
     return $reponse;
 }
-?>
+
+#------------------------------rentrer date, nom et prénom nouveau test dans base de données---------------
+function nouveau_test_bdd($bdd){
+    $date = $_POST["date"];
+    $prenom = $_POST["prenom"];
+    $nom = $_POST["nom"];
+    $sql = ("SELECT idacteur FROM personne WHERE prenom = '$prenom' AND nom = '$nom'");
+    foreach ($bdd->query($sql) as $row){
+        $idacteur=$row['idacteur'];
+    }
+    $req = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('$date', '$idacteur')"); 
+}
+
+#-----------------------------récupérer numéro de session---------------------------------------------
+function numero_session($bdd){
+    $reponse = $bdd->query("SELECT MAX(idsession) AS idsession FROM sessiontest");
+    $donnees = $reponse->fetch();
+    echo $donnees['idsession'];  
+}
+
+?>  
 
 
+       

@@ -10,9 +10,11 @@
 
 </head>
 
+<?php require("../modele/gestionnaire_lancer_test1_connu_bdd.php"); ?>
+
 <body>
 
-    <?php include("header.php"); ?>
+    <?php include("header.php"); ?> 
 
     <section>
 
@@ -54,7 +56,7 @@
 
 
             <div class=formulaire>
-                <form method="post" action="#">
+                <form method="post" action="gestionnaire_lancer-test3.php">
                     <p> Choisissez votre boitier :
                         <label>
                         <select name="capteur">
