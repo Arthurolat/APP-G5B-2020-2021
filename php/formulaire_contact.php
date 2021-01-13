@@ -6,7 +6,6 @@
         <title>Formulaire de contact</title>
         <link rel="stylesheet" href="../css/formulaire_contact.css">
     </head>
-
     <body>
         
         <div id="corps">
@@ -16,9 +15,10 @@
             </div>
             
             <div id="formulaire_contact">
-                <form action="" method="POST">
-                    <input type="text" name="prenom" id="form_control" placeholder="Nom" required /></br>
-                    <input type="text" name="nom" id="form_control" placeholder="Prénom" required /></br>
+                <form action="../modele/envoi_mail.php" method="POST">
+                    <input type="text" name="nom" id="form_control" placeholder="Nom" required /></br>
+                    <input type="text" name="prenom" id="form_control" placeholder="Prénom" required /></br>
+                    <input type="text" name="mail" id="form_control" placeholder="Mail" required /></br>
                     <textarea name="message" id="form_control" placeholder="Message" row="4" required></textarea></br>
                     <input type="submit" id="bouton_envoyer" value="ENVOYER" />
                 </form>

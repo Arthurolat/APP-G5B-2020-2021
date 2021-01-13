@@ -16,14 +16,13 @@
     
 
     <section>
-
         <div id=menuGauche>
             <ul id="barre_nav">
                 <li id="ongletdebut">
-                    <a href=#><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
+                    <a href="admin_mon-profil.php"><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="admin_messagerie.php"><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                    <a href="admin_messagerie-accueil.php"><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
                     <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
@@ -32,7 +31,7 @@
                     <a href="admin_rechercher.php"><img class="img-responsive" src="../images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                    <a href="admin_analyse-test.php"><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
                 </li>
 
                 <p> Réglages :</p>
@@ -52,20 +51,24 @@
         <div id="contenu">
             <h2> Gestion des capteurs </h2>
                 <h3>Ajouter un nouveau capteur</h3>
+                <?php if(isset($_SESSION['message'])):?>
+                   <h3><?=$_SESSION['message'] ?></h3>
+                <?php endif ?>
                     <section class="section1">
-                        <form method="post" action="#">
+                        <form method="post" enctype="multipart/form-data" action="ajouter-new-type-capteur-importation.php">
                                  <label for="Nomcapteurinput">Nom du capteur :</label>
-                                 <input type="text" name="Nom" id="nomcapteurinput" placeholder="Nom">
+                                 <input type="text" name="nom" id="nomcapteurinput" placeholder="Nom">
                                  <label for="Seuilinput">Veuillez saisir le seuil :</label>
-                                 <input type="text" name="Seuil" id="Seuilinput" placeholder="Seuil">
+                                 <input type="number" name="seuil" id="Seuilinput" placeholder="Seuil">
                                  <label for="Imageinput">Image du capteur :</label>
-                                 <input type="file" name="ImageCapteur" id="Imageinput" placeholder="Image">
+                                 <input type="file" name="imageCapteur" id="Imageinput" placeholder="Image">
                                  <label for="Nomcapteurinput">Unité de mesure :</label>
                                  <input type="text" name="unite" id="unitecapteur" placeholder="Unité">
                                  <button>Enregistrer</button> 
                         </form>
                     </section>
-               
+                    <?php $_SESSION['message']=NULL ;?>
+
 
         </div>
     </section>

@@ -19,10 +19,10 @@
         <div id=menuGauche>
             <ul id=barre_nav>
                 <li id="ongletdebut">
-                    <a href="mon_profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
+                    <a href="admin_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="admin_messagerie.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                    <a href="admin_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
                     <a  href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultat" width=10px> Lancer une session de tests </a>
@@ -31,7 +31,7 @@
                     <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
                 <li>
-                    <a href=#><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                    <a href="admin_analyse-test.php"><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
                 </li>
 
                 <p> Réglages :</p>
@@ -57,36 +57,40 @@
                         <legend>Filtres de recherche</legend>
                     <div class="div1">
                         <label for="Nomdutilisateurinput">Votre nom d'utilisateur :</label>
-                        <input type="text" name="Nom d'utilisateur" id="nomdutilisateurinput" placeholder="Pierre Dupont">
+                        <input type="text" name="Nomutilisateur" id="nomdutilisateurinput" placeholder="Pierre Dupont">
                     </div><br>  
                     <div class="div2">
                         <label for="Dateinput1">Date du :</label>
-                        <input type="Date" name="DatedesTests1" id="Dateinput1" placeholder="2020-01-01">
+                        <input type="Date" name="DatedesTestsFrom" id="Dateinput1" placeholder="2020-01-01">
 
                         <label for="Dateinput2"> à : </label>
-                        <input type="Date" name="DatedesTests2" id="Dateinput2" placeholder="2020-01-01">
+                        <input type="Date" name="DatedesTestsTo" id="Dateinput2" placeholder="2020-01-01">
                     </div><br>
                     <div class="div3">
                         <label>Test psychotechniques : </label>
                         <div class="div4"><br>
-                            <input type="checkbox" name="Testpsychotechniques" id="Testtempérature">
-                            <label for="Testtempérature">Test température</label>
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testtempérature" value="température de la peau" >
+                            <label for="Testtempérature">Test de température de la peau</label>
                         </div>
                         <div class="div5"><br>
-                            <input type="checkbox" name="Testpsychotechniques" id="Testfréquencecardiaque">
-                            <label for="Testfréquence cardiaque">Test fréquence cardiaque</label>
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testfréquencecardiaque" value="fréquence cardiaque">
+                            <label for="Testfréquence cardiaque">Test de fréquence cardiaque</label>
                         </div>
                         <div class="div5"><br>
-                            <input type="checkbox" name="Testpsychotechniques" id="Testson">
-                            <label for="Testson">Test son</label>
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testson" value="temps réaction à un son">
+                            <label for="Testson">Test du temps de réaction à un son</label>
                         </div>
                         <div class="div6"><br>
-                            <input type="checkbox" name="Testpsychotechniques" id="Testlumière">
-                            <label for="Testlumière">Test lumière</label>
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testlumière" value="temps de réaction à une lumière attendue">
+                            <label for="Testlumière">Test du temps de réaction à une lumière attendue</label>
                         </div>
                         <div class="div7"><br>
-                            <input type="checkbox" name="Testpsychotechniques" id="Testtonalité">
-                            <label for="Testtonalité">Test tonalité</label>
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testlumière" value="temps de réaction à une lumière inattendue">
+                            <label for="Testlumière">Test du temps de réaction à une lumière inattendue</label>
+                        </div>
+                        <div class="div8"><br>
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testtonalité" value="reconnaissance de tonalité">
+                            <label for="Testtonalité">Test de reconnaissance de tonalité</label>
                         </div>
                     </div>
                     <div class="container">
@@ -95,8 +99,7 @@
 
                     </fieldset>
                 </form>
-            
-
+        </div>
     </section>
 
     <?php include("footer.php"); ?>
