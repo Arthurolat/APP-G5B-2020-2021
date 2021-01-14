@@ -48,6 +48,7 @@ section {
     text-decoration: none;
     width: auto;
     vertical-align: center;
+    font-family: roboto, sans-serif;
 }
 
 #menuGauche li a {
@@ -94,6 +95,7 @@ section {
     padding: 0% 1% 0% 1%;
     background-color: rgba(255, 255, 255, 0.555);
     text-align: center;
+    font-family: roboto, sans-serif;
 }
 
 section h2 {
@@ -123,7 +125,7 @@ section h2 {
     background: #ed7d31;
     color: white;
     font-weight: bold;
-    font-family: "Times New Roman";
+    font-family: roboto, sans-serif;
     font-size: large;
 }
 
@@ -133,7 +135,7 @@ section h2 {
 
 .formulaire form fieldset {
     border: 0;
-    font-style: "Times New Roman";
+    font-family: roboto, sans-serif;
 }
 
 #contenu .formulaire form {

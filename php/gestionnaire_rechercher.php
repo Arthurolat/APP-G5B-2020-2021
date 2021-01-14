@@ -67,15 +67,15 @@
                         </div>
                         <div class="div5"><br>
                             <input type="checkbox" name="Testpsychotechniques[]" id="Testson" value="temps réaction à un son">
-                            <label for="Testson">Test du temps de réaction à un son</label>
+                            <label for="Testson">Test du temps de réaction à un son inattendu</label>
                         </div>
                         <div class="div6"><br>
                             <input type="checkbox" name="Testpsychotechniques[]" id="Testlumière" value="temps de réaction à une lumière attendue">
-                            <label for="Testlumière">Test du temps de réaction à une lumière attendue</label>
+                            <label for="Testlumière">Test du temps de réaction à une lumière attendue dans le noir</label>
                         </div>
                         <div class="div7"><br>
                             <input type="checkbox" name="Testpsychotechniques[]" id="Testlumière" value="temps de réaction à une lumière inattendue">
-                            <label for="Testlumière">Test du temps de réaction à une lumière inattendue</label>
+                            <label for="Testlumière">Test du temps de réaction à une lumière inattendue en extérieur</label>
                         </div>
                         <div class="div8"><br>
                             <input type="checkbox" name="Testpsychotechniques[]" id="Testtonalité" value="reconnaissance de tonalité">

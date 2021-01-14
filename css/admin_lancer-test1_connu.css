@@ -48,6 +48,7 @@ section {
     text-decoration: none;
     width: auto;
     vertical-align: center;
+    font-family: roboto, sans-serif;
 }
 
 #menuGauche li a {
@@ -93,6 +94,7 @@ section {
     margin-left: 1%;
     padding: 0% 1% 0% 1%;
     background-color: rgba(255, 255, 255, 0.555);
+    font-family: roboto, sans-serif;
 }
 
 section h2 {
@@ -144,6 +146,7 @@ section h2 {
     background: white;
     text-align: center;
     font-weight: bold;
+    font-family: roboto, sans-serif;
 }
 
 
@@ -240,7 +243,7 @@ ul li.ok:after {
     background: #ed7d31;
     color: white;
     font-weight: bold;
-    font-family: "Times New Roman";
+    font-family: roboto, sans-serif;
     font-size: large;
 }
 

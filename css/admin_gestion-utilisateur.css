@@ -47,6 +47,7 @@ section {
     text-decoration: none;
     width: auto;
     vertical-align: center;
+    font-family: roboto, sans-serif;
 }
 
 #menuGauche li a {
@@ -92,6 +93,7 @@ section {
     margin-left: 1%;
     padding: 0% 1% 0% 1%;
     background-color: rgba(255, 255, 255, 0.555);
+    font-family: roboto, sans-serif;
 }
 
 #searchbar {

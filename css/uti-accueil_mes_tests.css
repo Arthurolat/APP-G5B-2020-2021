@@ -43,6 +43,7 @@
         text-decoration: none;
         width: auto;
         vertical-align: center;
+        font-family: roboto, sans-serif;
     }
     
     #menuGauche li a {
@@ -75,7 +76,8 @@
         border-radius: 0 0 15px 15px;
     }
     /*----------------------- contenu -----------------------*/
-   #contenu {
+    
+    #contenu {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
@@ -88,6 +90,7 @@
         border-radius: 15px;
         margin-left: 1%;
         padding: 0% 1% 0% 1%;
+        font-family: roboto, sans-serif;
     }
     
     .titre {
@@ -98,7 +101,7 @@
         box-shadow: 5px 10px 10px #D2D4D6;
         border-radius: 15px;
         color: #041733;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
         font-size: 25px;
         grid-area: titre;
         background-color: #EAF2FB;
@@ -114,7 +117,7 @@
     
     .div-legende h3 {
         font-size: 11px;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
         padding: 2em
     }
     
@@ -173,7 +176,7 @@
         border: solid 2px #626567;
         border-radius: 15px;
         color: #ED7D31;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
     }
     
     #div-test-son {
@@ -195,7 +198,7 @@
         border: double 4px #041733;
         grid-area: titre2;
         text-align: center;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
         color: #041733;
     }
     
@@ -221,13 +224,13 @@
     .div-test-lumière-inattendue h3 {
         text-decoration: underline;
         text-align: center;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
     }
     
     .div-test-son-attendu p,
     .div-test-son-inattendu p {
         text-align: center;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
     }
     
     #div-test-lumière {
@@ -251,7 +254,7 @@
         border: double 4px #041733;
         grid-area: titre3;
         text-align: center;
-        font-family: calibri, Arial;
+        font-family: roboto, sans-serif;
     }
     
     .div-test-lumière-attendue {
@@ -269,7 +272,7 @@
     
     .titre-lumière-attendue {
         grid-area: titre_lumière_attendue;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
         text-align: center;
         text-decoration: underline;
     }
@@ -305,7 +308,7 @@
     .lumière-inattendue-nuit h4 {
         text-decoration: underline;
         text-align: center;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
     }
     
     .lumière-attendue-jour p,
@@ -314,7 +317,7 @@
     .lumière-inattendue-jour p,
     .lumière-inattendue-nuit p {
         text-align: center;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
     }
     
     .div-test-lumière-inattendue {
@@ -332,7 +335,7 @@
     
     .titre-lumière-inattendue {
         grid-area: titre_lumière_inattendue;
-        font-family: Calibri, Arial;
+        font-family: roboto, sans-serif;
         text-align: center;
         text-decoration: underline;
     }
@@ -380,13 +383,13 @@
     .div-sans-effort h3 {
         text-align: center;
         text-decoration: underline;
-        font-family: calibri, Arial;
+        font-family: roboto, sans-serif;
     }
     
     .div-effort p,
     .div-sans-effort p {
         text-align: center;
-        font-family: calibri, Arial;
+        font-family: roboto, sans-serif;
     }
     
     #div-test-temperature {
@@ -453,7 +456,7 @@
     }
     
     table {
-        font-family: calibri;
+        font-family: roboto, sans-serif;
         margin-left: 10px;
         width: 98%;
         height: 200px;

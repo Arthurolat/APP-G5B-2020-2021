@@ -100,6 +100,7 @@ function session_users ($bdd, $mail){
     return $reponse;
 }
 #----------------------------------affichage des resulats des tests-----------------------------
+/*
 function affichage_résultats($bdd, $datesession ){
     $reponse = $bdd->query("SELECT distinct datesession, t.nom as test, valeur
     FROM sessiontest s, resultat r, testgenerique t, personne p, mesure m
@@ -107,8 +108,9 @@ function affichage_résultats($bdd, $datesession ){
     $reponse->execute();
     return $reponse;
 }
+*/
 
-#------------------------------rentrer date, nom et prénom nouveau test dans base de données---------------
+# ------------------------------rentrer date, nom et prénom nouveau test dans base de données---------------
 function nouveau_test_bdd($bdd){
     $date = $_POST["date"];
     $prenom = $_POST["prenom"];
@@ -130,4 +132,4 @@ function numero_session($bdd){
 ?>  
 
 
-       
+    
