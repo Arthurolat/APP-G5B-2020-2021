@@ -1,4 +1,4 @@
-<table>
+ <table>
     <tr class="theader">
         <th>Utilisateur</th>
         <th>Date</th>
@@ -21,8 +21,16 @@
             <?php
                } else {
             ?>
-                <p><a href="gestionnaire_recherche-tableau-resultat-voir.php">Voir</a></p>
+                <p><!--<a href="gestionnaire_recherche-tableau-resultat-voir.php">Voir</a>-->
+
+                 <form action='../modele/affichage-resultats-tests.php' method="POST">
+                        <input type="hidden" value="<?php echo $donnees['idacteur']?>" name="idacteur">
+                        <input type="hidden" value= " <?php echo $donnees['datemesure']?>" name="datesession">
+                        <button type="submit"> Voir </button>
+                    </form>
+                </p>
             <?php }
+
             ?>   
         </td>
     </tr>
@@ -30,7 +38,7 @@
         $reponse->closeCursor();
         
     ?>
-    <tr>
+    <!--<tr>
         <td>Arthur Latourrette</td>
         <td>Session réalisée le </br> 2020-10-27 à 15h32</td>
         <td>test son, test lumière, test fréquence</td>
@@ -69,6 +77,6 @@
         <td>
             <p><a href="gestionnaire_recherche-tableau-resultat-voir.php">Voir</a></p>
         </td>
-    </tr>
+    </tr>-->
 
 </table>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
@@ -42,6 +42,7 @@
             <h2> Résultats </h2>
             
             <?php 
+            /*require("../modele/rechercher_un_test.php");*/
             require("../modele/rechercher_un_test.php");
             ?>
 
