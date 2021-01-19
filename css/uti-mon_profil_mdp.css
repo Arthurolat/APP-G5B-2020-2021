@@ -69,6 +69,11 @@ section {
 }
 
 
+/*img {
+    vertical-align: middle;
+}*/
+
+
 /*passage de la souris*/
 
 #menuGauche li a:hover,
@@ -116,10 +121,6 @@ section h2 {
     vertical-align: middle;
     margin-left: 40px;
     margin-top: 20px;
-}
-
-img {
-    vertical-align: middle;
 }
 
 h3 {
