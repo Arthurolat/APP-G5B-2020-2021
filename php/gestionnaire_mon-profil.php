@@ -40,15 +40,16 @@
         </div>
                 
         <div id=contenu>
-              <?php require"../modele/connexionbdd.php";
-                        $requete = "SELECT * FROM personne where mail = '".$_SESSION['mail']."'";
-                        $exec_requete = mysqli_query($db,$requete);
-                        $reponse      = mysqli_fetch_array($exec_requete);
-                    ?>
+                <?php require"../modele/connexionbdd.php";
+                    $requete = "SELECT * FROM personne where mail = '".$_SESSION['mail']."'";
+                    $exec_requete = mysqli_query($db,$requete);
+                    $reponse      = mysqli_fetch_array($exec_requete);
+                ?>
+
 
             <h2>
-                <IMG class="profil" src="../images/photos_membres/thomas.png" alt="<?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?>" width=120px><?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?></h2>
-
+                <IMG class="profil" src="<?= $reponse['photo']; ?>" alt="<?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?>" width=120px><?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?>
+            </h2>
 
 
             <div class=onglet>
