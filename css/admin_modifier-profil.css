@@ -2,9 +2,10 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    /*background: url("../images/image_militaire.png");*/
     height: auto;
-    background: url("../images/image_avion");
+    /*background: url("../images/image_avion");*/
+    background-color: #A9CAED;
+    /*ecf4fa;*/
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -15,27 +16,28 @@ body {
 
 section {
     display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 
 /*------------ barre de navigation verticale ------------*/
 
 #menuGauche {
-    width: 15%;
+    width: 20%;
 }
 
 #menuGauche #barre_nav {
-    border-radius: 15px;
-    background-color: #a9caed86;
-    border: 2px solid #A9CAED;
+    border-radius: 0px;
+    background-color: #A9CAED;
+    /*border: 2px solid #041733;*/
+    padding: 5px;
     position: -webkit-sticky;
     position: sticky;
     top: 1%;
-    box-shadow: 2px 2px 5px #A9CAED;
+    /*box-shadow: 2px 2px 5px #A9CAED;*/
 }
 
 #menuGauche ul,
@@ -44,10 +46,11 @@ section {
     margin-bottom: 0px;
     list-style-type: none;
     padding-left: 0px;
-    font-size: large;
+    font-size: 18px;
     text-decoration: none;
     width: auto;
     vertical-align: center;
+    color: #000;
     font-family: roboto, sans-serif;
 }
 
@@ -55,7 +58,6 @@ section {
     display: block;
     color: #000;
     padding: 4% 1% 4% 2%;
-    color: black;
 }
 
 #menuGauche ul ul li a {
@@ -75,6 +77,8 @@ section {
     transition: all .2s ease;
 }
 
+
+/*
 #menuGauche #ongletdebut a:hover {
     border-radius: 15px 15px 0 0;
 }
@@ -82,19 +86,19 @@ section {
 #menuGauche #ongletfin a:hover {
     border-radius: 0 0 15px 15px;
 }
+*/
 
 
-/*------------------contenu------------------------*/
+/*----------------------- contenu -----------------------*/
 
 #contenu {
-    width: 85%;
-    border: 2px solid #041733;
-    box-shadow: 2px 2px 5px #041733;
-    border-radius: 15px;
-    margin-left: 1%;
-    padding: 0% 1% 0% 1%;
-    background-color: rgba(255, 255, 255, 0.555);
-    text-align: center;
+    width: 95%;
+    /*border: 2px solid #041733;*/
+    /*box-shadow: 2px 2px 5px #041733;*/
+    border-radius: 0px;
+    margin-left: 0%;
+    padding: 2% 1% 2% 2%;
+    background-color: #ecf4fa;
     font-family: roboto, sans-serif;
 }
 

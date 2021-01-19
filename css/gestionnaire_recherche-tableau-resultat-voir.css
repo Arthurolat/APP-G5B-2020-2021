@@ -1,483 +1,492 @@
-    body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background: url("../images/image_avion");
-        height: auto;
-        background-attachment: fixed;
-        background-position: center center;
-        background-size: cover;
-    }
-    /*------------------------------corps de page ------------------------------*/
-    
-    section {
-        display: flex;
-        margin-left: 5%;
-        margin-right: 5%;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    /*------------ barre de navigation verticale ------------*/
-    
-    #menuGauche {
-        width: 15%;
-    }
-    
-    #menuGauche #barre_nav {
-        border-radius: 15px;
-        background-color: #a9caed86;
-        border: 2px solid #A9CAED;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 1%;
-        box-shadow: 2px 2px 5px #A9CAED;
-    }
-    
-    #menuGauche ul,
-    #menuGauche a {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        list-style-type: none;
-        padding-left: 0px;
-        font-size: large;
-        text-decoration: none;
-        width: auto;
-        vertical-align: center;
-        font-family: roboto, sans-serif;
-    }
-    
-    #menuGauche li a {
-        display: block;
-        color: #000;
-        padding: 4% 1% 4% 2%;
-        color: black;
-    }
-    
-    #menuGauche ul ul li a {
-        padding-left: 9%;
-    }
-    
-    #menuGauche img {
-        width: 15%;
-    }
-    /*passage de la souris*/
-    
-    #menuGauche li a:hover,
-    #menuGauche li a.active {
-        background-color: white;
-        transition: all .2s ease;
-    }
-    
-    #menuGauche #ongletdebut a:hover {
-        border-radius: 15px 15px 0 0;
-    }
-    
-    #menuGauche #ongletfin a:hover {
-        border-radius: 0 0 15px 15px;
-    }
-    
-    #menuGauche #ongletfin a {
-        border-radius: 0 0 15px 15px;
-    }
-    /*----------------------- contenu -----------------------*/
-    
-    #contenu {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: "titre titre titre titre titre" "son son son son legende" "lumiere lumiere lumiere lumiere legende" "lumiere lumiere lumiere lumiere legende" "freq freq freq freq freq " "temperature temperature temperature temperature temperature" "tonalite tonalite tonalite tonalite tonalite";
-        grid-gap: 40px;
-        width: 85%;
-        border: 2px solid #041733;
-        box-shadow: 2px 2px 5px #041733;
-        background-color: rgba(255, 255, 255, 0.555);
-        border-radius: 15px;
-        margin-left: 1%;
-        padding: 0% 1% 0% 1%;
-        font-family: roboto, sans-serif;
-    }
-    
-    .titre {
-        margin-top: 15px;
-        text-align: center;
-        background-color: #FFFF;
-        border: solid 2px #041733;
-        box-shadow: 5px 10px 10px #D2D4D6;
-        border-radius: 15px;
-        color: #041733;
-        font-family: roboto, sans-serif;
-        font-size: 25px;
-        grid-area: titre;
-        background-color: #EAF2FB;
-    }
-    
-    .div-legende {
-        border-radius: 15px;
-        border: 6px;
-        background-color: #BDC3C7;
-        grid-area: legende;
-        box-shadow: 5px 5px 5px #D2D4D6;
-    }
-    
-    .div-legende h3 {
-        font-size: 11px;
-        font-family: roboto, sans-serif;
-        padding: 2em
-    }
-    
-    .div-rond-vert {
-        text-align: center;
-        background-color: #13B323;
-        margin: 50px;
-        width: 100px;
-        height: 100px;
-        border-radius: 200px;
-        text-align: center;
-    }
-    
-    .div-rond-jaune {
-        text-align: center;
-        background-color: yellow;
-        margin: 50px;
-        width: 100px;
-        height: 100px;
-        border-radius: 200px;
-        text-align: center;
-    }
-    
-    .div-rond-orange {
-        text-align: center;
-        background-color: orange;
-        margin: 50px;
-        width: 100px;
-        height: 100px;
-        border-radius: 200px;
-    }
-    
-    .div-rond-rouge {
-        text-align: center;
-        background-color: red;
-        margin: 50px;
-        width: 100px;
-        height: 100px;
-        border-radius: 200px;
-    }
-    
-    .div-rond-noir {
-        text-align: center;
-        background-color: black;
-        margin: 50px;
-        width: 100px;
-        height: 100px;
-        border-radius: 200px;
-        color: white;
-    }
-    
-    .titre-legende {
-        margin: 15px;
-        text-align: center;
-        background-color: #ECF0F1;
-        border: solid 2px #626567;
-        border-radius: 15px;
-        color: #ED7D31;
-        font-family: roboto, sans-serif;
-    }
-    
-    #div-test-son {
-        border-radius: 15px;
-        box-shadow: 5px 5px 5px #D2D4D6;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.1fr 1fr;
-        grid-gap: 15px;
-        grid-template-areas: "titre2 titre2" " attendu inattendu";
-        background-color: #EAF2FB;
-        grid-area: son;
-    }
-    
-    .titre2 {
-        margin: 15px;
-        background-color: #ED7D31;
-        border-radius: 15px;
-        border: double 4px #041733;
-        grid-area: titre2;
-        text-align: center;
-        font-family: roboto, sans-serif;
-        color: #041733;
-    }
-    
-    .div-test-son-attendu {
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #A9CAED;
-        grid-area: attendu;
-        background-color: #A9CAED;
-        margin: 15px;
-    }
-    
-    .div-test-son-inattendu {
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #A9CAED;
-        grid-area: inattendu;
-        background-color: #A9CAED;
-        margin: 15px;
-    }
-    
-    .div-test-son-attendu h3,
-    .div-test-son-inattendu h3,
-    .div-test-lumière-attendue h3,
-    .div-test-lumière-inattendue h3 {
-        text-decoration: underline;
-        text-align: center;
-        font-family: roboto, sans-serif;
-    }
-    
-    .div-test-son-attendu p,
-    .div-test-son-inattendu p {
-        text-align: center;
-        font-family: roboto, sans-serif;
-    }
-    
-    #div-test-lumière {
-        border-radius: 15px;
-        border: 2 px;
-        border-color: #A9CAED;
-        box-shadow: 5px 5px 5px #D2D4D6;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.1fr 1fr 1fr;
-        grid-gap: 20px;
-        grid-template-areas: "titre3 titre3 titre3 " "attendue attendue attendue " "inattendue inattendue inattendue ";
-        background-color: #EAF2FB;
-        grid-area: lumiere;
-    }
-    
-    .titre3 {
-        margin: 15px;
-        background-color: #ED7D31;
-        border-radius: 15px;
-        border: double 4px #041733;
-        grid-area: titre3;
-        text-align: center;
-        font-family: roboto, sans-serif;
-    }
-    
-    .div-test-lumière-attendue {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.1fr 1fr;
-        grid-gap: 15px;
-        grid-template-areas: "titre_lumière_attendue titre_lumière_attendue titre_lumière_attendue" "jour nuit champ_de_vision";
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #A9CAED;
-        grid-area: attendue;
-        background-color: #A9CAED;
-        margin: 15px;
-    }
-    
-    .titre-lumière-attendue {
-        grid-area: titre_lumière_attendue;
-        font-family: roboto, sans-serif;
-        text-align: center;
-        text-decoration: underline;
-    }
-    
-    .lumière-attendue-jour {
-        grid-area: jour;
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #7FB3D5;
-        background-color: #EDBB99;
-        margin: 15px;
-    }
-    
-    .lumière-attendue-nuit {
-        grid-area: nuit;
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #7FB3D5;
-        background-color: #EDBB99;
-        margin: 15px;
-    }
-    
-    .champ-de-vision {
-        grid-area: champ_de_vision;
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #7FB3D5;
-        background-color: #EDBB99;
-        margin: 15px;
-    }
-    
-    .lumière-attendue-jour h4,
-    .lumière-attendue-nuit h4,
-    .champ-de-vision h4,
-    .lumière-inattendue-jour h4,
-    .lumière-inattendue-nuit h4 {
-        text-decoration: underline;
-        text-align: center;
-        font-family: roboto, sans-serif;
-    }
-    
-    .lumière-attendue-jour p,
-    .lumière-attendue-nuit p,
-    .champ-de-vision p,
-    .lumière-inattendue-jour p,
-    .lumière-inattendue-nuit p {
-        text-align: center;
-        font-family: roboto, sans-serif;
-    }
-    
-    .div-test-lumière-inattendue {
-        display: grid;
-        grid-template-columns: 1.5fr 1.5fr;
-        grid-template-rows: 0.1fr 1fr;
-        grid-gap: 15px;
-        grid-template-areas: "titre_lumière_inattendue titre_lumière_inattendue" "inatendue_jour inatendue_nuit ";
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #A9CAED;
-        grid-area: inattendue;
-        background-color: #A9CAED;
-        margin: 15px;
-    }
-    
-    .titre-lumière-inattendue {
-        grid-area: titre_lumière_inattendue;
-        font-family: roboto, sans-serif;
-        text-align: center;
-        text-decoration: underline;
-    }
-    
-    .lumière-inattendue-jour {
-        grid-area: inatendue_jour;
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #7FB3D5;
-        background-color: #EDBB99;
-        margin: 15px;
-    }
-    
-    .lumière-inattendue-nuit {
-        grid-area: inatendue_nuit;
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #7FB3D5;
-        background-color: #EDBB99;
-        margin: 15px;
-    }
-    
-    #div-test-freq {
-        border-radius: 15px;
-        border-color: #A9CAED;
-        display: grid;
-        border: 2px;
-        box-shadow: 5px 5px 5px #D2D4D6;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.1fr 1fr;
-        grid-gap: 20px;
-        grid-template-areas: "titre4 titre4 " "effort sans_effort";
-        background-color: #EAF2FB;
-        grid-area: freq;
-    }
-    
-    .titre4 {
-        margin: 15px;
-        background-color: #ED7D31;
-        border-radius: 15px;
-        border: double 4px #041733;
-        grid-area: titre4;
-        text-align: center;
-    }
-    
-    .div-effort h3,
-    .div-sans-effort h3 {
-        text-align: center;
-        text-decoration: underline;
-        font-family: roboto, sans-serif;
-    }
-    
-    .div-effort p,
-    .div-sans-effort p {
-        text-align: center;
-        font-family: roboto, sans-serif;
-    }
-    
-    #div-test-temperature {
-        border-radius: 15px;
-        border: 2px;
-        border-color: #A9CAED;
-        box-shadow: 5px 5px 5px #D2D4D6;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.1fr 1fr;
-        grid-gap: 20px;
-        grid-template-areas: "titre5 titre5 " "effort sans_effort";
-        background-color: #EAF2FB;
-        grid-area: temperature;
-    }
-    
-    .titre5 {
-        margin: 15px;
-        background-color: #ED7D31;
-        border-radius: 15px;
-        border: double 4px #041733;
-        grid-area: titre5;
-        text-align: center;
-    }
-    
-    .div-effort {
-        margin: 15px;
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #A9CAED;
-        grid-area: effort;
-        background-color: #A9CAED;
-    }
-    
-    .div-sans-effort {
-        margin: 15px;
-        border-radius: 10px;
-        box-shadow: 5px 3px 10px #A9CAED;
-        grid-area: sans_effort;
-        background-color: #A9CAED;
-    }
-    
-    #div-test-tonalite {
-        margin-bottom: 40px;
-        border: 2px;
-        border-radius: 15px;
-        box-shadow: 5px 5px 5px #D2D4D6;
-        border-color: #A9CAED;
-        grid-area: tonalite;
-        background-color: #EAF2FB;
-    }
-    
-    .titre6 {
-        margin: 15px;
-        background-color: #ED7D31;
-        border-radius: 15px;
-        border: double 4px #041733;
-        grid-area: titre6;
-        text-align: center;
-    }
-    
-    .div-test-tonalité-tableau {
-        width: 100%;
-        height: 400px;
-    }
-    
-    table {
-        font-family: roboto, sans-serif;
-        margin-left: 10px;
-        width: 98%;
-        height: 200px;
-        border-collapse: collapse;
-        font-size: 18px;
-    }
-    
-    th {
-        border: 1px solid #5DADE2;
-        padding: 10px;
-    }
-    
-    td {
-        border: 1px solid #5DADE2;
-        padding: 10px;
-    }
-    
-    tr:nth-child(odd) {
-        background-color: #A9CAED;
-    }
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    /*background: url("../images/image_avion");*/
+    background-color: #A9CAED;
+    /*ecf4fa;*/
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/*------------------------------corps de page ------------------------------*/
+
+section {
+    display: flex;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+/*------------ barre de navigation verticale ------------*/
+
+#menuGauche {
+    width: 20%;
+}
+
+#menuGauche #barre_nav {
+    border-radius: 0px;
+    background-color: #A9CAED;
+    /*border: 2px solid #041733;*/
+    padding: 5px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1%;
+    /*box-shadow: 2px 2px 5px #A9CAED;*/
+}
+
+#menuGauche ul,
+#menuGauche a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    list-style-type: none;
+    padding-left: 0px;
+    font-size: 18px;
+    text-decoration: none;
+    width: auto;
+    vertical-align: center;
+    color: #000;
+    font-family: roboto, sans-serif;
+}
+
+#menuGauche li a {
+    display: block;
+    color: #000;
+    padding: 4% 1% 4% 2%;
+}
+
+#menuGauche ul ul li a {
+    padding-left: 9%;
+}
+
+#menuGauche img {
+    width: 15%;
+}
+
+
+/*passage de la souris*/
+
+#menuGauche li a:hover,
+#menuGauche li a.active {
+    background-color: white;
+    transition: all .2s ease;
+}
+
+
+/*
+#menuGauche #ongletdebut a:hover {
+    border-radius: 15px 15px 0 0;
+}
+
+#menuGauche #ongletfin a:hover {
+    border-radius: 0 0 15px 15px;
+}
+*/
+
+
+/*----------------------- contenu -----------------------*/
+
+#contenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "titre titre titre titre titre" "son son son son legende" "lumiere lumiere lumiere lumiere legende" "lumiere lumiere lumiere lumiere legende" "freq freq freq freq freq " "temperature temperature temperature temperature temperature" "tonalite tonalite tonalite tonalite tonalite";
+    grid-gap: 40px;
+    width: 95%;
+    /*border: 2px solid #041733;
+        box-shadow: 2px 2px 5px #041733;*/
+    background-color: #ecf4fa;
+    margin-left: 0%;
+    padding: 0% 1% 0% 1%;
+    font-family: roboto, sans-serif;
+}
+
+.titre {
+    margin-top: 15px;
+    text-align: center;
+    background-color: #FFFF;
+    border: solid 2px #041733;
+    box-shadow: 5px 10px 10px #D2D4D6;
+    border-radius: 15px;
+    color: #041733;
+    font-family: roboto, sans-serif;
+    font-size: 25px;
+    grid-area: titre;
+    background-color: #EAF2FB;
+}
+
+.div-legende {
+    border-radius: 15px;
+    border: 6px;
+    background-color: #BDC3C7;
+    grid-area: legende;
+    box-shadow: 5px 5px 5px #D2D4D6;
+}
+
+.div-legende h3 {
+    font-size: 11px;
+    font-family: roboto, sans-serif;
+    padding: 2em
+}
+
+.div-rond-vert {
+    text-align: center;
+    background-color: #13B323;
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+    text-align: center;
+}
+
+.div-rond-jaune {
+    text-align: center;
+    background-color: yellow;
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+    text-align: center;
+}
+
+.div-rond-orange {
+    text-align: center;
+    background-color: orange;
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+}
+
+.div-rond-rouge {
+    text-align: center;
+    background-color: red;
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+}
+
+.div-rond-noir {
+    text-align: center;
+    background-color: black;
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+    color: white;
+}
+
+.titre-legende {
+    margin: 15px;
+    text-align: center;
+    background-color: #ECF0F1;
+    border: solid 2px #626567;
+    border-radius: 15px;
+    color: #ED7D31;
+    font-family: roboto, sans-serif;
+}
+
+#div-test-son {
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #D2D4D6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas: "titre2 titre2" " attendu inattendu";
+    background-color: #EAF2FB;
+    grid-area: son;
+}
+
+.titre2 {
+    margin: 15px;
+    background-color: #ED7D31;
+    border-radius: 15px;
+    border: double 4px #041733;
+    grid-area: titre2;
+    text-align: center;
+    font-family: roboto, sans-serif;
+    color: #041733;
+}
+
+.div-test-son-attendu {
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #A9CAED;
+    grid-area: attendu;
+    background-color: #A9CAED;
+    margin: 15px;
+}
+
+.div-test-son-inattendu {
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #A9CAED;
+    grid-area: inattendu;
+    background-color: #A9CAED;
+    margin: 15px;
+}
+
+.div-test-son-attendu h3,
+.div-test-son-inattendu h3,
+.div-test-lumière-attendue h3,
+.div-test-lumière-inattendue h3 {
+    text-decoration: underline;
+    text-align: center;
+    font-family: roboto, sans-serif;
+}
+
+.div-test-son-attendu p,
+.div-test-son-inattendu p {
+    text-align: center;
+    font-family: roboto, sans-serif;
+}
+
+#div-test-lumière {
+    border-radius: 15px;
+    border: 2 px;
+    border-color: #A9CAED;
+    box-shadow: 5px 5px 5px #D2D4D6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "titre3 titre3 titre3 " "attendue attendue attendue " "inattendue inattendue inattendue ";
+    background-color: #EAF2FB;
+    grid-area: lumiere;
+}
+
+.titre3 {
+    margin: 15px;
+    background-color: #ED7D31;
+    border-radius: 15px;
+    border: double 4px #041733;
+    grid-area: titre3;
+    text-align: center;
+    font-family: roboto, sans-serif;
+}
+
+.div-test-lumière-attendue {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas: "titre_lumière_attendue titre_lumière_attendue titre_lumière_attendue" "jour nuit champ_de_vision";
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #A9CAED;
+    grid-area: attendue;
+    background-color: #A9CAED;
+    margin: 15px;
+}
+
+.titre-lumière-attendue {
+    grid-area: titre_lumière_attendue;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.lumière-attendue-jour {
+    grid-area: jour;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #7FB3D5;
+    background-color: #EDBB99;
+    margin: 15px;
+}
+
+.lumière-attendue-nuit {
+    grid-area: nuit;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #7FB3D5;
+    background-color: #EDBB99;
+    margin: 15px;
+}
+
+.champ-de-vision {
+    grid-area: champ_de_vision;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #7FB3D5;
+    background-color: #EDBB99;
+    margin: 15px;
+}
+
+.lumière-attendue-jour h4,
+.lumière-attendue-nuit h4,
+.champ-de-vision h4,
+.lumière-inattendue-jour h4,
+.lumière-inattendue-nuit h4 {
+    text-decoration: underline;
+    text-align: center;
+    font-family: roboto, sans-serif;
+}
+
+.lumière-attendue-jour p,
+.lumière-attendue-nuit p,
+.champ-de-vision p,
+.lumière-inattendue-jour p,
+.lumière-inattendue-nuit p {
+    text-align: center;
+    font-family: roboto, sans-serif;
+}
+
+.div-test-lumière-inattendue {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas: "titre_lumière_inattendue titre_lumière_inattendue" "inatendue_jour inatendue_nuit ";
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #A9CAED;
+    grid-area: inattendue;
+    background-color: #A9CAED;
+    margin: 15px;
+}
+
+.titre-lumière-inattendue {
+    grid-area: titre_lumière_inattendue;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.lumière-inattendue-jour {
+    grid-area: inatendue_jour;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #7FB3D5;
+    background-color: #EDBB99;
+    margin: 15px;
+}
+
+.lumière-inattendue-nuit {
+    grid-area: inatendue_nuit;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #7FB3D5;
+    background-color: #EDBB99;
+    margin: 15px;
+}
+
+#div-test-freq {
+    border-radius: 15px;
+    border-color: #A9CAED;
+    display: grid;
+    border: 2px;
+    box-shadow: 5px 5px 5px #D2D4D6;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "titre4 titre4 " "effort sans_effort";
+    background-color: #EAF2FB;
+    grid-area: freq;
+}
+
+.titre4 {
+    margin: 15px;
+    background-color: #ED7D31;
+    border-radius: 15px;
+    border: double 4px #041733;
+    grid-area: titre4;
+    text-align: center;
+}
+
+.div-effort h3,
+.div-sans-effort h3 {
+    text-align: center;
+    text-decoration: underline;
+    font-family: roboto, sans-serif;
+}
+
+.div-effort p,
+.div-sans-effort p {
+    text-align: center;
+    font-family: roboto, sans-serif;
+}
+
+#div-test-temperature {
+    border-radius: 15px;
+    border: 2px;
+    border-color: #A9CAED;
+    box-shadow: 5px 5px 5px #D2D4D6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "titre5 titre5 " "effort sans_effort";
+    background-color: #EAF2FB;
+    grid-area: temperature;
+}
+
+.titre5 {
+    margin: 15px;
+    background-color: #ED7D31;
+    border-radius: 15px;
+    border: double 4px #041733;
+    grid-area: titre5;
+    text-align: center;
+}
+
+.div-effort {
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #A9CAED;
+    grid-area: effort;
+    background-color: #A9CAED;
+}
+
+.div-sans-effort {
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 3px 10px #A9CAED;
+    grid-area: sans_effort;
+    background-color: #A9CAED;
+}
+
+#div-test-tonalite {
+    margin-bottom: 40px;
+    border: 2px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #D2D4D6;
+    border-color: #A9CAED;
+    grid-area: tonalite;
+    background-color: #EAF2FB;
+}
+
+.titre6 {
+    margin: 15px;
+    background-color: #ED7D31;
+    border-radius: 15px;
+    border: double 4px #041733;
+    grid-area: titre6;
+    text-align: center;
+}
+
+.div-test-tonalité-tableau {
+    width: 100%;
+    height: 400px;
+}
+
+table {
+    font-family: roboto, sans-serif;
+    margin-left: 10px;
+    width: 98%;
+    height: 200px;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+th {
+    border: 1px solid #5DADE2;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #5DADE2;
+    padding: 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: #A9CAED;
+}
