@@ -1,6 +1,5 @@
 <?php 
 require("../modele/connexionbdd.php");
-require("../modele/fonctions.php"); 
 
 if(!isset($_SESSION['mail'])) {
     header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');

@@ -29,7 +29,7 @@
                 </ul>
             </nav>
 
-            <a id="connexion" href="Controleur/page_connexion.php"><button>Connexion</button></a>  
+            <a id="connexion" href="php/page_connexion.php"><button>Connexion</button></a>  
         </header> 
 
         
