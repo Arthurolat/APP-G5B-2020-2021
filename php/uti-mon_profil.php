@@ -45,11 +45,17 @@
 
         <div id=contenu>
              <?php require"../modele/connexionbdd.php";
-                        $requete = "SELECT * FROM personne where mail = '".$_SESSION['mail']."'";
-                        $exec_requete = mysqli_query($db,$requete);
-                        $reponse      = mysqli_fetch_array($exec_requete);
-                    ?>
-
+              
+                if(!isset($_SESSION['mail'])) {
+                    header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
+                    exit();
+                }
+             
+                $requete = "SELECT * FROM personne where mail = '".$_SESSION['mail']."'";
+                $exec_requete = mysqli_query($db,$requete);
+                $reponse      = mysqli_fetch_array($exec_requete);
+            ?>
+            
 
             <h2>
                 <IMG class="profil" src="<?= $reponse['photo']; ?>" alt="<?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?>" width=120px><?=" ". ucfirst($reponse['prenom'])." ".mb_strtoupper($reponse['nom']) ?>

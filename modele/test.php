@@ -22,5 +22,22 @@ echo $id;
 
 // https://www.youtube.com/watch?v=arjtn3uNiK4
 
+
 ?>
+
+<?php
+
+$pass = "00d70c561892a94980befd12a400e26aeb4b8599";
+$hash = sha1('mdp'); 
+if ($pass=$hash)
+{
+  echo '</br>'."Mot de passe correct".'</br>';
+  echo password_hash($pass, PASSWORD_DEFAULT); 
+}
+else
+{
+  echo '</br>'."Mot de passe incorrect";
+}
+?>
+
 

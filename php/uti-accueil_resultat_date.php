@@ -1,6 +1,11 @@
 <?php
 require("../modele/connexionbdd.php");
 require("../modele/fonctions.php");
+
+if(!isset($_SESSION['mail'])) {
+    header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +56,7 @@ require("../modele/fonctions.php");
             <h2> Mes résultats </h2>
             <?php
                 $reponse=session_users ($bdd, $_SESSION['mail']);
+                
             ?>                 
             
             <table>
