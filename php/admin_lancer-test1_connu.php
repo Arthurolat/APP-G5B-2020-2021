@@ -1,3 +1,13 @@
+<?php 
+require("../modele/connexionbdd.php");
+require("../modele/fonctions.php"); 
+
+if(!isset($_SESSION['mail'])) {
+    header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
@@ -69,12 +79,12 @@
                     <p>Utilisateur déjà existant</p>
                 </div>
                 <div class=element2>
-                    <p><a href="gestionnaire_lancer-test1_inconnu.html">Créer un nouveau compte utilisateur</a></p>
+                    <p><a href="admin_lancer-test1_inconnu.php">Créer un nouveau compte utilisateur</a></p>
                 </div>
             </div>
             <div class=formulaire>
 
-                <form method="post" action="gestionnaire_lancer-test2.html">
+                <form method="post" action="admin_lancer-test2.php">
                     <p>
                         <fieldset>
                             <p><label>Nom : <input type="text" name="nom" size="50" placeholder="Le nom de l'utilisateur..."></label></p>

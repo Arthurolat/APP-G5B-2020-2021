@@ -1,17 +1,20 @@
-<?php 
+ <?php 
 require("../modele/connexionbdd.php");
 require("../modele/fonctions.php");
 
 /* Récupération des valeurs des champs du formulaire */
+$selected=NULL;
 $Nomutilisateur= $_POST['Nomutilisateur'];
 $DatedesTestsFrom= $_POST['DatedesTestsFrom'];
 $DatedesTestsTo= $_POST['DatedesTestsTo'];
-$Testpsychotechniques= isset($_POST['Testpsychotechniques']) ? $_POST['Testpsychotechniques'] : NULL;
+$Testpsychotechniques= isset($_POST['Testpsychotechniques']) ? $_POST['Testpsychotechniques'] : array();
 $tableau= array($Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques);
+$reponse= recherchetest_multicriteres($bdd, $Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques, $selected);
 
+/*$reponse= recherche_multicriteres($bdd, $Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques, $selected);*/
 
 /* Selection des criteres de recherche */
-switch($tableau){
+/*switch($tableau){
     case array(null, null, null, null): #recherche vide 
         $reponse = recherchetest_all($bdd);
     break;
@@ -72,7 +75,7 @@ switch($tableau){
             recherchetest_users_date_test ($bdd, $Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $selected);
         }
     break;
-}
+}*/
 
 include("../vues/affichage-recherche_test.php");            
 ?>
