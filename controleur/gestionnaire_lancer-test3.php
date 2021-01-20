@@ -18,7 +18,6 @@ if(!isset($_SESSION['mail'])) {
 
 </head>
 
-<p><?php require("../modele/gestionnaire_lancer_test2_bdd.php"); ?></p>
 
 <body>
 

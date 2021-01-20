@@ -43,10 +43,10 @@
 
             </div>
             <div class="row">
-                <div class="col">
+                <!--<div class="col">
                     <input type="checkbox" name="rememberMe" id="rememberMe">
                     <label for="remenberMe" class="souvenir"> Se souvenir de moi</label>
-                </div>
+                </div>-->
                 <a href="#" class="forgotPassword">Mot de passe oublié ?</a>
             </div>
 

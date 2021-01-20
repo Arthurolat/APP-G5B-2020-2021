@@ -59,7 +59,7 @@ if(!isset($_SESSION['mail'])) {
         </div>
                 
             <div id=contenu>
-            <?php require"../modele/connexionbdd.php";
+            <?php 
                 $requete = "SELECT * FROM personne where mail = '".$_SESSION['mail']."'";
                 $exec_requete = mysqli_query($db,$requete);
                 $reponse      = mysqli_fetch_array($exec_requete);
