@@ -34,8 +34,9 @@
 
 #formulaire_contact {
     height: 40%;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 120px;
+    margin-bottom: 20%;
 }
 
 #bouton_envoyer {
@@ -59,15 +60,26 @@
 
 #form_control {
     width: 600px;
-    background: transparent;
+    background: white;
     border: none;
+    border-radius: 10px;
     outline: none;
     border-bottom: 1px solid grey;
-    color: #FFF;
+    color: black;
     font-size: 18px;
     margin-bottom: 16px;
+    padding-left: 15px;
+    resize: vertical;
 }
 
 input {
     height: 45px;
+}
+
+textarea {
+    height: 75px;
+    max-height: 130px;
+    min-width: 45px;
+    font-family: roboto, sans-serif;
+    padding-top: 10px;
 }

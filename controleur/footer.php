@@ -25,10 +25,10 @@
     </div>
     <div class="footer_menu_one">
         <ul>
-            <li><a href="a_propos.php">A propos</a></li>
-            <li><a href="accueil.php#contact">Contactez-nous</a></li>
+            <li><a href="http://localhost/APP-G5B-2020-2021/controleur/a_propos.php">A propos</a></li>
+            <li><a href="http://localhost/APP-G5B-2020-2021/accueil.php#corps">Contactez-nous</a></li>
             <li><a href="#">Mentions légales</a></li>
-            <li><a href="FAQ.php">FAQ</a></li>
+            <li><a href="http://localhost/APP-G5B-2020-2021/controleur/FAQ.php">FAQ</a></li>
     
         </ul>
     

@@ -17,7 +17,7 @@
                 <form action="../APP-G5B-2020-2021/modele/envoi_mail.php" method="POST">
                     <input type="text" name="nom" id="form_control" placeholder="Nom" required /></br>
                     <input type="text" name="email" id="form_control" placeholder="Mail" required /></br>
-                    <textarea name="message" id="form_control" placeholder="Message" row="4" required></textarea></br>
+                    <textarea name="message" id="form_control" placeholder="Message" rows="4" required></textarea></br>
                     <input type="submit" id="bouton_envoyer" value="ENVOYER" />
                 </form>
             </div>

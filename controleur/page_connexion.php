@@ -17,7 +17,7 @@
 
 <body>
     
-    <a href="accueil.php" ><img class="logohome" src="../images/icones/logo_home.png" width='30px'/></a>
+    <a href="http://localhost/APP-G5B-2020-2021/accueil.php" ><img class="logohome" src="../images/icones/logo_home.png" width='30px'/></a>
 
     <div class="connexioncontainer">
         <div class="slidersection">

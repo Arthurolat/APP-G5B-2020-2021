@@ -29,7 +29,7 @@
                 </ul>
             </nav>
 
-            <a id="connexion" href="php/page_connexion.php"><button>Connexion</button></a>  
+            <a id="connexion" href="controleur/page_connexion.php"><button>Connexion</button></a>  
         </header> 
 
         
@@ -59,7 +59,7 @@
                     </p>
                 </div>
 
-                <a id="bouton_a_propos" href="Controleur/a_propos.php"><button>En savoir plus !</button></a>
+                <a id="bouton_a_propos" href="controleur/a_propos.php"><button>En savoir plus !</button></a>
             </div>
             
         </div>
@@ -115,7 +115,7 @@
         </div>
 
         <footer>
-            <?php include("php/footer.php"); ?>
+            <?php include("controleur/footer.php"); ?>
         </footer>
         
     </body>

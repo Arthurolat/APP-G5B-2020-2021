@@ -17,14 +17,14 @@
                 
             <nav id="menu_principal"> <!-- Menu principal de navigation dans bande du haut -->
 				<ul>
-					<li><a href="accueil.php">Accueil</a></li>
-					<li><a href="accueil.php#a_propos">A propos</a></li>
-					<li><a href="accueil.php#team">La team</a></li>
-                    <li><a href="accueil.php#contact">Contact</a></li>
+					<li><a href="http://localhost/APP-G5B-2020-2021/accueil.php">Accueil</a></li>
+					<li><a href="http://localhost/APP-G5B-2020-2021/accueil.php#a_propos">A propos</a></li>
+					<li><a href="http://localhost/APP-G5B-2020-2021/accueil.php#team">La team</a></li>
+                    <li><a href="http://localhost/APP-G5B-2020-2021/accueil.php#contact">Contact</a></li>
                 </ul>
             </nav>
 
-            <a id="connexion" href="page_connexion.html"><button>Connexion</button></a>  
+            <a id="connexion" href="page_connexion.php"><button>Connexion</button></a>  
         </header> 
 
         <div id="histoire">
