@@ -1,11 +1,30 @@
 <?php 
 require("../modele/connexionbdd.php");
 
+
+
 if(!isset($_SESSION['mail'])) {
     header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
     exit();
 }
+
+$query = "SELECT * FROM personne";
+$params = [];
+
+if (!empty($_GET['q'])){
+	$query .= " WHERE nom LIKE :nom";
+	$params['nom'] = '%' . $_GET['q'] . '%';
+
+}
+
+$statement = $bdd ->prepare($query);
+$statement -> execute($params);
+$personne=$statement->fetchAll();
+
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -61,146 +80,46 @@ if(!isset($_SESSION['mail'])) {
             
         <div id="contenu">
 
+
             <div id="searchbar">
                 <h1>Rechercher un utilisateur : </h1>
-                <form method="post" action="#">
-                    <input class="champ" type="text" value="">
-                    <input type="image" id="image" alt="Login" src="../images/icones/icone_loupe.png" width="30px" >  
+                <form action="">
+                   
+                   <input class="champ" type="text" value="" name="q" placeholder="Rechercher par nom">
+                   <button class="btn">Rechercher</button>
+                    
                 </form>
             </div>
+        
 
-            <table class=tableau align="center" width="1300px">
+                        
+            <table class="tableau" align="center" width="1300px">
+
+            	<thead>
                 <tr class="theader">
+                    <th>Prénom</th>
                     <th>Nom</th>
                     <th>Modifier</th>
                     <th>Supprimer</th>
                 </tr>
+            </thead>
+
+            <tbody>
+            	<?php foreach($personne as $personne): ?>
                 <tr>
-                    <td>Clara Augie</td>
+                    <td><?= $personne['prenom'] ?></td>
+                    <td><?= $personne['nom'] ?></td>
                     <td>
                         <p><a href="admin_modifier-profil.php">Modifier</a></p>
                     </td>
                     <td>
-                        <p>Supprimer</p>
+                        <p><input type="submit" name="supprimer" value="Supprimer"></p>
                     </td>
                 </tr>
-                <tr>
-                    <td>Sanae El Messadi </td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Guillaume Jolly</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Constantin Chevalier</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php"">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Arthur Latourette</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                <tr>
-                <td>Thomas Le Deventec</td>
-                <td>
-                    <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                </td>
-                <td>
-                    <p>Supprimer</p>
-                </td>
-                </tr>
-                    <tr>
-                    <td>Nom</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                    <tr>
-                    <td>Nom</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                    <tr>
-                    <td>Nom</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                    <tr>
-                    <td>Nom</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                <tr>
-                <td>Nom</td>
-                <td>
-                    <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                </td>
-                <td>
-                    <p>Supprimer</p>
-                </td>
-                </tr>
-                    <tr>
-                    <td>Nom</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                    <tr>
-                    <td>Nom</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
-                    <tr>
-                    <td>Nom</td>
-                    <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
-                    </td>
-                    <td>
-                        <p>Supprimer</p>
-                    </td>
-                </tr>
+                
+            <?php endforeach ?>
+                 
+             </tbody>  
             </table>
         
 
