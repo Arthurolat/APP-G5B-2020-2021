@@ -110,10 +110,17 @@ $personne=$statement->fetchAll();
                     <td><?= $personne['prenom'] ?></td>
                     <td><?= $personne['nom'] ?></td>
                     <td>
-                        <p><a href="admin_modifier-profil.php">Modifier</a></p>
+                        <p><a href="admin_modifier-profil.php?numPersonne=<?=$personne['idacteur']?>">Modifier</a></p>
                     </td>
                     <td>
-                        <p><input type="submit" name="supprimer" value="Supprimer"></p>
+           
+        	
+        		<p>
+        		<a class="supprimer" 
+        		href="supprimer.php?action=delete&id=' . $result->client_id . '&validationWait=true">Supprimer</a>
+        		
+    			</p>
+    			
                     </td>
                 </tr>
                 
