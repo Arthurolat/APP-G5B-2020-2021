@@ -1,6 +1,14 @@
 <?php 
 require("../modele/connexionbdd.php");
 
+$query = $bdd ->prepare('SELECT * FROM personne WHERE idacteur= :num');
+$query -> bindValue(':num',$_GET['numPersonne'],PDO::PARAM_INT)
+
+
+
+$personne = $query ->fetch();
+
+
 if(!isset($_SESSION['mail'])) {
     header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
     exit();
@@ -66,15 +74,21 @@ if(!isset($_SESSION['mail'])) {
             <div class=formulaire >
                 <form method="post" action="#">
                     <fieldset>
-                        <p><label>Nom : <input type="text" name="nom" size="50" placeholder="nom"></label></p>
-                        <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="prénom"></label></p>
-                        <p><label>Email : <input type="email" name="email" size="50" placeholder="email"></label></p>
-                        <p><label>Date de naissance : <input type="date" name="date"></label></p>
-                        <p><label>Numero de téléphone : <input type="tel" name="tel" maxlength="10" placeholder="tel"></label></p>
-                        <p><label>Adresse : <input type="text" name="adresse" size="50" placeholder="rue"></label></p>
-                        <p><label>Ville : <input type="text" name="ville" size="50" placeholder="ville"></label></p>
-                        <p><label>Code postal : <input type="text" name="adresse" size="50" maxlength="5" placeholder="code postal"></label></p>
-                        <p><label>Mot de passe : <input type="text" name="Mdp" size="50" placeholder="mot de passe"></label></p>
+
+                        <p><label>Nom : <input type="text" name="nom" size="50" placeholder="nom" value="<?= $personne['nom'];?>"></label></p>
+
+                        <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="prénom" value="<?= $personne['prenom'];?>"></label></p>
+
+                        <p><label>Email : <input type="email" name="email" size="50" placeholder="email" value="<?= $personne['mail'];?>"></label></p>
+
+                        <p><label>Date de naissance : <input type="date" name="date" value="<?= $personne['dateNaissance'];?>"></label></p>
+
+                        <p><label>Numero de téléphone : <input type="tel" name="tel" maxlength="10" placeholder="tel" value="<?= $personne['tel'];?>"></label></p>
+
+                        <p><label>Adresse : <input type="text" name="adresse" size="50" placeholder="rue" value="<?= $personne['adresse'];?>"></label></p>
+
+                        <p><label>Mot de passe : <input type="text" name="Mdp" size="50" placeholder="mot de passe" value="<?= $personne['mdp'];?>"></label></p>
+
                         <p><label>Statut : </label>
                             <select id="statut" name="idstatut"> 
                             <option value="Utilisateur">Utilisateur</option>
