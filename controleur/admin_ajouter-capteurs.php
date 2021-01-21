@@ -1,5 +1,5 @@
 <?php 
-require("../modele/connexionbdd.php");
+require_once("../modele/connexionbdd.php");
 
 if(!isset($_SESSION['mail'])) {
     header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
@@ -68,7 +68,7 @@ if(!isset($_SESSION['mail'])) {
                    <h3><?=$_SESSION['message'] ?></h3>
                 <?php endif ?>
                         <section class="section1">
-                            <form action="ajouter_capteur_importation.php" method="POST">
+                            <form action="../modele/ajouter_capteur.php" method="POST">
                                     <label for="Nomcapteurinput">Nom du capteur :</label>
                                     <select name="capteurs" id="nomcapteurinput">
                                     <?php while ($reponse=mysqli_fetch_array($exec_requete)): ?>
