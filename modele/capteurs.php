@@ -1,3 +1,4 @@
+
 <?php 
 	 function ajouter_capteur(){
 		if(isset($_POST['quantité'])&&isset($_POST['capteurs'])){
