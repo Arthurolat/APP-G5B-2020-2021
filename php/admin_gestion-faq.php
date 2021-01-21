@@ -52,7 +52,7 @@
         <div id="contenu">
                 <h2> F.A.Q </h2>
 
-                <form action="FAQ.php" method="POST">
+                <form action="insert.php" method="POST">
 
                 <h3><textarea name="question1" id="form_control" placeholder="1. Question :" row="4" required></textarea></br></h3>
                 <p><textarea name="reponse1" id="form_control" placeholder="Réponse" row="4" required></textarea></br></p>
