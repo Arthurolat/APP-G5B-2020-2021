@@ -155,8 +155,32 @@ function nouveau_test_bdd($bdd){
 function numero_session($bdd){
     $reponse = $bdd->query("SELECT MAX(idsession) AS idsession FROM sessiontest");
     $donnees = $reponse->fetch();
+<<<<<<< HEAD
     echo $donnees['idsession']; 
 
+=======
+    $_SESSION['numero_session'] = $donnees;
+    print_r($_SESSION['numero_session']);  
+}
+
+#----------------------------rentrer mesure température peau-------------------------------------
+function mesure_temperature($bdd){
+    $idcapteur = $idtest = 4;
+    $date = date("Y-m-d H:i:s");
+    $idsession = $_SESSION['numero_session'];
+    $req = $bdd->exec("INSERT INTO mesure(datemesure, idcapteur) VALUES('$date', '$idcapteur')");
+    $reponse = $bdd->query("SELECT MAX(idmesure) AS idmesure FROM mesure");
+    $reponse->execute();
+    $idmesure = $reponse;
+    //$idmesure = $idmesure['mesure'];
+    $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
+}
+
+#------------------------------inserer valeur mesure temperature peau----------------------------
+function valeur_mesure_temperature($bdd){
+    $valeur = $POST["valeur"];
+    $req = $bdd->exec("UPDATE mesure SET valeur='$valeur' WHERE idmesure = MAX(idmesure)");
+>>>>>>> 5b594e4e45656c20b846468432cccfe4a5956f58
 }
 
 

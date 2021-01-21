@@ -55,10 +55,6 @@
                 <div id="div-test-son">
                     <div class="titre2"><h2>Temps de réaction à un son</h2></div>
 
-                    <div class="div-test-son-attendu"><h3>Son attendu</h3>
-                        <p>Temps: 1:02 s</p>
-                        <p><img src="../images/rond_vert.png"></p>
-                    </div>
                     <div class="div-test-son-inattendu"><h3>Son inattendu</h3>
                         <?php
                         $soninnatendu=0;
@@ -80,70 +76,110 @@
                     <div class="titre3"><h2>Temps de réaction à une lumière</h2></div>
                     <div class="div-test-lumière-attendue">
                         <div class= "titre-lumière-attendue"><h3>Lumière attendue</h3></div>
-                        <div class="lumière-attendue-jour">
-                            <h4>Jour</h4>
-                            <p>Temps: </p>
-                            <p><img src="../images/rond_orange.png"></p></div>
+                        
                         <div class="lumière-attendue-nuit">
                             <?php
-                        $lumiere_innatendue_noir=0;
+                        $lumiere_attendue_noir=0;
                         while ($donnees = $reponse->fetch()){
                             if ($donnees['idcapteur']==2){
-                                $lumiere_innatendue_noir=$donnees['valeur'];
+                                $lumiere_attendue_noir=$donnees['valeur'];
                             }
                          } 
                             
                         
                           ?>
                             <h4>Nuit</h4>
-                            <p>Temps:<?php echo $lumiere_innatendue_noir ?> s</p>
+                            <p>Temps: <?php echo $lumiere_attendue_noir ?> s</p>
                             <p><img src="../images/rond_jaune.png"></p></div>
-                        <div class="champ-de-vision">
-                        <h4>Champ de vision</h4>
-                        <p>170°</p></div>
+                        
                     </div>
                    
                     
                     <div class="div-test-lumière-inattendue">
                         <div class="titre-lumière-inattendue"><h3>Lumière inattendue</h3></div>
                         <div class="lumière-inattendue-jour">
+                             <?php
+                        $lumiere_inattendue_jour=0;
+                        while ($donnees = $reponse->fetch()){
+                            if ($donnees['idcapteur']==3){
+                                $lumiere_inattendue_jour=$donnees['valeur'];
+                            }
+                         } 
+                            
+                        
+                          ?>
                             <h4>Jour</h4>
-                            <p>Temps: 7.03s </p>
+                            <p>Temps: <?php echo $lumiere_inattendue_jour ?> s </p>
                             <p><img src="../images/rond_rouge.png"></p></div>
-                        <div class="lumière-inattendue-nuit">
-                                <h4>Nuit</h4>
-                                <p>Temps: 5.01 s</p>
-                                <p><img src="../images/rond_orange.png"></p></div>
+                        
                     </div>
                 </div>
 
                 <div id="div-test-freq">
                     <div class="titre4"><h2>Fréquence cardiaque</h2></div>
                     <div class="div-effort">
+                        <?php
+                        $freq_effort=0;
+                        while ($donnees = $reponse->fetch()){
+                            if ($donnees['idcapteur']==6){
+                                $freq_effort=$donnees['valeur'] AND
+                                $donnees['apres_effort']='oui' ;
+                            }
+                         } 
+                         ?>
                         <h3>Effort</h3>
-                        <p>80 bits/s</p>
+                        <p><?php echo $freq_effort ?> bits/s</p>
                     </div>
                         
                     <div class="div-sans-effort">
+                        <?php
+                        $freq_sans_effort=0;
+                        while ($donnees = $reponse->fetch()){
+                            if ($donnees['idcapteur']==6){
+                                $freq_sans_effort=$donnees['valeur'] AND
+                                $donnees['apres_effort']='non' ;
+                            }
+                         } 
+                         ?>
                         <h3>Sans effort</h3>
-                        <p>100 bits/s</p>
+                        <p>  <?php echo $freq_sans_effort ?> bits/s</p>
                     </div>
                 </div>
 
                 <div id="div-test-temperature">
                     <div class="titre5"><h2>Température de la peau</h2></div>
                     <div class="div-effort">
+                        <?php
+                        $temp_effort=0;
+                        while ($donnees = $reponse->fetch()){
+                            if ($donnees['idcapteur']==4){
+                                $temp_effort=$donnees['valeur'] AND
+                                $donnees['apres_effort']='non' ;
+                            }
+                         } 
+                         ?>
+
                         <h3>Effort</h3>
-                        <p>36.5°</p>
+                        <p> <?php echo $temp_effort ?> °</p>
                     </div>
-                    <div class="div-sans-effort"> 
+                    <div class="div-sans-effort">
+                        <?php
+                        $temp_sans_effort=0;
+                        while ($donnees = $reponse->fetch()){
+                            if ($donnees['idcapteur']==4){
+                                $temp_sans_effort=$donnees['valeur'] AND
+                                $donnees['apres_effort']='non' ;
+                            }
+                         } 
+                         ?>
                         <h3>Sans effort</h3>
-                        <p>39.2°</p>
+                        <p> <?php echo $temp_sans_effort ?> °</p>
                     </div>
                 </div>
                 <div id="div-test-tonalite"> 
                 <div class="titre6"><h2>Reconnaissance de tonalité</h2></div>
                 <div class="div-test-tonalité-tableau">
+                    
                     <p>
                         <table>
                         <tr>

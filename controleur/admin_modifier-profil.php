@@ -1,12 +1,6 @@
 <?php 
 require("../modele/connexionbdd.php");
 
-$query = $bdd ->prepare('SELECT * FROM personne WHERE idacteur= :num');
-$query -> bindValue(':num',$_GET['numPersonne'],PDO::PARAM_INT)
-
-
-
-$personne = $query ->fetch();
 
 
 if(!isset($_SESSION['mail'])) {
