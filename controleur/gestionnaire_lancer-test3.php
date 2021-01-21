@@ -73,6 +73,7 @@ if(!isset($_SESSION['mail'])) {
                 }, 1000);
             </script>
             -->
+            <!--
             <form method="post" action="#">
                 <p> Choisissez votre capteur :
                     <label>
@@ -85,6 +86,7 @@ if(!isset($_SESSION['mail'])) {
                 </label>
                 </p>
             </form>
+            -->
             <div class=formulaire>
                 <div class="test1">
                     <img class="img-responsive" src="../images/test_temperature.jpg">
