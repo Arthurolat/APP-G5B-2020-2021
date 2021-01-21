@@ -155,8 +155,11 @@ function nouveau_test_bdd($bdd){
 function numero_session($bdd){
     $reponse = $bdd->query("SELECT MAX(idsession) AS idsession FROM sessiontest");
     $donnees = $reponse->fetch();
-    echo $donnees['idsession'];  
+    echo $donnees['idsession']; 
+
 }
+
+
 
 ?>  
 

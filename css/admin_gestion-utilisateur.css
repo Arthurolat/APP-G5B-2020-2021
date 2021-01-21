@@ -184,11 +184,12 @@ tr:nth-child(1) {
     text-align: left;
     text-indent: 16px;
     background-color: #ed7d31;
-    color: white;
+    color: black;
     font-size: larger;
     font-weight: bolder;
     height: 40px;
 }
+
 
 
 /*mise en forme ligne body du tableau */
