@@ -105,6 +105,7 @@ section {
     padding: 2% 1% 2% 2%;
     background-color: #ecf4fa;
     font-family: roboto, sans-serif;
+    font-size: 16px;
 }
 
 section h2 {
@@ -127,9 +128,6 @@ h3 {
     font-size: 21px;
 }
 
-
-/*---- basculer entre les onglets----*/
-
 #contenu .onglet {
     text-align: center;
     display: flex;
@@ -144,15 +142,13 @@ h3 {
     margin: 0 auto;
     height: 40px;
     font-size: 17px;
+    padding-bottom: 5px;
 }
 
 .onglet .element1 {
     color: #ed7d31;
     font-weight: bold;
-    border: 2px solid #041733;
-    border-bottom: none;
-    border-radius: 30px 30px 0 0;
-    background-color: rgba(255, 255, 255, 0.774);
+    border-bottom: 2px solid #ed7d31;
 }
 
 .onglet .element2 {
@@ -174,7 +170,6 @@ td {
     border-top: 1px solid rgba(0, 0, 0, 0.37);
     border-bottom: 1px solid rgba(0, 0, 0, 0.37);
     width: 100%;
-    border-radius: 15px;
 }
 
 
@@ -184,19 +179,6 @@ table {
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.37);
 }
-
-
-/*coloration tableau lors du survol souris */
-
-tr td:nth-child(2) p:hover {
-    background-color: #ed7d31;
-    color: white;
-    border: 1px outset #ed7d31;
-    transition: all .3s ease;
-}
-
-
-/* mise en forme ligne header tableau*/
 
 
 /*mise en forme ligne body du tableau */

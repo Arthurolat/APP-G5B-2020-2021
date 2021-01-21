@@ -31,9 +31,6 @@ if(!isset($_SESSION['mail'])) {
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
                     <a href="gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -49,50 +46,44 @@ if(!isset($_SESSION['mail'])) {
 
         <div id="contenu">
 
-            <h2> Rechercher </h2>
+            <h2> Rechercher un test </h2>
                 <form method="post" action="gestionnaire_recherche-tableau-resultat.php">
                     <fieldset>
-                        <legend>Filtres de recherche</legend>
                     <div class="div1">
-                        <label for="Nomdutilisateurinput">Votre nom d'utilisateur :</label>
-                        <input type="text" name="Nomutilisateur" id="nomdutilisateurinput" placeholder="Pierre Dupont">
+                        <label for="Nomdutilisateurinput">Nom de l'utilisateur :</label>
+                        <input type="text" name="Nomutilisateur" id="nomdutilisateurinput" placeholder="">
                     </div><br>  
                     <div class="div2">
-                        <label for="Dateinput1">Date du :</label>
-                        <input type="Date" name="DatedesTestsFrom" id="Dateinput1" placeholder="2020-01-01">
-
-                        <label for="Dateinput2"> à : </label>
-                        <input type="Date" name="DatedesTestsTo" id="Dateinput2" placeholder="2020-01-01">
+                        <label id="datefrom">Sessions réalisée du :</label>
+                        <input type="Date" name="DatedesTestsFrom" id="Dateinput1" placeholder="">
+ 
+                        <label id="dateto"> Au :</label>
+                        <input type="Date" name="DatedesTestsTo" id="Dateinput2" placeholder="">
                     </div><br>
                     <div class="div3">
-                        <label>Test psychotechniques : </label>
-                        <div class="div4"><br>
+                        <label>Test psychotechniques réalisés : </label>
+                            </br>  
                             <input type="checkbox" name="Testpsychotechniques[]" id="Testtempérature" value="température de la peau" >
                             <label for="Testtempérature">Test de température de la peau</label>
-                        </div>
-                        <div class="div5"><br>
+                            </br>                   
                             <input type="checkbox" name="Testpsychotechniques[]" id="Testfréquencecardiaque" value="fréquence cardiaque">
                             <label for="Testfréquence cardiaque">Test de fréquence cardiaque</label>
-                        </div>
-                        <div class="div5"><br>
-                            <input type="checkbox" name="Testpsychotechniques[]" id="Testson" value="temps réaction à un son">
+                            </br>                          
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testson" value="temps réaction à un son inattendu" >
                             <label for="Testson">Test du temps de réaction à un son inattendu</label>
-                        </div>
-                        <div class="div6"><br>
-                            <input type="checkbox" name="Testpsychotechniques[]" id="Testlumière" value="temps de réaction à une lumière attendue">
+                            </br>                          
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testlumière" value="temps de réaction à une lumière attendue dans le noir (clignotement)">
                             <label for="Testlumière">Test du temps de réaction à une lumière attendue dans le noir</label>
-                        </div>
-                        <div class="div7"><br>
-                            <input type="checkbox" name="Testpsychotechniques[]" id="Testlumière" value="temps de réaction à une lumière inattendue">
+                            </br>                          
+                            <input type="checkbox" name="Testpsychotechniques[]" id="Testlumière2" value="temps de réaction à une lumière inattendue en extérieur">
                             <label for="Testlumière">Test du temps de réaction à une lumière inattendue en extérieur</label>
-                        </div>
-                        <div class="div8"><br>
+                            </br>                          
                             <input type="checkbox" name="Testpsychotechniques[]" id="Testtonalité" value="reconnaissance de tonalité">
                             <label for="Testtonalité">Test de reconnaissance de tonalité</label>
-                        </div>
+                        
                     </div>
                     <div class="container">
-                    <input class="btn" type="submit" name="bouton" value="Rechercher">
+                        <input class="btn" type="submit" name="bouton" value="Rechercher">
                     </div>
 
                     </fieldset>

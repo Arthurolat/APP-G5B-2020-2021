@@ -1,5 +1,5 @@
  <?php 
-require("../modele/connexionbdd.php");
+
 require("../modele/fonctions.php");
 
 /* Récupération des valeurs des champs du formulaire */

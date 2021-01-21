@@ -31,9 +31,6 @@ if(!isset($_SESSION['mail'])) {
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
                     <a href="gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -51,7 +48,7 @@ if(!isset($_SESSION['mail'])) {
             <h2> Résultats </h2>
             
             <?php 
-            /*require("../modele/rechercher_un_test.php");*/
+            
             require("../modele/rechercher_un_test.php");
             ?>
 

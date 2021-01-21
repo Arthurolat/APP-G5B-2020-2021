@@ -32,9 +32,6 @@ if(!isset($_SESSION['mail'])) {
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
                     <a class="active" href=#><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -75,9 +72,12 @@ if(!isset($_SESSION['mail'])) {
                 <form method="post" action="gestionnaire_lancer-test2.php">
                     <p>
                         <fieldset>
-                            <p><label>Nom : <input type="text" name="nom" size="50" placeholder="Le nom de l'utilisateur..."></label></p>
-                            <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="Le prénom de l'utilisateur..."></label></p>
-                            <p><label>Date et heure : <input type="datetime-local" name="date"></label></p>
+                            <p><label>Nom de famille: </label>
+                            <input type="text" name="nom" size="50" placeholder="" required></p>
+                            <p><label>Prénoms :</label>
+                            <input type="text" name="prenom" size="50" placeholder="" required></p>
+                            <p><label>Date et heure : </label>
+                            <input type="datetime-local" name="date" required></p>
                             <p class="bouton"><input type="submit" value="Suivant" /></p>
                         </fieldset>
                     </p>
