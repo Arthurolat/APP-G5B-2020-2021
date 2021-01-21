@@ -1,3 +1,12 @@
+<?php 
+require("../modele/connexionbdd.php");
+
+if(!isset($_SESSION['mail'])) {
+    header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
@@ -7,6 +16,10 @@
     <title>lancement session choix test et capteur</title>
 
 </head>
+
+<?php 
+require("../modele/gestionnaire_lancer_test3_bdd.php"); 
+?>
 
 <body>
 

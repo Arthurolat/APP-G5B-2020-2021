@@ -166,8 +166,10 @@ function mesure_temperature($bdd){
     $idsession = $_SESSION['numero_session'];
     $req = $bdd->exec("INSERT INTO mesure(datemesure, idcapteur) VALUES('$date', '$idcapteur')");
     $reponse = $bdd->query("SELECT MAX(idmesure) AS idmesure FROM mesure");
-    $idmesure = $reponse->fetch();
-    $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");
+    $reponse->execute();
+    $idmesure = $reponse;
+    //$idmesure = $idmesure['mesure'];
+    $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
 }
 
 #------------------------------inserer valeur mesure temperature peau----------------------------
