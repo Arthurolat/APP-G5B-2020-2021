@@ -18,6 +18,9 @@ if(!isset($_SESSION['mail'])) {
 
 </head>
 
+<?php 
+require("../modele/gestionnaire_lancer_test2_bdd.php"); 
+?>
 
 <body>
 
@@ -91,7 +94,6 @@ if(!isset($_SESSION['mail'])) {
                 <div class="test1">
                     <img class="img-responsive" src="../images/test_temperature.jpg">
                     <div class="lancer_test">
-
                         <form method="post" action="#">
                             <p>Température superficielle de la peau</p>
                         </form>
