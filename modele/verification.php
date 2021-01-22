@@ -3,13 +3,15 @@
 if(isset($_POST['mail']) && isset($_POST['mdp']))
 {
 
-require("../modele/connexionbdd.php");
+require("connexionbdd.php");
 
     // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
     // pour éliminer toute attaque de type injection SQL et XSS
    $mail = mysqli_real_escape_string($db,htmlspecialchars($_POST['mail'])); 
    $mdp = mysqli_real_escape_string($db,htmlspecialchars($_POST['mdp']));
-    
+   
+   $mdp=sha1($mdp); 
+
    if($mail !== "" && $mdp !== "")
    {
       $requete = "SELECT count(*), statut FROM personne where 
@@ -27,15 +29,15 @@ require("../modele/connexionbdd.php");
          $_SESSION['mail'] = $mail;
          if($statut=='admin')
          {
-         header('Location: admin_lancer-test1_connu.php');
+         header('Location: ../controleur/admin_lancer-test1_connu.php');
          }
          if($statut=='gestionnaire')
          {
-         header('Location: gestionnaire_lancer-test1_connu.php');
+         header('Location: ../controleur/gestionnaire_lancer-test1_connu.php');
          }
          if($statut=='utilisateur')
          {
-         header('Location: uti-accueil_resultat_date.php');
+         header('Location: ../controleur/uti-accueil_resultat_date.php');
          }
          
       }
@@ -52,7 +54,7 @@ require("../modele/connexionbdd.php");
 }
 else
 {
-   header('Location: page_connexion.php');
+   header('Location: ../controleur/page_connexion.php');
 }
 mysqli_close($db); // fermer la connexion
 ?>

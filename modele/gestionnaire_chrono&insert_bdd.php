@@ -1,8 +1,5 @@
-<?php
-
+<?php 
 require("../modele/fonctions.php");
 
-add_utilisateur($bdd);
-
-
+valeur_mesure($bdd);
 ?>

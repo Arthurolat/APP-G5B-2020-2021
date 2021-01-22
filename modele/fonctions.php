@@ -142,45 +142,39 @@ function affichage_resultats($bdd, $datesession, $idacteur ){
 
 #------------------------------utilisateur existant : rentrer date, nom et prénom nouveau test dans base de données---------------
 function nouveau_test_bdd($bdd){
-    $date= $_POST['date'];
     $prenom = $_POST["prenom"];
     $nom = $_POST["nom"];
-    
+    $date= $_POST['date'];
    
     $sql = ("SELECT idacteur FROM personne WHERE prenom = '$prenom' AND nom = '$nom'");
     foreach ($bdd->query($sql) as $row){
         $_SESSION['idacteur_sessiontest']=$var=$row['idacteur'];
     }
     
-    if (!empty($date)){
-        $sql = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('$date', '$var')");
-    }else{ 
-        $sql = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('CURRENT_TIMESTAMP()', 'max(idacteur)')");
-    }
+    $sql = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('$date', '$var')");
+        
      
 }
 
-#-----------------------------ajout utilisateur dans bdd-------------------------------------------
+#-----------------------------ajout utilisateur dans bdd lors du lancement d'une session de test-------------------------------------------
 function add_utilisateur($bdd){
-    $nom= $_POST['nom'];
-    $prenom= $_POST['prenom'];
+    $nom_uti= $_POST['nom'];
+    $prenom_uti= $_POST['prenom'];
     $email= $_POST['email'];
     $naissance= $_POST['datenaissance'];
     $tel= $_POST['tel'];
     $adresse= $_POST['adresse'].', '.$_POST['ville'].', '.$_POST['codepostal'];
     
-    $requete = $bdd->prepare("INSERT INTO personne(prenom, nom, mail, dateNaissance, tel, adresse) VALUES ('$nom','$prenom','$email','$naissance','$tel', '$adresse')");
+    $requete = $bdd->prepare("INSERT INTO personne(prenom, nom, mail, dateNaissance, tel, adresse) VALUES ('$nom_uti','$prenom_uti','$email','$naissance','$tel', '$adresse')");
     $requete->execute();
+
+    
 }
 #-----------------------------récupérer numéro de session---------------------------------------------
 function numero_session($bdd){
     $reponse = $bdd->query("SELECT MAX(idsession) AS idsession FROM sessiontest");
     $donnees = $reponse->fetch();
-<<<<<<< HEAD
-    echo $donnees['idsession']; 
-
-=======
-    $_SESSION['numero_session'] = $donnees;
+    //$_SESSION['numero_session'] = $donnees;
     print_r($_SESSION['numero_session']);  
 }
 
@@ -202,15 +196,11 @@ function mesure_temperature($bdd){
 function valeur_mesure_temperature($bdd){
     $valeur = $_POST["valeur"];
     $req = $bdd->exec("UPDATE mesure SET valeur='$valeur' WHERE idmesure = MAX(idmesure)");
->>>>>>> 5b594e4e45656c20b846468432cccfe4a5956f58
 }
 
 
 
-<<<<<<< HEAD
-=======
 ?>  
->>>>>>> 63ecb555015aa3cd8e5b05dd4dd23821ef2caea8
 
 
        

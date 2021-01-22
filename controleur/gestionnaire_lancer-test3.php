@@ -19,7 +19,12 @@ if(!isset($_SESSION['mail'])) {
 </head>
 
 <?php 
-require("../modele/gestionnaire_lancer_test2_bdd.php"); 
+if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gestionnaire_lancer-test2.php"){
+    require("../modele/gestionnaire_lancer_test2_bdd.php"); 
+}
+else{
+    require("../modele/gestionnaire_chrono&insert_bdd.php");
+}
 ?>
 
 <body>
@@ -74,6 +79,7 @@ require("../modele/gestionnaire_lancer_test2_bdd.php");
             </script>
             -->
             
+            <!--
             <form method="post" action="gestionnaire_chrono&insert.php">
                 <p> Choisissez votre capteur :
                     <label>
@@ -87,15 +93,16 @@ require("../modele/gestionnaire_lancer_test2_bdd.php");
                     </select>
                 </label>
                 </p>
-            
+                -->
             
                 <div class=formulaire>
                     <div class="test1">
                         <img class="img-responsive" src="../images/test_temperature.jpg">
                         <div class="lancer_test">
-                                <p>Température superficielle de la peau</p>
-                                <p class="bouton"><input type="submit" value="Lancer" name="1"/></p>
-                            
+                        <form method="post" action="gestionnaire_chrono&insert.php">
+                            <p>Température superficielle de la peau</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton1"/></p>
+                        </form>
                         </div>
                     </div>
                     <div class="test2">
