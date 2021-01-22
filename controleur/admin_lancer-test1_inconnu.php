@@ -89,6 +89,8 @@ if(!isset($_SESSION['mail'])) {
                             <p><label>Adresse : </label><input type="text" name="adresse" size="50" placeholder=""></p>
                             <p><label>Ville : </label><input type="text" name="ville" size="50" placeholder=""></p>
                             <p><label>Code postal : </label><input type="text" name="adresse" size="50" maxlength="5" placeholder=""></p>
+                            <p><label>Date et heure de la 1ère session : </label>
+                            <input type="datetime-local" name="date" required></p>
                             <p class="bouton"><input type="submit" value="Suivant" /></p>
                         </fieldset>
                     </p>

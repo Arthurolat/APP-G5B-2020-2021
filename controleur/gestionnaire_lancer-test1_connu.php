@@ -18,7 +18,9 @@ if(!isset($_SESSION['mail'])) {
     <title>lancement session attribution utilisateur connu-test </title>
 
 </head>
-
+<?php 
+    require("../modele/creation_nouvel_utilisateur.php");
+?>
 <body>
 
     <?php include("header.php"); ?>
