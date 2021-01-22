@@ -19,7 +19,9 @@ if(!isset($_SESSION['mail'])) {
 
 </head>
 <?php 
+if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gestionnaire_lancer-test1_inconnu.php")
     require("../modele/creation_nouvel_utilisateur.php");
+}
 ?>
 <body>
 
