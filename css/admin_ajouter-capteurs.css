@@ -135,6 +135,7 @@ form {
 
 .section1 {
     justify-content: center;
+    margin: 0;
 }
 
 form input {
