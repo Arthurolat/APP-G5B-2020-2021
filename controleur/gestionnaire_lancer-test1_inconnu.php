@@ -71,13 +71,13 @@ if(!isset($_SESSION['mail'])) {
                     <p>
                         <fieldset>
                             <p><label>Nom de famille : </label><input type="text" name="nom" size="50" placeholder=""></p>
-                            <p><label>Prénoms : <em>(séparés par une virgule)</em>  </label><input type="text" name="prenom" size="50" placeholder=""></p>
+                            <p><label>Prénoms : <em>(séparés par une virgule)</em> </label><input type="text" name="prenom" size="50" placeholder=""></p>
+                            <p><label>Date de naissance : </label><input type="date" name="datenaissance"></p>
                             <p><label>Email : </label><input type="email" name="email" size="50" placeholder=""></p>
-                            <p><label>Date de naissance : </label><input type="date" name="date"></p>
                             <p><label>Téléphone portable : </label><input type="tel" name="tel" maxlength="10" placeholder=""></p>
                             <p><label>Adresse : </label><input type="text" name="adresse" size="50" placeholder=""></p>
                             <p><label>Ville : </label><input type="text" name="ville" size="50" placeholder=""></p>
-                            <p><label>Code postal : </label><input type="text" name="adresse" size="50" maxlength="5" placeholder=""></p>
+                            <p><label>Code postal : </label><input type="text" name="codepostal" size="50" maxlength="5" placeholder=""></p>
                             <p class="bouton"><input type="submit" value="Suivant" /></p>
                         </fieldset>
                     </p>

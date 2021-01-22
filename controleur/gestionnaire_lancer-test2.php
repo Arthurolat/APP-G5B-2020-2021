@@ -18,7 +18,13 @@ if(!isset($_SESSION['mail'])) {
 
 </head>
 
-<?php require("../modele/gestionnaire_lancer_test1_connu_bdd.php"); 
+<?php 
+if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gestionnaire_lancer-test1_connu.php"){
+    require("../modele/gestionnaire_lancer_test1_connu_bdd.php");
+}else{
+   require("../modele/creation_nouvel_utilisateur.php");  
+}
+
 echo $_SESSION['idacteur_sessiontest']; ?>
 
 <body>
