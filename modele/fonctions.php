@@ -155,7 +155,7 @@ function nouveau_test_bdd($bdd){
     if (!empty($date)){
         $sql = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('$date', '$var')");
     }else{ 
-        $sql = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('CURRENT_TIMESTAMP()', 'max(idacteur)')");
+        $sql = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('CURRENT_TIMESTAMP()', '$var')");
     }
      
 }
@@ -208,7 +208,7 @@ function mesure_temperature($bdd){
 
 #------------------------------inserer valeur mesure----------------------------
 function valeur_mesure($bdd){
-    $valeur = $POST["valeur"];
+    $valeur = $POST['valeur'];
     $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
     foreach ($bdd->query($sql) as $row){
         $idmesure=$row['idmesure'];

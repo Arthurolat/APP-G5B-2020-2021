@@ -23,7 +23,7 @@ if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gest
     require("../modele/gestionnaire_lancer_test2_bdd.php"); 
 }
 else{
-    require("../modele/gestionnaire_chrono&insert_bdd.php")
+    require("../modele/gestionnaire_chrono&insert_bdd.php");
 }
 ?>
 
