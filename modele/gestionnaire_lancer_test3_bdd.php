@@ -1,7 +1,7 @@
 <?php 
 require("../modele/fonctions.php");
 
-if(isset($_POST['bouton1']) AND $_POST['bouton1']=='Lancer'){
+if(isset($_POST['bouton1'])){
     mesure_temperature($bdd);
 }
 ?>
