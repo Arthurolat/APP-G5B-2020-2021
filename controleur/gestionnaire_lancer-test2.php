@@ -18,7 +18,8 @@ if(!isset($_SESSION['mail'])) {
 
 </head>
 
-<?php require("../modele/gestionnaire_lancer_test1_connu_bdd.php"); ?>
+<?php require("../modele/gestionnaire_lancer_test1_connu_bdd.php"); 
+echo $_SESSION['idacteur_sessiontest']; ?>
 
 <body>
 

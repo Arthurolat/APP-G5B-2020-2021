@@ -139,16 +139,19 @@ function affichage_resultats($bdd, $datesession, $idacteur ){
 }
 
 
-#------------------------------rentrer date, nom et prénom nouveau test dans base de données---------------
+#------------------------------utilisateur existant : rentrer date, nom et prénom nouveau test dans base de données---------------
 function nouveau_test_bdd($bdd){
     $date = $_POST["date"];
     $prenom = $_POST["prenom"];
     $nom = $_POST["nom"];
+    
+   
     $sql = ("SELECT idacteur FROM personne WHERE prenom = '$prenom' AND nom = '$nom'");
     foreach ($bdd->query($sql) as $row){
-        $idacteur=$row['idacteur'];
+        $_SESSION['idacteur_sessiontest']=$var=$row['idacteur'];
     }
-    $req = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('$date', '$idacteur')"); 
+    
+    $req = $bdd->exec("INSERT INTO sessiontest(datesession, idacteur) VALUES('$date', '$var')"); 
 }
 
 #-----------------------------récupérer numéro de session---------------------------------------------
@@ -158,6 +161,7 @@ function numero_session($bdd){
     $_SESSION['numero_session'] = $donnees;
     print_r($_SESSION['numero_session']);  
 }
+
 
 #----------------------------rentrer mesure température peau-------------------------------------
 function mesure_temperature($bdd){
