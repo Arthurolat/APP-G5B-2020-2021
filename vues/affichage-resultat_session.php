@@ -11,6 +11,12 @@
     { 
     ?>
     <tr>
-        <td><?php echo $donnees['utilisateur']?></td>
-        <td>Session réalisée le </br> <?php echo $donnees['datesession']?></td>
+        <td><?php echo $donnees['heure']?></td>
         <td><?php echo $donnees['test']?></td>
+        <td><?php echo $donnees['valeur']?></td>
+        <td><?php echo $donnees['unite']?></td>
+    </tr>
+    <?php } 
+        $reponse->closeCursor();
+    ?>
+</table>

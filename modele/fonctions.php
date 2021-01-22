@@ -216,10 +216,12 @@ function valeur_mesure($bdd){
 #-------------------------------------recap session--------------------
 function recap_session($bdd){
     $idsession=$_SESSION['numero_session'];
-    $reponse = $bdd->prepare("SELECT m.datemesure, t.nom, m.valeur, t.unite
+    $reponse = $bdd->prepare("SELECT m.datemesure as heure, t.nom as test, m.valeur as valeur, t.unite as unite
     FROM mesure m, testgenerique t, resultat r
     WHERE m.idmesure=r.idmesure AND t.idtest=r.idtest AND r.idsession='$idsession'
     ORDER BY m.datemesure ASC");
+    $reponse->execute();
+    return $reponse;
 }
 
 
