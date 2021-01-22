@@ -117,7 +117,7 @@ $personne=$statement->fetchAll();
         	
         		<p>
         		<a class="supprimer" 
-        		href="supprimer.php?action=delete&id=' . $result->client_id . '&validationWait=true">Supprimer</a>
+        		href="supprimer.php?numPersonne=<?=$personne['idacteur']?>">Supprimer</a>
         		
     			</p>
     			
