@@ -17,8 +17,7 @@ VALUES
 $sql=" INSERT INTO 'faq' ('question', 'reponse')
 VALUES
 ('$_POST[question5]','$_POST[reponse5]')";    
-    
-    header('Location: admin_gestion-faq.php');
+    header('Location: ../controleur/admin_gestion-faq.php');
 
     mysqli_close($db); // fermer la connexion
 
