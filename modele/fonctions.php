@@ -158,6 +158,10 @@ function nouveau_test_bdd($bdd){
 function numero_session($bdd){
     $reponse = $bdd->query("SELECT MAX(idsession) AS idsession FROM sessiontest");
     $donnees = $reponse->fetch();
+<<<<<<< HEAD
+    echo $donnees['idsession']; 
+
+=======
     $_SESSION['numero_session'] = $donnees;
     print_r($_SESSION['numero_session']);  
 }
@@ -180,7 +184,10 @@ function mesure_temperature($bdd){
 function valeur_mesure_temperature($bdd){
     $valeur = $POST["valeur"];
     $req = $bdd->exec("UPDATE mesure SET valeur='$valeur' WHERE idmesure = MAX(idmesure)");
+>>>>>>> 5b594e4e45656c20b846468432cccfe4a5956f58
 }
+
+
 
 ?>  
 
