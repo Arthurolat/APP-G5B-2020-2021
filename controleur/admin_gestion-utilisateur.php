@@ -51,9 +51,6 @@ $personne=$statement->fetchAll();
                     <a href="admin_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="admin_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
                     <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -82,7 +79,7 @@ $personne=$statement->fetchAll();
 
 
             <div id="searchbar">
-                <h1>Rechercher un utilisateur : </h1>
+                <h2>Rechercher un utilisateur : </h2>
                 <form action="">
                    
                    <input class="champ" type="text" value="" name="q" placeholder="Rechercher par nom">
@@ -131,20 +128,7 @@ $personne=$statement->fetchAll();
         
 
             <br>
-            <br>
-            <div class="pagination">
-                <div class="pages">
-                    <a class="desactive"> &#60; Précédent</a>
-                    <a class="active"> 1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a class="etc">...</a>
-                    <a href="#">Suivant &#62;</a>
-                </div>
-            </div>
-            <br>
+            
             <br>
         </div>
     
