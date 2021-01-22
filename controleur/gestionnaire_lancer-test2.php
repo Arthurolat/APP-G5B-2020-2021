@@ -18,7 +18,8 @@ if(!isset($_SESSION['mail'])) {
 
 </head>
 
-<?php require("../modele/gestionnaire_lancer_test1_connu_bdd.php"); ?>
+<?php require("../modele/gestionnaire_lancer_test1_connu_bdd.php"); 
+echo $_SESSION['idacteur_sessiontest']; ?>
 
 <body>
 
@@ -30,9 +31,6 @@ if(!isset($_SESSION['mail'])) {
             <ul id=barre_nav>
                 <li id="ongletdebut">
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
-                </li>
-                <li>
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
                     <a class="active" href=#><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>

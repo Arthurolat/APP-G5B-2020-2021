@@ -34,9 +34,6 @@ require("../modele/gestionnaire_lancer_test2_bdd.php");
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
                     <a class="active" href=#><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -76,68 +73,68 @@ require("../modele/gestionnaire_lancer_test2_bdd.php");
                 }, 1000);
             </script>
             -->
-            <!--
-            <form method="post" action="#">
+            
+            <form method="post" action="gestionnaire_chrono&insert.php">
                 <p> Choisissez votre capteur :
                     <label>
                     <select name="capteur">
-                        <option value="c1">Capteur 1</option>  
-                        <option value="c2">Capteur 2</option> 
-                        <option value="c3">Capteur 3</option> 
-                        <option value="c4">Capteur 4</option> 
+                        <option value="c1">Capteur de temps de réaction à un son inattendu</option>  
+                        <option value="c2">Capteur de temps de réaction à une lumière dans le noir</option> 
+                        <option value="c3">Capteur de temps de réaction à une lumière en extérieur</option> 
+                        <option value="c4">Capteur de température de la peau</option> 
+                        <option value="c5">Capteur de reconnaisssance de tonalité</option> 
+                        <option value="c6">Capteur de fréquence cardiaque</option> 
                     </select>
                 </label>
                 </p>
+            
+            
+                <div class=formulaire>
+                    <div class="test1">
+                        <img class="img-responsive" src="../images/test_temperature.jpg">
+                        <div class="lancer_test">
+                                <p>Température superficielle de la peau</p>
+                                <p class="bouton"><input type="submit" value="Lancer" name="1"/></p>
+                            
+                        </div>
+                    </div>
+                    <div class="test2">
+                        <img class="img-responsive" src="../images/test_frequence.jpg">
+                        <div class="lancer_test">
+                            <p> Fréquence cardiaque</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="6"/></p>
+                        </div>
+                    </div>
+                    <div class="test3">
+                        <img class="img-responsive" src="../images/test_tonalite.jpg">
+                        <div class="lancer_test">
+                            <p> Reconnaissance de la tonalité d'un son </p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="5"/></p>
+                        </div>
+                    </div>
+                    <div class="test4">
+                        <img class="img-responsive" src="../images/test_sonore.jpg">
+                        <div class="lancer_test">
+                            <p> Réaction à un stimulus sonore inattendu</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="1"/></p>
+                        </div>
+                    </div>
+                    <div class="test5">
+                        <img class="img-responsive" src="../images/test_visuel_attendu.jpg">
+                        <div class="lancer_test">
+                            <p> Réaction à un stimulus visuel attendu dans le noir</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="2"/></p>
+                        </div>
+                    </div>
+                    <div class="test6">
+                        <img class="img-responsive" src="../images/test_visuel_inattendu.jpg">
+                        <div class="lancer_test">
+                            <p> Réaction à un stimulus visuel inattendu en extérieur</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="3"/></p>
+                        </div>
+                    </div>
+                </div>
             </form>
-            -->
-            <div class=formulaire>
-                <div class="test1">
-                    <img class="img-responsive" src="../images/test_temperature.jpg">
-                    <div class="lancer_test">
-                        <form method="post" action="#">
-                            <p>Température superficielle de la peau</p>
-                        </form>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test2">
-                    <img class="img-responsive" src="../images/test_frequence.jpg">
-                    <div class="lancer_test">
-                        <p> Fréquence cardiaque</p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test3">
-                    <img class="img-responsive" src="../images/test_tonalite.jpg">
-                    <div class="lancer_test">
-                        <p> Reconnaissance de la tonalité d'un son </p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test4">
-                    <img class="img-responsive" src="../images/test_sonore.jpg">
-                    <div class="lancer_test">
-                        <p> Réaction à un stimulus sonore</p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test5">
-                    <img class="img-responsive" src="../images/test_visuel_attendu.jpg">
-                    <div class="lancer_test">
-                        <p> Réaction à un stimulus visuel attendu</p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test6">
-                    <img class="img-responsive" src="../images/test_visuel_inattendu.jpg">
-                    <div class="lancer_test">
-                        <p> Réaction à un stimulus visuel inattendu</p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-
-
-            </div>
             </br>
 
             <div class=controle>

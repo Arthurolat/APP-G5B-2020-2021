@@ -31,9 +31,6 @@ if(!isset($_SESSION['mail'])) {
                     <a class="active" href=#><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="admin_messagerie-accueil.php"><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
                     <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -75,7 +72,7 @@ if(!isset($_SESSION['mail'])) {
                     <p>Informations personnelles</p>
                 </div>
                 <div class=element2>
-                    <p><a href="uti-mon_profil_mdp.php">Confidentialité et Sécurité</a></p>
+                    <p><a href="admin_mon-profil-mdp.php">Confidentialité et Sécurité</a></p>
                 </div>
             </div>
             <div class="tableau">

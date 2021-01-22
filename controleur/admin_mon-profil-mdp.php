@@ -32,9 +32,6 @@ if(!isset($_SESSION['mail'])) {
                   <a class="active" href="admin_mon-profil.php"><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
               </li>
               <li>
-                  <a href="admin_messagerie-accueil.php""><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-              </li>
-              <li>
                   <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
               </li>
               <li>
@@ -84,13 +81,16 @@ if(!isset($_SESSION['mail'])) {
                 <form method="post" action="#">
                     <p>
                         <fieldset>
-
-                            <p><label>Mot de passe actuel : <input type="text" name="Mdp" size="50" placeholder="mot de passe"></label></p>
-                            <p><label>Nouveau mot de passe : <input type="text" name="Mdp" size="50" placeholder="nouveau mot de passe"></label></p>
-                            <p><label>Confirmer le nouveau mot de passe : <input type="text" name="Mdp" size="50" placeholder="confirmer mot de passe"></label></p>
-
+                            
+                            <p><label>Mot de passe actuel :</label>
+                            <input type="text" name="Mdp" size="50" placeholder="mot de passe"></p>
+                            <p><label>Nouveau mot de passe :</label>
+                            <input type="text" name="Mdp" size="50" placeholder="nouveau mot de passe"></p>
+                            <p><label>Confirmer le nouveau mot de passe :</label>
+                            <input type="text" name="Mdp" size="50" placeholder="confirmer mot de passe"></p>
+                            
                             <p class="bouton"><input type="submit" value="Valider" align="right"></p>
-
+                            
                         </fieldset>
                     </p>
 
