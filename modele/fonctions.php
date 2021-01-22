@@ -190,7 +190,8 @@ function mesure_temperature($bdd){
     $idcapteur = $idtest = 4;
     $date = date("Y-m-d H:i:s");
     $idsession = $_SESSION['numero_session'];
-    $req = $bdd->exec("INSERT INTO mesure(datemesure, idcapteur) VALUES('$date', '$idcapteur')");
+    $valeur_defaut=0;
+    $req = $bdd->exec("INSERT INTO mesure(datemesure, valeur, idcapteur) VALUES('$date', '$valeur_defaut', '$idcapteur')");
     $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
     foreach ($bdd->query($sql) as $row){
         $idmesure=$row['idmesure'];
