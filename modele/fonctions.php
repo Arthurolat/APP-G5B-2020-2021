@@ -174,13 +174,6 @@ function add_utilisateur($bdd){
 }
 #-----------------------------récupérer numéro de session---------------------------------------------
 function numero_session($bdd){
-<<<<<<< Updated upstream
-    $reponse = $bdd->query("SELECT MAX(idsession) AS idsession FROM sessiontest");
-    $donnees = $reponse->fetch();
-    //$_SESSION['numero_session'] = $donnees;
-    print_r($_SESSION['numero_session']);  
-=======
-    
     $sql = ("SELECT idsession FROM sessiontest ORDER BY idsession DESC LIMIT 1");
     foreach ($bdd->query($sql) as $row){
         $_SESSION['numero_session']=$donnees=$row['idsession'];
@@ -191,7 +184,6 @@ function numero_session($bdd){
     //$donnees = $reponse->fetch();
     //$_SESSION['numero_session'] = $donnees;
     //echo $donnees;  
->>>>>>> Stashed changes
 }
 
 
@@ -214,12 +206,6 @@ function mesure_temperature($bdd){
     $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
 }
 
-<<<<<<< Updated upstream
-#------------------------------inserer valeur mesure temperature peau----------------------------
-function valeur_mesure_temperature($bdd){
-    $valeur = $_POST["valeur"];
-    $req = $bdd->exec("UPDATE mesure SET valeur='$valeur' WHERE idmesure = MAX(idmesure)");
-=======
 #------------------------------inserer valeur mesure----------------------------
 function valeur_mesure($bdd){
     $valeur = $POST["valeur"];
@@ -228,7 +214,6 @@ function valeur_mesure($bdd){
         $idmesure=$row['idmesure'];
     }
     $req = $bdd->exec("UPDATE mesure SET valeur='$valeur' WHERE idmesure = $idmesure");
->>>>>>> Stashed changes
 }
 
 
