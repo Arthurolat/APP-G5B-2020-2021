@@ -18,6 +18,7 @@ if(!isset($_SESSION['mail'])) {
 
 </head>
 
+<<<<<<< Updated upstream
 <?php 
 if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gestionnaire_lancer-test1_connu.php"){
     require("../modele/gestionnaire_lancer_test1_connu_bdd.php");
@@ -25,6 +26,9 @@ if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gest
    require("../modele/creation_nouvel_utilisateur.php");  
 }
 ?>
+=======
+<?php require("../modele/gestionnaire_lancer_test1_connu_bdd.php"); ?>
+>>>>>>> Stashed changes
 
 <body>
 
