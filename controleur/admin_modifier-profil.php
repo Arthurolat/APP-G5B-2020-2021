@@ -1,13 +1,18 @@
-<?php 
-require("../modele/connexionbdd.php");
+<?php  
+
+$bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset=utf8', 'appg5b', '@ppg5b2020');
+
+$pdoStat = $bdd ->prepare('SELECT * FROM personne WHERE idacteur=:num');
+
+$pdoStat-> bindValue(':num',$_GET['numPersonne'], PDO :: PARAM_INT);
+
+$executeIsOk = $pdoStat->execute();
+
+$personne= $pdoStat ->fetch();
 
 
-
-if(!isset($_SESSION['mail'])) {
-    header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
-    exit();
-}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -66,8 +71,10 @@ if(!isset($_SESSION['mail'])) {
 
 
             <div class=formulaire >
-                <form method="post" action="#">
+                <form method="post" action="modifier.php">
                     <fieldset>
+
+                        <input type="hidden" name="numPersonne" value="<?= $personne['idacteur'] ?>">
 
                         <p><label>Nom : <input type="text" name="nom" size="50" placeholder="nom" value="<?= $personne['nom'];?>"></label></p>
 
