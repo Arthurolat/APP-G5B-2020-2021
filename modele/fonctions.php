@@ -198,7 +198,6 @@ function mesure_temperature($bdd){
     foreach ($bdd->query($sql) as $row){
         $idmesure=$row['idmesure'];
     }
-
     //$reponse = $bdd->query("SELECT MAX(idmesure) AS idmesure FROM mesure");
     //$reponse->execute();
     //$idmesure = $reponse;
