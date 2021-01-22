@@ -213,6 +213,10 @@ function valeur_mesure($bdd){
     $req = $bdd->exec("UPDATE mesure SET valeur='$valeur' WHERE idmesure = $idmesure");
 }
 
+#-------------------------------------recap session--------------------
+function recap_session($bdd){
+    
+}
 
 
 ?>  

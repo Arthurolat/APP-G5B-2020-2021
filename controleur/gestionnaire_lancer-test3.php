@@ -149,7 +149,10 @@ else{
                     <p><a href="gestionnaire_lancer-test2.php">Retour</a></p>
                 </div>
                 <div class="element2">
-                    <p><a href="gestionnaire_lancer-test4.php">Suivant</a></p>
+                <form method="post" action="gestionnaire_lancer-test4.php">
+                    <p class="bouton"><input type="submit" value="Suivant"/></p>
+                    <!--<p><a href="gestionnaire_lancer-test4.php">Suivant</a></p>-->
+                </form>
                 </div>
             </div>
         </div>
