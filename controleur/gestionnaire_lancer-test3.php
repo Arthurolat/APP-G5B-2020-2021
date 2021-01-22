@@ -18,6 +18,9 @@ if(!isset($_SESSION['mail'])) {
 
 </head>
 
+<?php 
+require("../modele/gestionnaire_lancer_test2_bdd.php"); 
+?>
 
 <body>
 
@@ -88,11 +91,10 @@ if(!isset($_SESSION['mail'])) {
                 <div class="test1">
                     <img class="img-responsive" src="../images/test_temperature.jpg">
                     <div class="lancer_test">
-
-                        <form method="post" action="#">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
                             <p>Température superficielle de la peau</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton1"/></p>
                         </form>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
                     </div>
                 </div>
                 <div class="test2">

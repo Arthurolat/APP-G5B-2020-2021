@@ -1,5 +1,6 @@
+
 <?php 
-require("../modele/connexionbdd.php");
+require_once("../modele/connexionbdd.php");
 
 if(!isset($_SESSION['mail'])) {
     header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
@@ -61,7 +62,7 @@ if(!isset($_SESSION['mail'])) {
                    <h3><?=$_SESSION['message'] ?></h3>
                 <?php endif ?>
                     <section class="section1">
-                        <form method="post" enctype="multipart/form-data" action="ajouter-new-type-capteur-importation.php">
+                        <form method="post" enctype="multipart/form-data" action="../modele/ajouter_new_type_capteur.php">
                                  <label for="Nomcapteurinput">Nom du capteur :</label>
                                  <input type="text" name="nom" id="nomcapteurinput" placeholder="Nom">
                                  <label for="Seuilinput">Veuillez saisir le seuil :</label>
