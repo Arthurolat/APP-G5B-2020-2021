@@ -24,8 +24,7 @@ if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gest
 }else{
    require("../modele/creation_nouvel_utilisateur.php");  
 }
-
-echo $_SESSION['idacteur_sessiontest']; ?>
+?>
 
 <body>
 
