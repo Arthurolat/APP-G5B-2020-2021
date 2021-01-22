@@ -204,7 +204,7 @@ function mesure_temperature($bdd){
 
 #------------------------------inserer valeur mesure temperature peau----------------------------
 function valeur_mesure($bdd){
-    $valeur = $POST["valeur"];
+    $valeur = $_POST['valeur'];
     $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
     foreach ($bdd->query($sql) as $row){
         $idmesure=$row['idmesure'];
