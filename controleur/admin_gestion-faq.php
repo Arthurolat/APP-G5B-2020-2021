@@ -49,7 +49,11 @@
         <div id="contenu">
                 <h2> F.A.Q </h2>
 
+<<<<<<< HEAD:controleur/admin_gestion-faq.php
                 <form action="../modele/insert.php" method="POST">
+=======
+                <form action="insert.php" method="POST">
+>>>>>>> master:php/admin_gestion-faq.php
 
                 <h3><textarea name="question1" id="form_control" placeholder="1. Question :" row="4" required></textarea></br></h3>
                 <p><textarea name="reponse1" id="form_control" placeholder="Réponse" row="4" required></textarea></br></p>
