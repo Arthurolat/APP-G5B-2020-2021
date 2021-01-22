@@ -32,11 +32,11 @@ function envoiMail(){
         $mail->Host         = 'smtp.gmail.com';                   // Set the SMTP server to send through
         $mail->Port         = 465;                                // TCP port to connect to, use 465 
         $mail->isHTML();                                   
-        $mail->Username     = '********@gmail.com';                 // SMTP username
-        $mail->Password     = '********';                       // SMTP password
+        $mail->Username     = 'appg5b@gmail.com';                 // SMTP username
+        $mail->Password     = 'appg5b2020';                       // SMTP password
 
         //from
-        $mail->setFrom('*********@gmail.com');
+        $mail->setFrom('appg5b@gmail.com');
 
         //reply to
         $mail->addReplyTo($email, $nom);
