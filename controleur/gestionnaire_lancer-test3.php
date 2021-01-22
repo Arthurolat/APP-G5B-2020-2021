@@ -19,8 +19,12 @@ if(!isset($_SESSION['mail'])) {
 </head>
 
 <?php 
-require("../modele/gestionnaire_lancer_test2_bdd.php"); 
-require("../modele/gestionnaire_chrono&insert_bdd.php")
+if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gestionnaire_lancer-test2.php"){
+    require("../modele/gestionnaire_lancer_test2_bdd.php"); 
+}
+else{
+    require("../modele/gestionnaire_chrono&insert_bdd.php")
+}
 ?>
 
 <body>
