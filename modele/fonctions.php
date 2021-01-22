@@ -210,12 +210,16 @@ function valeur_mesure($bdd){
     foreach ($bdd->query($sql) as $row){
         $idmesure=$row['idmesure'];
     }
-    $req = $bdd->exec("UPDATE mesure SET valeur='$valeur' WHERE idmesure = $idmesure");
+    $req = $bdd->exec("UPDATE mesure SET valeur='$valeur' WHERE idmesure = '$idmesure'");
 }
 
 #-------------------------------------recap session--------------------
 function recap_session($bdd){
-    
+    $idsession=$_SESSION['numero_session'];
+    $reponse = $bdd->prepare("SELECT m.datemesure, t.nom, m.valeur, t.unite
+    FROM mesure m, testgenerique t, resultat r
+    WHERE m.idmesure=r.idmesure AND t.idtest=r.idtest AND r.idsession='$idsession'
+    ORDER BY m.datemesure ASC");
 }
 
 
