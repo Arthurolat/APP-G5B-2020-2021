@@ -59,6 +59,12 @@ if(!isset($_SESSION['mail'])) {
 
             <div class=formulaire>
 
+            <?php
+            require("../modele/resultat_session.php");
+            
+            ?>
+
+                <!--
                 <table>
                     <tr class="theader">
                         <th>Heure</th>
@@ -131,6 +137,7 @@ if(!isset($_SESSION['mail'])) {
 
             </div>
             </br>
+            -->
             <div class=controle>
                 <div class="element1">
                     <p><a href="gestionnaire_lancer-test3.php">Retour</a></p>

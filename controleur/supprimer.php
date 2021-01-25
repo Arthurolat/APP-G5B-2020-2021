@@ -8,6 +8,8 @@ $pdoStat-> bindValue(':num',$_GET['numPersonne'], PDO :: PARAM_INT);
 
 $executeIsOk = $pdoStat->execute();
 
+header("location:http://localhost/APP-G5B-2020-2021/controleur/admin_gestion-utilisateur.php");
+
 
 
 
