@@ -67,7 +67,7 @@ if(!isset($_SESSION['mail'])) {
                 </div>
             </div>
             <div class=formulaire>
-                <form method="post" action="gestionnaire_lancer-test1_connu.php">
+                <form method="post" action="../modele/creation_nouvel_utilisateur.php">
                     <p>
                         <fieldset>
                             <p><label>Nom de famille : </label><input type="text" name="nom" size="50" placeholder=""></p>
