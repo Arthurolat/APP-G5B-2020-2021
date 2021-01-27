@@ -143,6 +143,7 @@ function affichage_resultats($bdd, $datesession, $idacteur ){
 function moyenne_resultats ($bdd, $idacteur){
 $reponse = $bdd->query("SELECT AVG(valeur) as valeur, idcapteur FROM mesure m INNER JOIN resultat r ON m.idmesure=r.idmesure INNER JOIN sessiontest s ON r.idsession= s.idsession AND s.idacteur= $idacteur  GROUP BY idcapteur");
     $reponse->execute();
+    print_r($reponse);
     return $reponse;
     
 }

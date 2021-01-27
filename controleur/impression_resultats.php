@@ -55,7 +55,7 @@ td    { vertical-align: top;  }
       <td><?php echo $soninnatendu ?></td>  
    </tr>
    <tr>
-      <td>Temps de réaction à une lumière attendue dans le noir </td>
+      <td><h2>Temps de réaction à une lumière attendue dans le noir</h2></td>
       <td>ligne2 colonne2</td>
     </tr>
     <tr>
