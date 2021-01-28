@@ -56,9 +56,7 @@ $personne=$statement->fetchAll();
                 <li>
                     <a href="admin_rechercher.php"><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
-                <li>
-                    <a href="admin_analyse-test.php"><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
-                </li>
+               
 
                 <p> Réglages :</p>
                 <li>
@@ -88,20 +86,19 @@ $personne=$statement->fetchAll();
                 </form>
             </div>
         
-
-                        
+                       
             <table class="tableau" align="center" width="1300px">
 
-            	<thead>
+            	
                 <tr class="theader">
                     <th>Prénom</th>
                     <th>Nom</th>
                     <th>Modifier</th>
                     <th>Supprimer</th>
                 </tr>
-            </thead>
+                
 
-            <tbody>
+            
             	<?php foreach($personne as $personne): ?>
                 <tr>
                     <td><?= $personne['prenom'] ?></td>
@@ -109,21 +106,14 @@ $personne=$statement->fetchAll();
                     <td>
                         <p><a href="admin_modifier-profil.php?numPersonne=<?=$personne['idacteur']?>">Modifier</a></p>
                     </td>
-                    <td>
-           
-        	
-        		<p>
-        		<a class="supprimer" 
-        		href="supprimer.php?numPersonne=<?=$personne['idacteur']?>">Supprimer</a>
-        		
-    			</p>
-    			
+                    <td>       	
+                        <p><a class="supprimer" href="supprimer.php?numPersonne=<?=$personne['idacteur']?>">Supprimer</a></p>
                     </td>
                 </tr>
                 
             <?php endforeach ?>
                  
-             </tbody>  
+              
             </table>
         
 

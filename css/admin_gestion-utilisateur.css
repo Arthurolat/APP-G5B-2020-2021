@@ -121,7 +121,6 @@ section h2 {
     border-radius: 10px;*/
 }
 
-
 form {
     margin-left: 1%;
     margin-right: 1%;
@@ -132,19 +131,32 @@ form {
 
 form .champ {
     width: 600px;
-    height: 35px;
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border-bottom: 1px solid grey;
+    color: black;
+    font-size: large;
+    font-family: roboto, sans-serif;
+    margin-bottom: 16px;
+    margin-top: -10px;
+    padding-left: 15px;
 }
 
-
-/* ne marche pas, à revoir 
-
-form input [type="image"] {
-    background-image: url("../images/icone_loupe.png");
-    width: 35px;
-    height: 35px;
-    padding: 0;
+form .btn {
+    border: 2px solid #ed7d31;
+    box-shadow: 2px 2px 3px #ed7d31;
+    border-radius: 50px;
+    padding: 5px 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #ed7d31;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: large;
 }
-*/
 
 #contenu table,
 td,
@@ -175,9 +187,12 @@ tr:not(.theader):hover {
 
 tr td:nth-child(3) p:hover {
     background-color: #ed7d31;
-    color: white;
     border: 1px outset #ed7d31;
     transition: all .3s ease;
+}
+
+tr td:nth-child(3) p:hover a {
+    color: white;
 }
 
 tr td:nth-child(2) p:hover {
@@ -187,6 +202,16 @@ tr td:nth-child(2) p:hover {
     transition: all .3s ease;
 }
 
+tr td:nth-child(4) p:hover {
+    background-color: #ed7d31;
+    border: 1px outset #ed7d31;
+    transition: all .3s ease;
+}
+
+tr td:nth-child(4) p:hover a {
+    color: white;
+}
+
 
 /* mise en forme ligne header tableau*/
 
@@ -194,12 +219,11 @@ tr:nth-child(1) {
     text-align: left;
     text-indent: 16px;
     background-color: #ed7d31;
-    color: black;
+    color: white;
     font-size: larger;
     font-weight: bolder;
     height: 40px;
 }
-
 
 
 /*mise en forme ligne body du tableau */
@@ -217,7 +241,8 @@ a {
 
 td:nth-child(2),
 td:nth-child(1),
-td:nth-child(3) {
+td:nth-child(3),
+td:nth-child(4) {
     padding-left: 30px;
 }
 
@@ -226,37 +251,42 @@ td:nth-child(3) {
 
 td:nth-child(1),
 tr:nth-child(1) th:nth-child(1) {
-    width: 35%;
+    width: 30%;
 }
 
 td:nth-child(2),
 tr:nth-child(1) th:nth-child(2) {
-    width: 25%;
+    width: 30%;
 }
 
 td:nth-child(3),
 tr:nth-child(1) th:nth-child(3) {
-    width: 25%;
+    width: 15%;
+}
+
+td:nth-child(4),
+tr:nth-child(1) th:nth-child(4) {
+    width: 15%;
 }
 
 
-/*bouton voir résultat col3 */
+/*bouton col3 & col4 */
 
 tr td:nth-child(3) p {
     border: 1px outset #A9CAED;
     /*margin: 0 45px 0 45px;*/
     /*padding: 10px 0 10px 0;*/
-    margin: 0 30%;
+    margin: 0 15%;
     padding: 6% 0;
     border-radius: 5px;
     background-color: #A9CAED;
 }
 
-tr td:nth-child(2) p {
+tr td:nth-child(4) p {
     border: 1px outset #A9CAED;
     /*margin: 0 45px 0 45px;*/
     /*padding: 10px 0 10px 0;*/
-    margin: 0 30%;
+    margin: 0 15%;
     padding: 6% 0;
     border-radius: 5px;
     background-color: #A9CAED;

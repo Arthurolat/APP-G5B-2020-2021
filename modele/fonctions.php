@@ -132,13 +132,22 @@ function session_users ($bdd, $mail){
 }
 #----------------------------------affichage des resulats des tests-----------------------------
 function affichage_resultats($bdd, $datesession, $idacteur ){
-    $reponse = $bdd->query("SELECT * FROM mesure m
-    WHERE m.idacteur= $idacteur AND m.datemesure='$datesession'");
+   // $reponse = $bdd->query("SELECT * FROM mesure m
+   // WHERE m.idacteur= $idacteur AND m.datemesure='$datesession'");
+    $reponse = $bdd->query("SELECT * FROM mesure m INNER JOIN resultat r ON m.idmesure=r.idmesure INNER JOIN sessiontest s ON r.idsession= s.idsession AND s.idacteur= $idacteur AND m.datemesure='$datesession'");
     $reponse->execute();
     return $reponse;
     //print_r($reponse);
+    
 }
 
+function moyenne_resultats ($bdd, $idacteur){
+$reponse = $bdd->query("SELECT AVG(valeur) as valeur, idcapteur FROM mesure m INNER JOIN resultat r ON m.idmesure=r.idmesure INNER JOIN sessiontest s ON r.idsession= s.idsession AND s.idacteur= $idacteur  GROUP BY idcapteur");
+    $reponse->execute();
+    print_r($reponse);
+    return $reponse;
+    
+}
 
 #------------------------------utilisateur existant : rentrer date, nom et prénom nouveau test dans base de données---------------
 function nouveau_test_bdd($bdd){

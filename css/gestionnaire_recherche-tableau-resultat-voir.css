@@ -196,10 +196,10 @@ section {
     border-radius: 15px;
     box-shadow: 5px 5px 5px #D2D4D6;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 1fr;
     grid-gap: 15px;
-    grid-template-areas: "titre2 titre2" " attendu inattendu";
+    grid-template-areas: "titre2 " " inattendu";
     background-color: #EAF2FB;
     grid-area: son;
 }
