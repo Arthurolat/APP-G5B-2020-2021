@@ -1,3 +1,24 @@
+<?php 
+require("../modele/connexionbdd.php");
+
+
+
+if(!isset($_SESSION['mail'])) {
+    header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
+    exit();
+}
+
+$query = "SELECT * FROM faq";
+$params = [];
+
+
+$statement = $bdd ->prepare($query);
+$statement -> execute($params);
+$faq=$statement->fetchAll();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
@@ -30,7 +51,7 @@
                 <li>
                     <a href="admin_rechercher.php"><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
-               
+                
 
                 <p> Réglages :</p>
                 <li>
@@ -50,35 +71,38 @@
         <div id="contenu">
             <h2> F.A.Q </h2>
             
-            <h3>1. Question :</h3>
-            <div>
-                <p>Réponse</p>
-            </div>
+            <table class="tableau" align="center">
 
-            <h3>2. Question :</h3>
-            <div>
-                <p>Réponse</p>
-            </div>
+                <thead>
+                <tr class="theader">
+                    <th>Question</th>
+                    <th>Réponse</th>
+                    <th>Modifier</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            <?php foreach($faq as $faq): ?>
+                <tr>
+                    <td><?= $faq['question'] ?></td>
+                    <td><?= $faq['reponse'] ?></td>
+                    <td>
+                        <p><a href="admin_modifier-faq.php?numfaq=<?=$faq['idfaq']?>">Modifier</a></p>
+                    </td>
+                    
             
-
-            <h3>3. Question :</h3>
-            <div>
-                <p>Réponse</p>
-            </div>
-
-            <h3>4. Question :</h3>
-            <div>
-                <p>Réponse</p>
-            </div>
-
-            <h3>5. Question :</h3>
-            <div>
-                <p>Réponse</p>
-            </div>
+            </tr>
+                
+            <?php endforeach ?>
+                 
+             </tbody>  
+            </table>
         
-            <p class="bouton"><input type="submit" value="Valider"></p>
-        </div>
 
+            <br>
+            
+            <br>
+        </div>
         
     </section>
 
