@@ -15,14 +15,13 @@ if(!isset($_SESSION['mail'])) {
     <link rel="stylesheet" href="../css/gestionnaire_recherche-tableau-resultat-voir.css" />   <!-- css idem -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
-    <title>Page résul
-    tat des tests utilisateur</title>
+    <title>Page résultat des tests utilisateur</title>
 
 </head>
 
 <body>
     
-    <?php include("../php/header.php"); ?>
+    <?php include("../controleur/header.php"); ?>
 
     <section>
         <form action='impression.php' method="POST">
@@ -37,14 +36,7 @@ if(!isset($_SESSION['mail'])) {
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-<<<<<<< HEAD
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
-                    <a href="gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
-=======
                     <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
->>>>>>> 975290d2c894d6a69571d31e3a2687a0746e7e2d
                 </li>
                 <li>
                     <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>

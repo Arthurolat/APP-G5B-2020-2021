@@ -35,7 +35,7 @@ if(!isset($_SESSION['mail'])) {
                 <li>
                     <a href="uti-accueil_resultat_date.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Consulter mes résultats</a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="uti-accueil_mes_tests.php"><img class="img-responsive" src="../images/icones/icone_folder.png" alt="icone report" width=10px> Analyse de mes tests</a>
                     <ul>
                         <li><a href="uti-accueil_mes_tests.php#div-test-son">1. Temps de réaction à un son</a></li>
@@ -44,7 +44,7 @@ if(!isset($_SESSION['mail'])) {
                         <li><a href="uti-accueil_mes_tests.php#div-test-temperature">4. Température de la peau</a></li>
                         <li id="ongletfin"><a href="uti-accueil_mes_tests.php#div-test-tonalite">5. Reconnaissance de tonalité</a></li>
                     </ul>
-                </li>
+                </li>-->
 
             </ul>
 

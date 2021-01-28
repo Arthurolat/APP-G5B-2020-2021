@@ -1,5 +1,5 @@
 <?php 
-require("../modele/connexionbdd.php");
+//require("../modele/connexionbdd.php");
 
 if(!isset($_SESSION['mail'])) {
     header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
@@ -22,37 +22,33 @@ if(!isset($_SESSION['mail'])) {
 
 <body>
     
-    <?php include("header.php"); ?>
+    <?php include("../controleur/header.php"); ?>
 
     <section>
-        <form action='impression.php' method="POST">
-                        <input type="hidden" value="<?php echo $idacteur ?>" name="idacteur">
-                        <input type="hidden" value= " <?php echo $datesession ?>" name="datesession">
-                        <button type="submit"> Imprimer </button>
-                    </form>
-
         <div id=menuGauche>
             <ul id=barre_nav>
                 <li id="ongletdebut">
-                    <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
+                    <a href="../controleur/gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
-                </li>
-                <li>
-                    <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
+                    <a href="../controleur/gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li id="ongletfin">
-                    <a href="gestionnaire_analyse-test.php"><img class="img-responsive" src="../images/icones/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
+                    <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
-
+                
             </ul>
 
         </div>
 
 
         <div id=contenu>
-                <div class="titre"><h1>RESULTATS SESSION DU </h1></div>
+        <form action='impression.php' method="POST">
+            <input type="hidden" value="<?php echo $idacteur ?>" name="idacteur">
+            <input type="hidden" value= " <?php echo $datesession ?>" name="datesession">
+            <button type="submit"> Imprimer </button>
+        </form>
+                <div class="titre"><h1>RESULTATS SESSION DU <?php echo $datesession ?></h1></div>
                 <div class="div-legende">
                     <div class="titre-legende"><h2>Légende</h2></div>
                     <div class="div-rond-vert"><h3>Temps de réaction compris entre 0s-2s</h3></div>
@@ -135,7 +131,7 @@ if(!isset($_SESSION['mail'])) {
                 }elseif (floatval($lumiere_attendue_noir) > 4 && floatval($lumiere_attendue_noir) <= 6) {?>
                     <img src="../images/rond_orange.png"> 
                     <?php
-                }elseif (floatval($lumuiere_attendue_noir) > 6 && floatval($lumiere_attendue_noir) <= 8) {?>
+                }elseif (floatval($lumiere_attendue_noir) > 6 && floatval($lumiere_attendue_noir) <= 8) {?>
                     <img src="../images/rond_rouge.png"> 
                     <?php
                 }elseif (floatval($lumiere_attendue_noir) > 8) {?>
