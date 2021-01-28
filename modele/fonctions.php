@@ -292,7 +292,6 @@ function recap_session($bdd){
     return $reponse;
 }
 
-
 ?>  
 
 
