@@ -282,7 +282,8 @@ ul li.ok:after {
     padding-left: 15px;
 }
 
-.formulaire form input[type=date] {
+.formulaire form input[type=date],
+.formulaire form input[type=datetime-local] {
     width: 200px;
     height: 30px;
     background: white;

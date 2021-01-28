@@ -124,10 +124,8 @@
     }
     
     .formulaire form input[type=text],
-    .formulaire form input[type=date],
     .formulaire form input[type=email],
-    .formulaire form input[type=tel],
-    .formulaire form select {
+    .formulaire form input[type=tel] {
         width: 60%;
         height: 30px;
         background: white;
@@ -141,6 +139,31 @@
         margin-bottom: 16px;
         margin-top: -10px;
         padding-left: 15px;
+    }
+    
+    .formulaire form input[type=date],
+    .formulaire form select {
+        width: 200px;
+        height: 30px;
+        background: white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        border-bottom: 1px solid grey;
+        color: black;
+        font-size: large;
+        font-family: roboto, sans-serif;
+        margin-bottom: 16px;
+        margin-top: -3px;
+        padding-left: 15px;
+    }
+    
+    .formulaire form label {
+        margin-right: 8px;
+        margin-bottom: 5px;
+        width: 175px;
+        display: block;
+        float: left;
     }
     
     .formulaire form .bouton {
