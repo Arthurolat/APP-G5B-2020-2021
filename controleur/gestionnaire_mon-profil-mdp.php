@@ -67,16 +67,16 @@ if(!isset($_SESSION['mail'])) {
                 </div>
             </div>
             <div class=formulaire>
-                <form method="post" action="#">
+                <form method="post" action="../modele/update_mdp.php">
                     <p>
                         <fieldset>
                             
                             <p><label>Mot de passe actuel :</label>
-                            <input type="text" name="Mdp" size="50" placeholder="mot de passe"></p>
+                            <input type="text" name="mdp0" size="50" placeholder="mot de passe"></p>
                             <p><label>Nouveau mot de passe :</label>
-                            <input type="text" name="Mdp" size="50" placeholder="nouveau mot de passe"></p>
+                            <input type="text" name="mdp1" size="50" placeholder="nouveau mot de passe"></p>
                             <p><label>Confirmer le nouveau mot de passe :</label>
-                            <input type="text" name="Mdp" size="50" placeholder="confirmer mot de passe"></p>
+                            <input type="text" name="mdp1verif" size="50" placeholder="confirmer mot de passe"></p>
                             
                             <p class="bouton"><input type="submit" value="Valider" align="right"></p>
                             
