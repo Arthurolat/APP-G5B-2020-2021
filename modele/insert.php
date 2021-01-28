@@ -1,25 +1,22 @@
+
+
 <?php
 
-require("../modele/connexionbdd.php");
+$bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset=utf8', 'appg5b', '@ppg5b2020');
 
-$sql=" INSERT INTO 'faq' ('question', 'reponse')
-	VALUES
-    ('$_POST[question1]','$_POST[reponse1]')";
-$sql=" INSERT INTO 'faq' ('question', 'reponse')
-VALUES
-('$_POST[question2]','$_POST[reponse2]')";
-$sql=" INSERT INTO 'faq' ('question', 'reponse')
-VALUES
-('$_POST[question3]','$_POST[reponse3]')";
-$sql=" INSERT INTO 'faq' ('question', 'reponse')
-VALUES
-('$_POST[question4]','$_POST[reponse4]')";
-$sql=" INSERT INTO 'faq' ('question', 'reponse')
-VALUES
-('$_POST[question5]','$_POST[reponse5]')";    
-    header('Location: ../controleur/admin_gestion-faq.php');
+$pdoStat = $bdd ->prepare('UPDATE faq SET question=:question, reponse=:reponse WHERE idfaq=:num LIMIT 1');
 
-    mysqli_close($db); // fermer la connexion
+
+
+
+$pdoStat-> bindValue(':question',$_POST['question'], PDO :: PARAM_INT);
+$pdoStat-> bindValue(':reponse',$_POST['reponse'], PDO :: PARAM_INT);
+
+
+$executeIsOk = $pdoStat->execute();
+
+header('Location: ../controleur/admin_gestion-faq.php');
+
 
 ?>
 
