@@ -101,43 +101,53 @@ else{
                         <div class="lancer_test">
                         <form method="post" action="gestionnaire_chrono&insert.php">
                             <p>Température superficielle de la peau</p>
-                            <p class="bouton"><input type="submit" value="Lancer" name="bouton1"/></p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton4"/></p>
                         </form>
                         </div>
                     </div>
                     <div class="test2">
                         <img class="img-responsive" src="../images/test_frequence.jpg">
                         <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
                             <p> Fréquence cardiaque</p>
-                            <p class="bouton"><input type="submit" value="Lancer" name="6"/></p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton6"/></p>
+                        </form>
                         </div>
                     </div>
                     <div class="test3">
                         <img class="img-responsive" src="../images/test_tonalite.jpg">
                         <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
                             <p> Reconnaissance de la tonalité d'un son </p>
-                            <p class="bouton"><input type="submit" value="Lancer" name="5"/></p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton5"/></p>
+                        </form>
                         </div>
                     </div>
                     <div class="test4">
                         <img class="img-responsive" src="../images/test_sonore.jpg">
                         <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
                             <p> Réaction à un stimulus sonore inattendu</p>
-                            <p class="bouton"><input type="submit" value="Lancer" name="1"/></p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="boutons1"/></p>
+                        </form>
                         </div>
                     </div>
                     <div class="test5">
                         <img class="img-responsive" src="../images/test_visuel_attendu.jpg">
                         <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
                             <p> Réaction à un stimulus visuel attendu dans le noir</p>
-                            <p class="bouton"><input type="submit" value="Lancer" name="2"/></p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton2"/></p>
+                        </form>
                         </div>
                     </div>
                     <div class="test6">
                         <img class="img-responsive" src="../images/test_visuel_inattendu.jpg">
                         <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
                             <p> Réaction à un stimulus visuel inattendu en extérieur</p>
-                            <p class="bouton"><input type="submit" value="Lancer" name="3"/></p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton3"/></p>
+                        </form>
                         </div>
                     </div>
                 </div>

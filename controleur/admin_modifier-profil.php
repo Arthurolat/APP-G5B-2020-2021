@@ -1,13 +1,14 @@
 <?php  
+require("../modele/connexionbdd.php");
 
-$bdd = new PDO('mysql:host=mysql-appg5b.alwaysdata.net;dbname=appg5b_bdd;charset=utf8', 'appg5b', '@ppg5b2020');
+if(!isset($_SESSION['mail'])) {
+    header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
+    exit();
+}
 
 $pdoStat = $bdd ->prepare('SELECT * FROM personne WHERE idacteur=:num');
-
 $pdoStat-> bindValue(':num',$_GET['numPersonne'], PDO :: PARAM_INT);
-
 $executeIsOk = $pdoStat->execute();
-
 $personne= $pdoStat ->fetch();
 
 
@@ -85,12 +86,28 @@ $personne= $pdoStat ->fetch();
 
                         <p><label for="adresse">Adresse : <input id="adresse" type="text" name="adresse" size="50" placeholder="rue" value="<?= $personne['adresse'];?>"></label></p>
 
+<<<<<<< HEAD
                         <p><label for="mdp">Mot de passe : <input id="mdp" type="text" name="mdp" size="50" placeholder="mot de passe" value="<?= $personne['mdp'];?>"></label></p>
 
                       
                         <p class="bouton"><input type="submit" value="Valider" align="right"></p>
                     
+=======
+                        <p><label>Mot de passe : <input type="text" name="mdp" size="50" placeholder="mot de passe" value=""></label></p>
+
+                        <p><label>Statut : </label>
+                            <select id="statut" name="idstatut"> 
+                            <option value="Utilisateur">Utilisateur</option>
+                            <option value="Gestionnaire">Gestionnaire</option>
+                            <option value="Administrateur">Administrateur</option>
+                            </select>
+                        </p>
+                        
+                        <p class="bouton"><input type="submit" name="submit" value="Valider" align="right"></p>
+                        
+>>>>>>> 7367bdaba30167659125f3b875278f4ed932610f
                     </fieldset>
+                    
                 </form>
         
             </div>
