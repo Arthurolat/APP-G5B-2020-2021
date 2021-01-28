@@ -14,13 +14,15 @@
 
     <?php include("header.php"); ?>
 
-
     <section>
 
         <div id=menuGauche>
             <ul id=barre_nav>
                 <li id="ongletdebut">
                     <a href="admin_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
+                </li>
+                <li>
+                    <a href="admin_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
                     <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
@@ -46,30 +48,38 @@
             </ul>
 
         </div>
+
         <div id="contenu">
-                <h2> F.A.Q </h2>
-
-<<<<<<< HEAD:controleur/admin_gestion-faq.php
-                <form action="../modele/insert.php" method="POST">
-=======
-                <form action="insert.php" method="POST">
->>>>>>> master:php/admin_gestion-faq.php
-
-                <h3><textarea name="question1" id="form_control" placeholder="1. Question :" row="4" required></textarea></br></h3>
-                <p><textarea name="reponse1" id="form_control" placeholder="Réponse" row="4" required></textarea></br></p>
-                <h3><textarea name="question2" id="form_control" placeholder="2. Question :" row="4" required></textarea></br></h3>
-                <p><textarea name="reponse2" id="form_control" placeholder="Réponse" row="4" required></textarea></br></p>
-                <h3><textarea name="question3" id="form_control" placeholder="3. Question :" row="4" required></textarea></br></h3>
-                <p><textarea name="reponse3" id="form_control" placeholder="Réponse" row="4" required></textarea></br></p>
-                <h3><textarea name="question4" id="form_control" placeholder="4. Question :" row="4" required></textarea></br></h3>
-                <p><textarea name="reponse4" id="form_control" placeholder="Réponse" row="4" required></textarea></br></p>
-                <h3><textarea name="question5" id="form_control" placeholder="5. Question :" row="4" required></textarea></br></h3>
-                <p><textarea name="reponse5" id="form_control" placeholder="Réponse" row="4" required></textarea></br></p>
-                <p><input type="submit" class="bouton" id="bouton_envoyer" value="Valider" /></p>
-                </form>
+            <h2> F.A.Q </h2>
+            
+            <h3>1. Question :</h3>
+            <div>
+                <p>Réponse</p>
             </div>
 
+            <h3>2. Question :</h3>
+            <div>
+                <p>Réponse</p>
+            </div>
+            
+
+            <h3>3. Question :</h3>
+            <div>
+                <p>Réponse</p>
+            </div>
+
+            <h3>4. Question :</h3>
+            <div>
+                <p>Réponse</p>
+            </div>
+
+            <h3>5. Question :</h3>
+            <div>
+                <p>Réponse</p>
+            </div>
         
+            <p class="bouton"><input type="submit" value="Valider"></p>
+        </div>
 
         
     </section>
