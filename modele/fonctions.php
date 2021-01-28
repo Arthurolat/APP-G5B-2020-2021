@@ -176,8 +176,6 @@ function numero_session($bdd){
     foreach ($bdd->query($sql) as $row){
         $_SESSION['numero_session']=$donnees=$row['idsession'];
     }
-    echo $donnees;
-
     //$reponse = $bdd->query("SELECT MAX(idsession) AS idsession FROM sessiontest");
     //$donnees = $reponse->fetch();
     //$_SESSION['numero_session'] = $donnees;
@@ -203,7 +201,77 @@ function mesure_temperature($bdd){
     $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
 }
 
-#------------------------------inserer valeur mesure temperature peau----------------------------
+#----------------------------rentrer mesure température peau-------------------------------------
+function mesure_reconnaissance_tonalite($bdd){
+    $idcapteur = $idtest = 5;
+    $date = date("Y-m-d H:i:s");
+    $idsession = $_SESSION['numero_session'];
+    $valeur_defaut=0;
+    $req = $bdd->exec("INSERT INTO mesure(datemesure, valeur, idcapteur) VALUES('$date', '$valeur_defaut', '$idcapteur')");
+    $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
+    foreach ($bdd->query($sql) as $row){
+        $idmesure=$row['idmesure'];
+    }
+    $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
+}
+
+#----------------------------rentrer mesure température peau-------------------------------------
+function mesure_temps_reaction_son($bdd){
+    $idcapteur = $idtest = 1;
+    $date = date("Y-m-d H:i:s");
+    $idsession = $_SESSION['numero_session'];
+    $valeur_defaut=0;
+    $req = $bdd->exec("INSERT INTO mesure(datemesure, valeur, idcapteur) VALUES('$date', '$valeur_defaut', '$idcapteur')");
+    $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
+    foreach ($bdd->query($sql) as $row){
+        $idmesure=$row['idmesure'];
+    }
+    $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
+}
+
+#----------------------------rentrer mesure température peau-------------------------------------
+function mesure_temps_reaction_lumiere_attendue($bdd){
+    $idcapteur = $idtest = 2;
+    $date = date("Y-m-d H:i:s");
+    $idsession = $_SESSION['numero_session'];
+    $valeur_defaut=0;
+    $req = $bdd->exec("INSERT INTO mesure(datemesure, valeur, idcapteur) VALUES('$date', '$valeur_defaut', '$idcapteur')");
+    $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
+    foreach ($bdd->query($sql) as $row){
+        $idmesure=$row['idmesure'];
+    }
+    $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
+}
+
+#----------------------------rentrer mesure température peau-------------------------------------
+function mesure_temps_reaction_lumiere_inattendue($bdd){
+    $idcapteur = $idtest = 3;
+    $date = date("Y-m-d H:i:s");
+    $idsession = $_SESSION['numero_session'];
+    $valeur_defaut=0;
+    $req = $bdd->exec("INSERT INTO mesure(datemesure, valeur, idcapteur) VALUES('$date', '$valeur_defaut', '$idcapteur')");
+    $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
+    foreach ($bdd->query($sql) as $row){
+        $idmesure=$row['idmesure'];
+    }
+    $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
+}
+
+#----------------------------rentrer mesure température peau-------------------------------------
+function mesure_frequence_cardiaque($bdd){
+    $idcapteur = $idtest = 6;
+    $date = date("Y-m-d H:i:s");
+    $idsession = $_SESSION['numero_session'];
+    $valeur_defaut=0;
+    $req = $bdd->exec("INSERT INTO mesure(datemesure, valeur, idcapteur) VALUES('$date', '$valeur_defaut', '$idcapteur')");
+    $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
+    foreach ($bdd->query($sql) as $row){
+        $idmesure=$row['idmesure'];
+    }
+    $req = $bdd->exec("INSERT INTO resultat(idsession, idtest, idmesure) VALUES('$idsession', '$idtest', '$idmesure')");   
+}
+
+#------------------------------inserer valeur mesure----------------------------
 function valeur_mesure($bdd){
     $valeur = $_POST['valeur'];
     $sql = ("SELECT idmesure FROM mesure ORDER BY idmesure DESC LIMIT 1");
