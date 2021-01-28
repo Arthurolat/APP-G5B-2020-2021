@@ -1,13 +1,4 @@
-<?php 
-require("../modele/connexionbdd.php");
-
-if(!isset($_SESSION['mail'])) {
-    header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
-    exit();
-}
-?>
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
@@ -37,6 +28,9 @@ if(!isset($_SESSION['mail'])) {
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
+                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                </li>
+                <li>
                     <a href="gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -52,7 +46,7 @@ if(!isset($_SESSION['mail'])) {
 
 
         <div id=contenu>
-                <div class="titre"><h1>RESULTATS SESSION DU </h1></div>
+                <div class="titre"><h1>RESULTATS SESSION DU <?php echo $datesession ?> </h1></div>
                 <div class="div-legende">
                     <div class="titre-legende"><h2>Légende</h2></div>
                     <div class="div-rond-vert"><h3>Temps de réaction compris entre 0s-2s</h3></div>
