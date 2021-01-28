@@ -25,7 +25,7 @@
 
 
         </div>
-        <form class="connexionsection " action="verification.php" method="POST">
+        <form class="connexionsection " action="../modele/verification.php" method="POST">
             <h1>Connexion</h1>
             <div class="inputRow">
                 <div class="inputIcon">

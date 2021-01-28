@@ -30,9 +30,6 @@ if(!isset($_SESSION['mail'])) {
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
                     <a class="active" href=#><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -62,6 +59,12 @@ if(!isset($_SESSION['mail'])) {
 
             <div class=formulaire>
 
+            <?php
+            require("../modele/resultat_session.php");
+            
+            ?>
+
+                <!--
                 <table>
                     <tr class="theader">
                         <th>Heure</th>
@@ -134,6 +137,7 @@ if(!isset($_SESSION['mail'])) {
 
             </div>
             </br>
+            -->
             <div class=controle>
                 <div class="element1">
                     <p><a href="gestionnaire_lancer-test3.php">Retour</a></p>

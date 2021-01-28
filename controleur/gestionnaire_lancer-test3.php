@@ -19,7 +19,12 @@ if(!isset($_SESSION['mail'])) {
 </head>
 
 <?php 
-require("../modele/gestionnaire_lancer_test2_bdd.php"); 
+if ($_SERVER['HTTP_REFERER']="http://localhost/APP-G5B-2020-2021/controleur/gestionnaire_lancer-test2.php"){
+    require("../modele/gestionnaire_lancer_test2_bdd.php"); 
+}
+else{
+    require("../modele/gestionnaire_chrono&insert_bdd.php");
+}
 ?>
 
 <body>
@@ -32,9 +37,6 @@ require("../modele/gestionnaire_lancer_test2_bdd.php");
             <ul id=barre_nav>
                 <li id="ongletdebut">
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
-                </li>
-                <li>
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
                     <a class="active" href=#><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
@@ -76,68 +78,80 @@ require("../modele/gestionnaire_lancer_test2_bdd.php");
                 }, 1000);
             </script>
             -->
+            
             <!--
-            <form method="post" action="#">
+            <form method="post" action="gestionnaire_chrono&insert.php">
                 <p> Choisissez votre capteur :
                     <label>
                     <select name="capteur">
-                        <option value="c1">Capteur 1</option>  
-                        <option value="c2">Capteur 2</option> 
-                        <option value="c3">Capteur 3</option> 
-                        <option value="c4">Capteur 4</option> 
+                        <option value="c1">Capteur de temps de réaction à un son inattendu</option>  
+                        <option value="c2">Capteur de temps de réaction à une lumière dans le noir</option> 
+                        <option value="c3">Capteur de temps de réaction à une lumière en extérieur</option> 
+                        <option value="c4">Capteur de température de la peau</option> 
+                        <option value="c5">Capteur de reconnaisssance de tonalité</option> 
+                        <option value="c6">Capteur de fréquence cardiaque</option> 
                     </select>
                 </label>
                 </p>
-            </form>
-            -->
-            <div class=formulaire>
-                <div class="test1">
-                    <img class="img-responsive" src="../images/test_temperature.jpg">
-                    <div class="lancer_test">
-                        <form method="post" action="#">
+                -->
+            
+                <div class=formulaire>
+                    <div class="test1">
+                        <img class="img-responsive" src="../images/test_temperature.jpg">
+                        <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
                             <p>Température superficielle de la peau</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton4"/></p>
                         </form>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
+                        </div>
+                    </div>
+                    <div class="test2">
+                        <img class="img-responsive" src="../images/test_frequence.jpg">
+                        <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
+                            <p> Fréquence cardiaque</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton6"/></p>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="test3">
+                        <img class="img-responsive" src="../images/test_tonalite.jpg">
+                        <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
+                            <p> Reconnaissance de la tonalité d'un son </p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton5"/></p>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="test4">
+                        <img class="img-responsive" src="../images/test_sonore.jpg">
+                        <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
+                            <p> Réaction à un stimulus sonore inattendu</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="boutons1"/></p>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="test5">
+                        <img class="img-responsive" src="../images/test_visuel_attendu.jpg">
+                        <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
+                            <p> Réaction à un stimulus visuel attendu dans le noir</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton2"/></p>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="test6">
+                        <img class="img-responsive" src="../images/test_visuel_inattendu.jpg">
+                        <div class="lancer_test">
+                        <form method="post" action="gestionnaire_chrono&insert.php">
+                            <p> Réaction à un stimulus visuel inattendu en extérieur</p>
+                            <p class="bouton"><input type="submit" value="Lancer" name="bouton3"/></p>
+                        </form>
+                        </div>
                     </div>
                 </div>
-                <div class="test2">
-                    <img class="img-responsive" src="../images/test_frequence.jpg">
-                    <div class="lancer_test">
-                        <p> Fréquence cardiaque</p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test3">
-                    <img class="img-responsive" src="../images/test_tonalite.jpg">
-                    <div class="lancer_test">
-                        <p> Reconnaissance de la tonalité d'un son </p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test4">
-                    <img class="img-responsive" src="../images/test_sonore.jpg">
-                    <div class="lancer_test">
-                        <p> Réaction à un stimulus sonore</p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test5">
-                    <img class="img-responsive" src="../images/test_visuel_attendu.jpg">
-                    <div class="lancer_test">
-                        <p> Réaction à un stimulus visuel attendu</p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-                <div class="test6">
-                    <img class="img-responsive" src="../images/test_visuel_inattendu.jpg">
-                    <div class="lancer_test">
-                        <p> Réaction à un stimulus visuel inattendu</p>
-                        <p class="bouton"><a href="gestionnaire_chrono&insert.html">Lancer</a></p>
-                    </div>
-                </div>
-
-
-            </div>
+            </form>
             </br>
 
             <div class=controle>
@@ -145,7 +159,10 @@ require("../modele/gestionnaire_lancer_test2_bdd.php");
                     <p><a href="gestionnaire_lancer-test2.php">Retour</a></p>
                 </div>
                 <div class="element2">
-                    <p><a href="gestionnaire_lancer-test4.php">Suivant</a></p>
+                <form method="post" action="gestionnaire_lancer-test4.php">
+                    <p class="bouton"><input type="submit" value="Suivant"/></p>
+                    <!--<p><a href="gestionnaire_lancer-test4.php">Suivant</a></p>-->
+                </form>
                 </div>
             </div>
         </div>

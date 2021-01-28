@@ -12,7 +12,7 @@ if(!isset($_SESSION['mail'])) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/admin_lancer-test1_connu.css" /> <!--idem que gestionnaire -->
+    <link rel="stylesheet" href="../css/gestionnaire_lancer-test1_connu.css" /> <!--idem que gestionnaire -->
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <title>Page d'accueil</title>
@@ -32,9 +32,6 @@ if(!isset($_SESSION['mail'])) {
                         <a href="admin_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                     </li>
                     <li>
-                        <a href="admin_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                    </li>
-                    <li>
                         <a class="active" href=#><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                     </li>
                     <li>
@@ -52,7 +49,7 @@ if(!isset($_SESSION['mail'])) {
                         <a href="admin_gestion-des-capteurs.php"><img class="img-responsive" src="../images/icones/icone_capteur2.png" alt="icone capteur" width=10px> Capteurs</a>
                     </li>
                     <li id="ongletfin">
-                        <a href="admin_gestion-faq"><img class="img-responsive" src="../images/icones/icone_faq.png" alt="icone faq" width=10px> F.A.Q</a>
+                        <a href="admin_gestion-faq.php"><img class="img-responsive" src="../images/icones/icone_faq.png" alt="icone faq" width=10px> F.A.Q</a>
                     </li>
 
                 </ul>
@@ -86,9 +83,12 @@ if(!isset($_SESSION['mail'])) {
                 <form method="post" action="admin_lancer-test2.php">
                     <p>
                         <fieldset>
-                            <p><label>Nom : <input type="text" name="nom" size="50" placeholder="Le nom de l'utilisateur..."></label></p>
-                            <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="Le prénom de l'utilisateur..."></label></p>
-                            <p><label>Date et heure : <input type="datetime-local" name="date"></label></p>
+                            <p><label>Nom de famille: </label>
+                            <input type="text" name="nom" size="50" placeholder="" required></p>
+                            <p><label>Prénoms :</label>
+                            <input type="text" name="prenom" size="50" placeholder="" required></p>
+                            <p><label>Date et heure : </label>
+                            <input type="datetime-local" name="date" required></p>
                             <p class="bouton"><input type="submit" value="Suivant" /></p>
                         </fieldset>
                     </p>

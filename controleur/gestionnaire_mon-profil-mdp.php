@@ -32,9 +32,6 @@ if(!isset($_SESSION['mail'])) {
                     <a class="active" href="gestionnaire_mon-profil-mdp.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
-                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
-                </li>
-                <li>
                     <a href="gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li>
@@ -49,7 +46,7 @@ if(!isset($_SESSION['mail'])) {
         </div>
 
         <div id=contenu>
-            <?php require"../modele/connexionbdd.php";
+            <?php 
                 $requete = "SELECT * FROM personne where mail = '".$_SESSION['mail']."'";
                 $exec_requete = mysqli_query($db,$requete);
                 $reponse      = mysqli_fetch_array($exec_requete);
@@ -70,16 +67,19 @@ if(!isset($_SESSION['mail'])) {
                 </div>
             </div>
             <div class=formulaire>
-                <form method="post" action="#">
+                <form method="post" action="../modele/update_mdp.php">
                     <p>
                         <fieldset>
-
-                            <p><label>Mot de passe actuel : <input type="text" name="Mdp" size="50" placeholder="mot de passe"></label></p>
-                            <p><label>Nouveau mot de passe : <input type="text" name="Mdp" size="50" placeholder="nouveau mot de passe"></label></p>
-                            <p><label>Confirmer le nouveau mot de passe : <input type="text" name="Mdp" size="50" placeholder="confirmer mot de passe"></label></p>
-
+                            
+                            <p><label>Mot de passe actuel :</label>
+                            <input type="text" name="mdp0" size="50" placeholder="mot de passe"></p>
+                            <p><label>Nouveau mot de passe :</label>
+                            <input type="text" name="mdp1" size="50" placeholder="nouveau mot de passe"></p>
+                            <p><label>Confirmer le nouveau mot de passe :</label>
+                            <input type="text" name="mdp1verif" size="50" placeholder="confirmer mot de passe"></p>
+                            
                             <p class="bouton"><input type="submit" value="Valider" align="right"></p>
-
+                            
                         </fieldset>
                     </p>
 

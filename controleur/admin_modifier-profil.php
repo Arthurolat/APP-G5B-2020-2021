@@ -1,11 +1,19 @@
-<?php 
+<?php  
 require("../modele/connexionbdd.php");
 
 if(!isset($_SESSION['mail'])) {
     header('Location: http://localhost/APP-G5B-2020-2021/accueil.php');
     exit();
 }
+
+$pdoStat = $bdd ->prepare('SELECT * FROM personne WHERE idacteur=:num');
+$pdoStat-> bindValue(':num',$_GET['numPersonne'], PDO :: PARAM_INT);
+$executeIsOk = $pdoStat->execute();
+$personne= $pdoStat ->fetch();
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -30,9 +38,6 @@ if(!isset($_SESSION['mail'])) {
             <ul id=barre_nav>
                 <li id="ongletdebut">
                     <a href="admin_mon-profil.php"><img class="img-responsive" src="../images/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
-                </li>
-                <li>
-                    <a href="admin_messagerie-accueil.php""><img class="img-responsive" src="../images/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
                 </li>
                 <li>
                     <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
@@ -64,17 +69,32 @@ if(!isset($_SESSION['mail'])) {
 
 
             <div class=formulaire >
-                <form method="post" action="#">
+                <form method="post" action="modifier.php">
                     <fieldset>
-                        <p><label>Nom : <input type="text" name="nom" size="50" placeholder="nom"></label></p>
-                        <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="prénom"></label></p>
-                        <p><label>Email : <input type="email" name="email" size="50" placeholder="email"></label></p>
-                        <p><label>Date de naissance : <input type="date" name="date"></label></p>
-                        <p><label>Numero de téléphone : <input type="tel" name="tel" maxlength="10" placeholder="tel"></label></p>
-                        <p><label>Adresse : <input type="text" name="adresse" size="50" placeholder="rue"></label></p>
-                        <p><label>Ville : <input type="text" name="ville" size="50" placeholder="ville"></label></p>
-                        <p><label>Code postal : <input type="text" name="adresse" size="50" maxlength="5" placeholder="code postal"></label></p>
-                        <p><label>Mot de passe : <input type="text" name="Mdp" size="50" placeholder="mot de passe"></label></p>
+
+                        <input type="hidden" name="numPersonne" value="<?= $personne['idacteur'] ?>">
+
+                        <p><label for="nom">Nom : <input id="nom" type="text" name="nom" size="50" placeholder="nom" value="<?= $personne['nom'];?>"></label></p>
+
+                        <p><label for="prenom">Prénom : <input id="prenom" type="text" name="prenom" size="50" placeholder="prénom" value="<?= $personne['prenom'];?>"></label></p>
+
+                        <p><label for="mail">Email : <input id="mail" type="email" name="email" size="50" placeholder="email" value="<?= $personne['mail'];?>"></label></p>
+
+                        <p><label for="dateNaissance">Date de naissance : <input id="dateNaissance" type="date" name="date" value="<?= $personne['dateNaissance'];?>"></label></p>
+
+                        <p><label for="tel">Numero de téléphone : <input id="tel" type="tel" name="tel" maxlength="10" placeholder="tel" value="<?= $personne['tel'];?>"></label></p>
+
+                        <p><label for="adresse">Adresse : <input id="adresse" type="text" name="adresse" size="50" placeholder="rue" value="<?= $personne['adresse'];?>"></label></p>
+
+<<<<<<< HEAD
+                        <p><label for="mdp">Mot de passe : <input id="mdp" type="text" name="mdp" size="50" placeholder="mot de passe" value="<?= $personne['mdp'];?>"></label></p>
+
+                      
+                        <p class="bouton"><input type="submit" value="Valider" align="right"></p>
+                    
+=======
+                        <p><label>Mot de passe : <input type="text" name="mdp" size="50" placeholder="mot de passe" value=""></label></p>
+
                         <p><label>Statut : </label>
                             <select id="statut" name="idstatut"> 
                             <option value="Utilisateur">Utilisateur</option>
@@ -82,9 +102,12 @@ if(!isset($_SESSION['mail'])) {
                             <option value="Administrateur">Administrateur</option>
                             </select>
                         </p>
-                        <p class="bouton"><input type="submit" value="Valider" align="right"></p>
-                    
+                        
+                        <p class="bouton"><input type="submit" name="submit" value="Valider" align="right"></p>
+                        
+>>>>>>> 7367bdaba30167659125f3b875278f4ed932610f
                     </fieldset>
+                    
                 </form>
         
             </div>
