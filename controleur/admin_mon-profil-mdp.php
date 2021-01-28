@@ -37,9 +37,7 @@ if(!isset($_SESSION['mail'])) {
               <li>
                   <a href="admin_rechercher.php"><img class="img-responsive" src="../images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
               </li>
-              <li>
-                  <a href="admin_analyse-test.php"><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
-              </li>
+              
 
               <p> Réglages :</p>
               <li>
