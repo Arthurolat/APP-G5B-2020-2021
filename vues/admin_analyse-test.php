@@ -1,5 +1,4 @@
- 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
@@ -47,7 +46,7 @@
 
 
         <div id=contenu>
-                <div class="titre"><h1>RESULTATS SESSION DU <?php echo $datesession ?> </h1></div>
+                <div class="titre"><h1>RESULTATS SESSION DU 2020-12-01</h1></div>
                 <div class="div-legende">
                     <div class="titre-legende"><h2>Légende</h2></div>
                     <div class="div-rond-vert"><h3>Temps de réaction compris entre 0s-2s</h3></div>
