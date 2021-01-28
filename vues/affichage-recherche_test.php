@@ -27,7 +27,7 @@
                         <input type="hidden" value="<?php echo $donnees['idacteur']?>" name="idacteur">
                         <input type="hidden" value= " <?php echo $donnees['datemesure']?>" name="datesession">
                         <button type="submit"> Voir </button>
-                    </form>
+                </form>
                 </p>
             <?php }
 

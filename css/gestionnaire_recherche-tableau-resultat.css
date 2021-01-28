@@ -145,6 +145,29 @@ tr td:nth-child(4) a:hover {
     transition: all .3s ease;
 }
 
+form button {
+    margin: 0 0%;
+    padding: 6% 10%;
+    border-radius: 5px;
+    background-color: #A9CAED;
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    font-family: roboto, sans-serif;
+    border: 1px outset #A9CAED;
+    transition: all .3s ease;
+}
+
+form button:hover {
+    margin: 0 0%;
+    padding: 6% 10%;
+    border-radius: 5px;
+    background-color: #ed7d31;
+    color: white;
+    border: 1px outset #ed7d31;
+    transition: all .3s ease;
+}
+
 
 /* mise en forme ligne header tableau*/
 
