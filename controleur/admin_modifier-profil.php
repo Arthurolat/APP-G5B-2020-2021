@@ -86,13 +86,7 @@ $personne= $pdoStat ->fetch();
 
                         <p><label for="adresse">Adresse : <input id="adresse" type="text" name="adresse" size="50" placeholder="rue" value="<?= $personne['adresse'];?>"></label></p>
 
-<<<<<<< HEAD
-                        <p><label for="mdp">Mot de passe : <input id="mdp" type="text" name="mdp" size="50" placeholder="mot de passe" value="<?= $personne['mdp'];?>"></label></p>
 
-                      
-                        <p class="bouton"><input type="submit" value="Valider" align="right"></p>
-                    
-=======
                         <p><label>Mot de passe : <input type="text" name="mdp" size="50" placeholder="mot de passe" value=""></label></p>
 
                         <p><label>Statut : </label>
@@ -104,8 +98,7 @@ $personne= $pdoStat ->fetch();
                         </p>
                         
                         <p class="bouton"><input type="submit" name="submit" value="Valider" align="right"></p>
-                        
->>>>>>> 7367bdaba30167659125f3b875278f4ed932610f
+
                     </fieldset>
                     
                 </form>
