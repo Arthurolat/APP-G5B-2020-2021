@@ -6,7 +6,7 @@ $pdoStat = $bdd ->prepare('UPDATE personne SET nom=:nom, prenom=:prenom, mail=:m
 
 $pdoStat-> bindValue(':num',$_POST['numPersonne'], PDO :: PARAM_INT);
 
-$pdoStat-> bindValue(':num',$_POST['numPersonne'], PDO :: PARAM_INT);
+
 $pdoStat-> bindValue(':nom',$_POST['nom'], PDO :: PARAM_INT);
 $pdoStat-> bindValue(':prenom',$_POST['prenom'], PDO :: PARAM_INT);
 $pdoStat-> bindValue(':mail',$_POST['email'], PDO :: PARAM_INT);
@@ -16,6 +16,8 @@ $pdoStat-> bindValue(':adresse',$_POST['adresse'], PDO :: PARAM_INT);
 $pdoStat-> bindValue(':mdp',$_POST['Mdp'], PDO :: PARAM_INT);
 
 $executeIsOk = $pdoStat->execute();
+
+header("location:http://localhost/APP-G5B-2020-2021/controleur/admin_gestion-utilisateur.php");
 
 
 ?>
