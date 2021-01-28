@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 //require("../modele/connexionbdd.php");
 
@@ -8,6 +9,9 @@ if(!isset($_SESSION['mail'])) {
 ?>
 
   <!DOCTYPE html>
+=======
+<!DOCTYPE html>
+>>>>>>> dc8f9ba45104f468320d2556e885f39733bba52f
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
@@ -31,6 +35,12 @@ if(!isset($_SESSION['mail'])) {
                     <a href="../controleur/gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
+                    <a href="../controleur/gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                </li>
+                <li>
+                    <a href="../controleur/gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
+                </li>
+                <li>
                     <a href="../controleur/gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
                 </li>
                 <li id="ongletfin">
@@ -43,12 +53,16 @@ if(!isset($_SESSION['mail'])) {
 
 
         <div id=contenu>
+<<<<<<< HEAD
         <form action='impression.php' method="POST">
             <input type="hidden" value="<?php echo $idacteur ?>" name="idacteur">
             <input type="hidden" value= " <?php echo $datesession ?>" name="datesession">
             <button type="submit"> Imprimer </button>
         </form>
                 <div class="titre"><h1>RESULTATS SESSION DU <?php echo $datesession ?></h1></div>
+=======
+                <div class="titre"><h1>RESULTATS SESSION DU <?php echo $datesession ?> </h1></div>
+>>>>>>> dc8f9ba45104f468320d2556e885f39733bba52f
                 <div class="div-legende">
                     <div class="titre-legende"><h2>Légende</h2></div>
                     <div class="div-rond-vert"><h3>Temps de réaction compris entre 0s-2s</h3></div>

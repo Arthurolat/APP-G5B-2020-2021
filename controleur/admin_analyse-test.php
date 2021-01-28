@@ -21,7 +21,11 @@ if(!isset($_SESSION['mail'])) {
 
 <body>
     
+<<<<<<< HEAD
     <?php include("../controleur/header.php"); ?>
+=======
+    <?php include("header.php"); ?>
+>>>>>>> dc8f9ba45104f468320d2556e885f39733bba52f
 
     <section>
         <form action='impression.php' method="POST">
@@ -36,7 +40,17 @@ if(!isset($_SESSION['mail'])) {
                     <a href="gestionnaire_mon-profil.php"><img class="img-responsive" src="../images/icones/icone_profil.png" alt="icone profil" width=10px> Mon profil</a>
                 </li>
                 <li>
+<<<<<<< HEAD
                     <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
+=======
+                    <a href="gestionnaire_messagerie-accueil.php"><img class="img-responsive" src="../images/icones/icone_messagerie.png" alt="icone messagerie" width=10px> Messagerie</a>
+                </li>
+                <li>
+                    <a href="gestionnaire_lancer-test1_connu.php"><img class="img-responsive" src="../images/icones/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
+
+                    <a href="admin_lancer-test1_connu.php"><img class="img-responsive" src="../images/icon-survey.png" alt="icone resultats" width=10px> Lancer une session de tests </a>
+
+>>>>>>> dc8f9ba45104f468320d2556e885f39733bba52f
                 </li>
                 <li>
                     <a class="active" href=#><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
