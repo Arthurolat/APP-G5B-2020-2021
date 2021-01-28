@@ -224,7 +224,12 @@ function recap_session($bdd){
     return $reponse;
 }
 
-?>  
 
-
+#-----------------------------affichage faq----------------
+function affichage_faq($bdd){
+    $reponse = $bdd->prepare("SELECT question, reponse FROM faq");
+    $reponse->execute();
+    return $reponse; 
+}
+?>
        
