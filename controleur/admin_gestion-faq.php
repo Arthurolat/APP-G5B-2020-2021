@@ -51,7 +51,7 @@ $faq=$statement->fetchAll();
                 <li>
                     <a href="admin_rechercher.php"><img class="img-responsive" src="../images/icones/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
-               
+                
 
                 <p> Réglages :</p>
                 <li>

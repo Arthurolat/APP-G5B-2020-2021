@@ -20,7 +20,9 @@ $faq= $pdoStat ->fetch();
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/admin_modifier-profil.css" />
+
+    <link rel="stylesheet" href="../css/admin_modifier-faq.css" />
+
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <title>Gestion FAQ</title>
@@ -45,9 +47,7 @@ $faq= $pdoStat ->fetch();
                 <li>
                     <a href="admin_rechercher.php"><img class="img-responsive" src="../images/icone_loupe.png" alt="icone loupe" width=10px> Recherche </a>
                 </li>
-                <li>
-                    <a href="admin_analyse-test.php"><img class="img-responsive" src="../images/icone_engrenage.png" alt="icone engrenage" width=10px> Analyse tests psychotechniques </a>
-                </li>
+
 
                 <p> Réglages :</p>
                 <li>
@@ -74,9 +74,13 @@ $faq= $pdoStat ->fetch();
 
                         <input type="hidden" name="numfaq" value="<?= $faq['idfaq'] ?>">
 
-                        <p><label for="question">Question : <input id="question" type="text" name="question" placeholder="question" value="<?= $faq['question'];?>"></label></p>
 
-                        <p><label for="reponse">Réponse : <input id="reponse" type="text" name="reponse" placeholder="reponse" value="<?= $faq['reponse'];?>"></label></p>
+                        <p><label for="question">Question : </label><input id="question" type="text" name="question" placeholder="question" value="<?= $faq['question'];?>"></p>
+
+                        <p><label for="reponse">Réponse : </label><input id="reponse" type="text" name="reponse" placeholder="reponse" value="<?= $faq['reponse'];?>"></p>
+
+        
+
 
                        
                         
