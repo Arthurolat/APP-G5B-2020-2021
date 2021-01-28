@@ -73,27 +73,21 @@ $personne= $pdoStat ->fetch();
 
                         <input type="hidden" name="numPersonne" value="<?= $personne['idacteur'] ?>">
 
-                        <p><label>Nom : <input type="text" name="nom" size="50" placeholder="nom" value="<?= $personne['nom'];?>"></label></p>
+                        <p><label for="nom">Nom : <input id="nom" type="text" name="nom" size="50" placeholder="nom" value="<?= $personne['nom'];?>"></label></p>
 
-                        <p><label>Prénom : <input type="text" name="prenom" size="50" placeholder="prénom" value="<?= $personne['prenom'];?>"></label></p>
+                        <p><label for="prenom">Prénom : <input id="prenom" type="text" name="prenom" size="50" placeholder="prénom" value="<?= $personne['prenom'];?>"></label></p>
 
-                        <p><label>Email : <input type="email" name="email" size="50" placeholder="email" value="<?= $personne['mail'];?>"></label></p>
+                        <p><label for="mail">Email : <input id="mail" type="email" name="email" size="50" placeholder="email" value="<?= $personne['mail'];?>"></label></p>
 
-                        <p><label>Date de naissance : <input type="date" name="date" value="<?= $personne['dateNaissance'];?>"></label></p>
+                        <p><label for="dateNaissance">Date de naissance : <input id="dateNaissance" type="date" name="date" value="<?= $personne['dateNaissance'];?>"></label></p>
 
-                        <p><label>Numero de téléphone : <input type="tel" name="tel" maxlength="10" placeholder="tel" value="<?= $personne['tel'];?>"></label></p>
+                        <p><label for="tel">Numero de téléphone : <input id="tel" type="tel" name="tel" maxlength="10" placeholder="tel" value="<?= $personne['tel'];?>"></label></p>
 
-                        <p><label>Adresse : <input type="text" name="adresse" size="50" placeholder="rue" value="<?= $personne['adresse'];?>"></label></p>
+                        <p><label for="adresse">Adresse : <input id="adresse" type="text" name="adresse" size="50" placeholder="rue" value="<?= $personne['adresse'];?>"></label></p>
 
-                        <p><label>Mot de passe : <input type="text" name="Mdp" size="50" placeholder="mot de passe" value="<?= $personne['mdp'];?>"></label></p>
+                        <p><label for="mdp">Mot de passe : <input id="mdp" type="text" name="mdp" size="50" placeholder="mot de passe" value="<?= $personne['mdp'];?>"></label></p>
 
-                        <p><label>Statut : </label>
-                            <select id="statut" name="idstatut"> 
-                            <option value="Utilisateur">Utilisateur</option>
-                            <option value="Gestionnaire">Gestionnaire</option>
-                            <option value="Administrateur">Administrateur</option>
-                            </select>
-                        </p>
+                      
                         <p class="bouton"><input type="submit" value="Valider" align="right"></p>
                     
                     </fieldset>
