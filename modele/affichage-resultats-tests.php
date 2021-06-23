@@ -1,4 +1,4 @@
- <?php 
+<?php 
 require("../modele/connexionbdd.php");
 require("../modele/fonctions.php");
 
@@ -8,6 +8,5 @@ $idacteur= $_POST['idacteur'];
 $reponse= affichage_resultats($bdd,$datesession, $idacteur);
 
 
-
-include("../vues/gestionnaire_recherche-tableau-resultat-voir.php");            
+include("../controleur/gestionnaire_recherche-tableau-resultat-voir.php");         
 ?>

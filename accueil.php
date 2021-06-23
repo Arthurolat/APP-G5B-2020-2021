@@ -10,7 +10,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/accueil2.css"> 
+        <link rel="stylesheet" href="../APP-G5B-2020-2021/css/formulaire_contact.css">
         <link rel="stylesheet" href="css/footer.css">
+        
     </head>
     <body>
         <header> <!-- Bande du haut de page -->
@@ -23,11 +25,11 @@
 					<li><a href="#">Accueil</a></li>
 					<li><a href="#a_propos">A propos</a></li>
 					<li><a href="#team">La team</a></li>
-                    <li><a href="#formulaire_contact">Contact</a></li>
+                    <li><a href="#corps">Contact</a></li>
                 </ul>
             </nav>
 
-            <a id="connexion" href="Controleur/page_connexion.php"><button>Connexion</button></a>  
+            <a id="connexion" href="controleur/page_connexion.php"><button>Connexion</button></a>  
         </header> 
 
         
@@ -57,7 +59,7 @@
                     </p>
                 </div>
 
-                <a id="bouton_a_propos" href="Controleur/a_propos.php"><button>En savoir plus !</button></a>
+                <a id="bouton_a_propos" href="controleur/a_propos.php"><button>En savoir plus !</button></a>
             </div>
             
         </div>
@@ -108,10 +110,13 @@
             </div>
         </div>
         
-        <div id="contact">
-        <?php include("php/formulaire_contact.php"); ?>
+        <div id="corps">
+            <?php include('../APP-G5B-2020-2021/vues/messagerie-externe.php'); ?>
         </div>
 
-        <?php include("php/footer.php"); ?>
+        <footer>
+            <?php include("controleur/footer.php"); ?>
+        </footer>
+        
     </body>
 </html>

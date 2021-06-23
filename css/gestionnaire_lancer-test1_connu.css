@@ -1,79 +1,76 @@
-body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    /*background: url("../images/image_militaire.png");*/
-    height: auto;
-    background: url("../images/image_avion");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center center;
-}
-
-
-/*------------------------------corps de page ------------------------------*/
-
-section {
-    display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-
-/*------------ barre de navigation verticale ------------*/
-
-#menuGauche {
-    width: 15%;
-}
-
-#menuGauche #barre_nav {
-    border-radius: 15px;
-    background-color: #a9caed86;
-    border: 2px solid #A9CAED;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1%;
-    box-shadow: 2px 2px 5px #A9CAED;
-}
-
-#menuGauche ul,
-#menuGauche a {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    list-style-type: none;
-    padding-left: 0px;
-    font-size: large;
-    text-decoration: none;
-    width: auto;
-    vertical-align: center;
-}
-
-#menuGauche li a {
-    display: block;
-    color: #000;
-    padding: 4% 1% 4% 2%;
-    color: black;
-}
-
-#menuGauche ul ul li a {
-    padding-left: 9%;
-}
-
-#menuGauche img {
-    width: 15%;
-}
-
-
-/*passage de la souris*/
-
-#menuGauche li a:hover,
-#menuGauche li a.active {
-    background-color: white;
-    transition: all .2s ease;
-}
-
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        /*background: url("../images/image_avion");*/
+        background-color: #A9CAED;
+        /*ecf4fa;*/
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+    }
+    /*------------------------------corps de page ------------------------------*/
+    
+    section {
+        display: flex;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    /*------------ barre de navigation verticale ------------*/
+    
+    #menuGauche {
+        width: 20%;
+    }
+    
+    #menuGauche #barre_nav {
+        border-radius: 0px;
+        background-color: #A9CAED;
+        /*border: 2px solid #041733;*/
+        padding: 5px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 1%;
+        /*box-shadow: 2px 2px 5px #A9CAED;*/
+    }
+    
+    #menuGauche ul,
+    #menuGauche a {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        list-style-type: none;
+        padding-left: 0px;
+        font-size: 18px;
+        text-decoration: none;
+        width: auto;
+        vertical-align: center;
+        color: #000;
+        font-family: roboto, sans-serif;
+    }
+    
+    #menuGauche li a {
+        display: block;
+        color: #000;
+        padding: 4% 1% 4% 2%;
+    }
+    
+    #menuGauche ul ul li a {
+        padding-left: 9%;
+    }
+    
+    #menuGauche img {
+        width: 15%;
+    }
+    /*passage de la souris*/
+    
+    #menuGauche li a:hover,
+    #menuGauche li a.active {
+        background-color: white;
+        transition: all .2s ease;
+    }
+    /*
 #menuGauche #ongletdebut a:hover {
     border-radius: 15px 15px 0 0;
 }
@@ -81,179 +78,208 @@ section {
 #menuGauche #ongletfin a:hover {
     border-radius: 0 0 15px 15px;
 }
-
-
-/*----------------------- contenu -----------------------*/
-
-#contenu {
-    width: 85%;
-    border: 2px solid #041733;
-    box-shadow: 2px 2px 5px #041733;
-    border-radius: 15px;
-    margin-left: 1%;
-    padding: 0% 1% 0% 1%;
-    background-color: rgba(255, 255, 255, 0.555);
-}
-
-section h2 {
-    margin-left: 1%;
-    margin-right: 1%;
-    border-bottom: 1px solid #041733;
-}
-
-
-/* ------step progress bar----- */
-
-.step_progress {
-    width: 100%;
-    margin: auto;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-}
-
-.step_progress ul li {
-    display: inline-block;
-    width: 24%;
-    position: relative;
-    text-align: center;
-    list-style-type: none;
-    font-weight: bold;
-    vertical-align: top;
-}
-
-.step_progress ul {
-    counter-reset: step;
-    margin: auto;
-}
-
-
-/*fixe les etapes*/
-
-.step_progress ul li:before {
-    content: counter(step);
-    counter-increment: step;
-    width: 30px;
-    height: 30px;
-    border: 2px solid black;
-    box-shadow: 1px 1px 2px black;
-    display: block;
-    margin: 0 auto 2px auto;
-    border-radius: 50%;
-    line-height: 27px;
-    background: white;
-    text-align: center;
-    font-weight: bold;
-}
-
-
-/*fixe les lignes*/
-
-.step_progress ul li:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2.5px;
-    background: black;
-    box-shadow: 1px 1px 2px black;
-    top: 15px;
-    left: -50%;
-    z-index: -1;
-}
-
-.step_progress ul li:first-child:after {
-    content: none;
-}
-
-
-/*applique la progression*/
-
-ul li.ok:before {
-    border: 2px solid #ed7d31;
-    box-shadow: 1px 1px 2px #ed7d31;
-    background: #ed7d31;
-    color: white;
-}
-
-ul li.ok:after {
-    background: #ed7d31;
-    height: 3px;
-    box-shadow: 1px 1px 3px #ed7d31;
-}
-
-
-/*---- attribuer session à un utilisateur----*/
-
-#contenu .onglet {
-    text-align: center;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin: 15px auto 0 auto;
-}
-
-.onglet .element1,
-.onglet .element2 {
-    width: 100%;
-    margin: 0 auto;
-    height: 40px;
-}
-
-.onglet .element1 {
-    color: #ed7d31;
-    font-weight: bold;
-    text-decoration: underline;
-    border: 2px solid #041733;
-    border-bottom: none;
-    border-radius: 30px 30px 0 0;
-    background-color: rgba(255, 255, 255, 0.774);
-}
-
-.onglet .element2 {
-    border-bottom: 2px solid #041733;
-    text-shadow: 0.3px 0.8px 10px white;
-    font-weight: bold;
-}
-
-.element2 a,
-.element2 a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-#contenu .formulaire {
-    text-align: center;
-    border: 2px solid #041733;
-    border-top: 2px solid #04173300;
-    width: auto;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.774);
-}
-
-.formulaire form input[type=submit] {
-    border: 2px solid #ed7d31;
-    box-shadow: 2px 2px 3px #ed7d31;
-    border-radius: 50px;
-    padding: 10px 35px;
-    margin-top: 50px;
-    text-decoration: none;
-    background: #ed7d31;
-    color: white;
-    font-weight: bold;
-    font-family: "Times New Roman";
-    font-size: large;
-}
-
-.formulaire form .bouton {
-    text-align: center;
-}
-
-.formulaire form fieldset {
-    border: 0;
-    font-style: "Times New Roman";
-}
-
-#contenu .formulaire form {
-    text-align: left;
-    padding: 40px 20px 0 20px;
-}
+*/
+    /*----------------------- contenu -----------------------*/
+    
+    #contenu {
+        width: 95%;
+        /*border: 2px solid #041733;*/
+        /*box-shadow: 2px 2px 5px #041733;*/
+        border-radius: 0px;
+        margin-left: 0%;
+        padding: 2% 1% 2% 2%;
+        background-color: #ecf4fa;
+        font-family: roboto, sans-serif;
+        font-size: 16px;
+    }
+    
+    section h2 {
+        font-size: xx-large;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-bottom: 1px solid #041733;
+    }
+    /* ------step progress bar----- */
+    
+    .step_progress {
+        width: 100%;
+        margin: auto;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .step_progress ul li {
+        display: inline-block;
+        width: 24%;
+        position: relative;
+        text-align: center;
+        list-style-type: none;
+        font-weight: bold;
+        vertical-align: top;
+    }
+    
+    .step_progress ul {
+        counter-reset: step;
+        margin: auto;
+    }
+    /*fixe les etapes*/
+    
+    .step_progress ul li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 30px;
+        height: 30px;
+        border: 2px solid black;
+        box-shadow: 1px 1px 2px black;
+        display: block;
+        margin: 0 auto 2px auto;
+        border-radius: 50%;
+        line-height: 27px;
+        background: white;
+        text-align: center;
+        font-weight: bold;
+        font-family: roboto, sans-serif;
+    }
+    /*fixe les lignes*/
+    
+    .step_progress ul li:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2.5px;
+        background: black;
+        box-shadow: 1px 1px 2px black;
+        top: 15px;
+        left: -50%;
+        z-index: -1;
+    }
+    
+    .step_progress ul li:first-child:after {
+        content: none;
+    }
+    /*applique la progression*/
+    
+    ul li.ok:before {
+        border: 2px solid #ed7d31;
+        box-shadow: 1px 1px 2px #ed7d31;
+        background: #ed7d31;
+        color: white;
+    }
+    
+    ul li.ok:after {
+        background: #ed7d31;
+        height: 3px;
+        box-shadow: 1px 1px 3px #ed7d31;
+    }
+    /*---- attribuer session à un utilisateur----*/
+    
+    #contenu .onglet {
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 15px auto 0 auto;
+    }
+    
+    .onglet .element1,
+    .onglet .element2 {
+        width: 100%;
+        margin: 0 auto;
+        height: 40px;
+        font-size: 17px;
+        padding-bottom: 5px;
+    }
+    
+    .onglet .element1 {
+        color: #ed7d31;
+        font-weight: bold;
+        text-decoration: none;
+        border-bottom: 2px solid #ed7d31;
+    }
+    
+    .onglet .element2 {
+        border-bottom: 2px solid #041733;
+        text-shadow: 0.3px 0.8px 10px white;
+        font-weight: bold;
+    }
+    
+    .element2 a,
+    .element2 a:visited {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #contenu .formulaire {
+        text-align: center;
+        width: auto;
+        margin: 0 auto;
+    }
+    
+    .formulaire form input[type=submit] {
+        border: 2px solid #ed7d31;
+        box-shadow: 2px 2px 3px #ed7d31;
+        border-radius: 50px;
+        padding: 10px 35px;
+        margin-top: 50px;
+        text-decoration: none;
+        background: #ed7d31;
+        color: white;
+        font-weight: bold;
+        font-family: roboto, sans-serif;
+        font-size: large;
+    }
+    
+    .formulaire form .bouton {
+        text-align: center;
+    }
+    
+    .formulaire form fieldset {
+        border: 0;
+        font-family: roboto, sans-serif;
+    }
+    
+    #contenu .formulaire form {
+        text-align: left;
+        padding: 40px 20px 0 20px;
+    }
+    
+    .formulaire form input[type=text] {
+        width: 60%;
+        height: 30px;
+        background: white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        border-bottom: 1px solid grey;
+        color: black;
+        font-size: large;
+        font-family: roboto, sans-serif;
+        margin-bottom: 16px;
+        margin-top: -10px;
+        padding-left: 15px;
+    }
+    
+    .formulaire form input[type=datetime-local] {
+        width: 200px;
+        height: 30px;
+        background: white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        border-bottom: 1px solid grey;
+        color: black;
+        font-size: large;
+        font-family: roboto, sans-serif;
+        margin-bottom: 16px;
+        margin-top: -10px;
+        padding-left: 15px;
+    }
+    
+    .formulaire form label {
+        margin-right: 8px;
+        margin-bottom: 5px;
+        width: 170px;
+        display: block;
+        float: left;
+    }

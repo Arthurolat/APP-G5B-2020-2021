@@ -7,9 +7,8 @@ section {
     padding-bottom: 30px;
 }
 
-body{
-
-    background-image:url("https://www.chicandfabric.com/wp-content/uploads/2020/07/20200706_085858.jpg");
+body {
+    background-image: url("https://www.chicandfabric.com/wp-content/uploads/2020/07/20200706_085858.jpg");
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -19,6 +18,7 @@ body{
     padding: 0;
 }
 
+
 /*----------------------- contenu -----------------------*/
 
 #contenu {
@@ -27,22 +27,165 @@ body{
     border-radius: 15px;
     margin-left: 1%;
     padding: 0% 1% 0% 1%;
-    background-color: white;
-    opacity:0.8;
+    background-color: rgb(255, 255, 255);
+    font-family: roboto, sans-serif;
 }
 
 section h2 {
+    font-size: xx-large;
     margin-left: 1%;
     margin-right: 1%;
     border-bottom: 1px solid #002060;
-    text-align:center;
+    text-align: center;
 }
 
-#contenu div{
-    width: 100%;
+#contenu div {
+    width: 99%;
     height: 100px;
     border: 2px solid black;
-    border-radius:15px;
-    padding-left:10px;
-    padding-top:10px;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+
+/* HEADER */
+
+li,
+a,
+button {
+    font-family: Oswald, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0px 5%;
+    /*background: linear-gradient(0.25turn, #e36509, #041733)*/
+    background-image: linear-gradient(to left, #041733, #432356, #8c215e, #c82f46, #e36509);
+}
+
+#logo_infinite img {
+    width: 70%;
+}
+
+#menu_principal {
+    list-style: none;
+}
+
+#menu_principal li {
+    display: inline-block;
+    padding: 0px 40px
+}
+
+#menu_principal li a {
+    transition: all 0.3 ease 0s;
+    text-shadow: #041733 1px 0 10px;
+}
+
+#menu_principal li a:hover {
+    color: #041733
+}
+
+button {
+    padding: 9px 25px;
+    background-color: #e36509;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+
+button:hover {
+    background-color: #cc5a08;
+}
+
+
+/*-------------------header avant deconnexion--------------*/
+
+header {
+    margin-bottom: 0px;
+    padding: 0px;
+    /*background: linear-gradient(-0.45turn, #A9CAED, #041733);*/
+}
+
+header a {
+    /*color: #FFFF;*/
+    text-decoration: none;
+}
+
+nav {
+    min-height: 50px;
+    display: flex;
+    width: 100%;
+    /*box-shadow: 2px 2px 5px #041733;
+    margin-bottom: 1px;*/
+}
+
+nav ul {
+    display: flex;
+    flex: 3 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin-right: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#deconnexion {
+    /*padding: 9px 25px;
+    background-color: #e36509;
+    border: none;
+    border-radius: 50px;*/
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+    margin-top: 20px;
+}
+
+#deconnexion a {
+    font-family: roboto, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFF;
+    text-decoration: underline;
+}
+
+#deconnexion a:hover {
+    color: #cc5a08;
+}
+
+#logoinfi_container {
+    flex: 3 1 40rem;
+    justify-content: space-around;
+    margin: 0;
+}
+
+#logosolution_container {
+    flex: 3 1 45rem;
+    justify-content: space-around;
+    margin: 0;
+}
+
+
+/* réglage taille image*/
+
+header .logo_infinite {
+    width: 100px;
+}
+
+header .logo_solution {
+    width: 150px;
 }

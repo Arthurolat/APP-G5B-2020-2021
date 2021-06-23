@@ -64,7 +64,7 @@ footer a {
 }
 
 .footer_menu_one ul li a {
-    font-family: arial;
+    font-family: roboto, sans-serif;
     font-size: 18px;
     color: #FFFF;
     text-transform: uppercase;
@@ -81,7 +81,7 @@ footer a {
 }
 
 .footer_bottom p {
-    font-family: arial;
+    font-family: roboto, sans-serif;
     font-size: 14px;
     text-align: center;
     color: black;

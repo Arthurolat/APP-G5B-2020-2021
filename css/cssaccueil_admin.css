@@ -91,6 +91,7 @@ section {
     text-decoration: none;
     width: auto;
     vertical-align: center;
+    font-family: roboto, sans-serif;
 }
 
 #menuGauche li a {
@@ -134,6 +135,7 @@ section {
     border-radius: 15px;
     margin-left: 10%;
     padding: 0% 1% 0% 1%;
+    font-family: roboto, sans-serif;
 }
 
 section h2 {
@@ -218,7 +220,7 @@ a {
 }
 
 .footer_menu_one ul li a {
-    font-family: arial;
+    font-family: roboto, sans-serif;
     font-size: 18px;
     color: #FFFF;
     text-transform: uppercase;
@@ -238,7 +240,7 @@ a {
 }
 
 .footer_bottom p {
-    font-family: arial;
+    font-family: roboto, sans-serif;
     font-size: 14px;
     text-align: center;
     color: black;

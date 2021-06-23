@@ -1,7 +1,7 @@
 header {
-    margin-bottom: 0;
+    margin-bottom: 0px;
     padding: 0px;
-    background: linear-gradient(0.25turn, #A9CAED, #041733);
+    background: linear-gradient(-0.45turn, #A9CAED, #041733);
 }
 
 header a {
@@ -24,11 +24,11 @@ nav ul {
     align-items: center;
     list-style: none;
     margin-right: 2rem;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#home{
+#home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,7 +45,7 @@ nav ul {
 }
 
 #deconnexion a {
-    font-family: Oswald, sans-serif;
+    font-family: roboto, sans-serif;
     font-weight: 500;
     font-size: 15px;
     color: #FFF;

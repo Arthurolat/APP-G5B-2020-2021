@@ -1,5 +1,5 @@
  <?php 
-require("../modele/connexionbdd.php");
+
 require("../modele/fonctions.php");
 
 /* Récupération des valeurs des champs du formulaire */
@@ -59,7 +59,6 @@ $reponse= recherchetest_multicriteres($bdd, $Nomutilisateur, $DatedesTestsTo, $D
     break;
 
     case array(null, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques): 
-        echo "champs 2+3";
         foreach ($Testpsychotechniques as $selected){
             recherchetest_date_test ($bdd, $DatedesTestsTo, $DatedesTestsFrom, $selected); 
         }
@@ -72,7 +71,6 @@ $reponse= recherchetest_multicriteres($bdd, $Nomutilisateur, $DatedesTestsTo, $D
     break;
 
     case array($Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $Testpsychotechniques): 
-        echo "all";
         foreach ($Testpsychotechniques as $selected){
             recherchetest_users_date_test ($bdd, $Nomutilisateur, $DatedesTestsTo, $DatedesTestsFrom, $selected);
         }

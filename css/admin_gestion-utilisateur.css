@@ -3,7 +3,9 @@ body {
     margin: 0;
     padding: 0;
     height: auto;
-    background: url("../images/image_avion");
+    /*background: url("../images/image_avion");*/
+    background-color: #A9CAED;
+    /*ecf4fa;*/
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -14,27 +16,28 @@ body {
 
 section {
     display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 
 /*------------ barre de navigation verticale ------------*/
 
 #menuGauche {
-    width: 15%;
+    width: 20%;
 }
 
 #menuGauche #barre_nav {
-    border-radius: 15px;
-    background-color: #a9caed86;
-    border: 2px solid #A9CAED;
+    border-radius: 0px;
+    background-color: #A9CAED;
+    /*border: 2px solid #041733;*/
+    padding: 5px;
     position: -webkit-sticky;
     position: sticky;
     top: 1%;
-    box-shadow: 2px 2px 5px #A9CAED;
+    /*box-shadow: 2px 2px 5px #A9CAED;*/
 }
 
 #menuGauche ul,
@@ -47,13 +50,14 @@ section {
     text-decoration: none;
     width: auto;
     vertical-align: center;
+    color: #000;
+    font-family: roboto, sans-serif;
 }
 
 #menuGauche li a {
     display: block;
     color: #000;
     padding: 4% 1% 4% 2%;
-    color: black;
 }
 
 #menuGauche ul ul li a {
@@ -73,6 +77,8 @@ section {
     transition: all .2s ease;
 }
 
+
+/*
 #menuGauche #ongletdebut a:hover {
     border-radius: 15px 15px 0 0;
 }
@@ -80,18 +86,29 @@ section {
 #menuGauche #ongletfin a:hover {
     border-radius: 0 0 15px 15px;
 }
+*/
 
 
 /*----------------------- contenu -----------------------*/
 
 #contenu {
-    width: 85%;
-    border: 2px solid #041733;
-    box-shadow: 2px 2px 5px #041733;
-    border-radius: 15px;
+    width: 95%;
+    /*border: 2px solid #041733;*/
+    /*box-shadow: 2px 2px 5px #041733;*/
+    border-radius: 0px;
+    margin-left: 0%;
+    padding: 2% 1% 0% 2%;
+    background-color: #ecf4fa;
+    font-family: roboto, sans-serif;
+    font-size: 16px;
+}
+
+section h2 {
+    font-size: xx-large;
+    text-align: left;
     margin-left: 1%;
-    padding: 0% 1% 0% 1%;
-    background-color: rgba(255, 255, 255, 0.555);
+    margin-right: 1%;
+    border-bottom: 1px solid #041733;
 }
 
 #searchbar {
@@ -114,27 +131,40 @@ form {
 
 form .champ {
     width: 600px;
-    height: 35px;
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border-bottom: 1px solid grey;
+    color: black;
+    font-size: large;
+    font-family: roboto, sans-serif;
+    margin-bottom: 16px;
+    margin-top: -10px;
+    padding-left: 15px;
 }
 
-
-/* ne marche pas, à revoir 
-
-form input [type="image"] {
-    background-image: url("../images/icone_loupe.png");
-    width: 35px;
-    height: 35px;
-    padding: 0;
+form .btn {
+    border: 2px solid #ed7d31;
+    box-shadow: 2px 2px 3px #ed7d31;
+    border-radius: 50px;
+    padding: 5px 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #ed7d31;
+    color: white;
+    font-family: roboto, sans-serif;
+    font-size: large;
 }
-*/
 
 #contenu table,
 td,
 th {
     text-align: center;
     border-collapse: collapse;
-    border-top: 1px solid rgba(0, 0, 0, 0.37);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+    border-top: 1px solid rgba(0, 0, 0, 0.534);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.534);
     width: 100%;
     /*border-radius: 15px;*/
 }
@@ -144,7 +174,7 @@ th {
 
 table {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(0, 0, 0, 0.534);
 }
 
 
@@ -157,9 +187,12 @@ tr:not(.theader):hover {
 
 tr td:nth-child(3) p:hover {
     background-color: #ed7d31;
-    color: white;
     border: 1px outset #ed7d31;
     transition: all .3s ease;
+}
+
+tr td:nth-child(3) p:hover a {
+    color: white;
 }
 
 tr td:nth-child(2) p:hover {
@@ -167,6 +200,16 @@ tr td:nth-child(2) p:hover {
     color: white;
     border: 1px outset #ed7d31;
     transition: all .3s ease;
+}
+
+tr td:nth-child(4) p:hover {
+    background-color: #ed7d31;
+    border: 1px outset #ed7d31;
+    transition: all .3s ease;
+}
+
+tr td:nth-child(4) p:hover a {
+    color: white;
 }
 
 
@@ -198,7 +241,8 @@ a {
 
 td:nth-child(2),
 td:nth-child(1),
-td:nth-child(3) {
+td:nth-child(3),
+td:nth-child(4) {
     padding-left: 30px;
 }
 
@@ -207,37 +251,42 @@ td:nth-child(3) {
 
 td:nth-child(1),
 tr:nth-child(1) th:nth-child(1) {
-    width: 35%;
+    width: 30%;
 }
 
 td:nth-child(2),
 tr:nth-child(1) th:nth-child(2) {
-    width: 25%;
+    width: 30%;
 }
 
 td:nth-child(3),
 tr:nth-child(1) th:nth-child(3) {
-    width: 25%;
+    width: 15%;
+}
+
+td:nth-child(4),
+tr:nth-child(1) th:nth-child(4) {
+    width: 15%;
 }
 
 
-/*bouton voir résultat col3 */
+/*bouton col3 & col4 */
 
 tr td:nth-child(3) p {
     border: 1px outset #A9CAED;
     /*margin: 0 45px 0 45px;*/
     /*padding: 10px 0 10px 0;*/
-    margin: 0 30%;
+    margin: 0 15%;
     padding: 6% 0;
     border-radius: 5px;
     background-color: #A9CAED;
 }
 
-tr td:nth-child(2) p {
+tr td:nth-child(4) p {
     border: 1px outset #A9CAED;
     /*margin: 0 45px 0 45px;*/
     /*padding: 10px 0 10px 0;*/
-    margin: 0 30%;
+    margin: 0 15%;
     padding: 6% 0;
     border-radius: 5px;
     background-color: #A9CAED;
